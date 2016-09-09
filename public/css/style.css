@@ -1,0 +1,184 @@
+body, h3,h2,h4{
+    font-family:'Raleway' ;
+}
+h5{
+    font-size: 1.2em;
+    font-family: 'Lato-Light';
+    text-align: justify;
+}
+h4
+{
+    font-family: 'Lato-Light';
+    font-size: 1.9em;
+}
+h2
+{
+    font-family: 'Lato-Light';
+}
+h6{
+    font-size: 1.2em;
+}
+p{ font-size: 1.3em}
+.navHeader
+{
+    padding: 1.2em 3em;
+    height: 7em;
+}
+.logoText
+{
+    font-family: 'Dancing Script';
+}
+.landing{
+    background-image: url('')   !important;
+    background-repeat: no-repeat;
+    height: auto;
+    max-width: 100%;
+    background-size: cover;
+    top: 0;
+    left: 0;
+
+}
+
+.landing.segment{
+    min-height: 100%;
+    padding: 0em 0em;
+}
+.transbg{
+    min-height:800px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.transbgText
+{
+    text-shadow:
+
+    0 0 5px rgba(0,0,0,.05),
+    0 1px 3px rgba(0,0,0,.2),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.2),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.3);
+}
+.smlText
+{
+    text-shadow:
+
+            0 0 5px rgba(0,0,0,.05),
+            0 1px 3px rgba(0,0,0,.2),
+            0 3px 5px rgba(0,0,0,.2),
+            0 5px 10px rgba(0,0,0,.2),
+            0 10px 10px rgba(0,0,0,.2),
+            0 20px 20px rgba(0,0,0,.3);
+}
+.footerS{
+
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background:#999;
+    padding: 70px;
+    background-color: #333;
+    color: #bbbdbf
+}
+
+.parallax-container {
+
+}
+
+.cta-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../public/images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.parallax-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../public/semantic/assets/img/b1.jpg");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+.parallax-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../public/semantic/assets/img/b4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+.logHeader{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../public/images/city.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.logHeader2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../../public/images/city2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* label color */
+.input-field label {
+    color:#1e88e5;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #1e88e5;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #1e88e5;
+    box-shadow: 0 1px 0 0 #1e88e5;
+}
+/* valid color */
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #1e88e5;
+    box-shadow: 0 1px 0 0 #1e88e5;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #1e88e5;
+    box-shadow: 0 1px 0 0 #1e88e5;
+}
+/* label focus color */
+.input-field input[type=email]:focus + label {
+    color: #1e88e5;
+}
+/* label underline focus color */
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid #1e88e5;
+    box-shadow: 0 1px 0 0 #1e88e5;
+}
+/* valid color */
+.input-field input[type=email].valid {
+    border-bottom: 1px solid #1e88e5;
+    box-shadow: 0 1px 0 0 #1e88e5;
+}
+/* invalid color */
+.input-field input[type=email].invalid {
+    border-bottom: 1px solid #1e88e5;
+    box-shadow: 0 1px 0 0 #1e88e5;
+}
+/* label focus color */
+.input-field input[type=password]:focus + label {
+    color: #1e88e5;
+}
+/* label underline focus color */
+.input-field input[type=password]:focus {
+    border-bottom: 1px solid #1e88e5;
+    box-shadow: 0 1px 0 0 #1e88e5;
+}
+/* valid color */
+.input-field input[type=password].valid {
+    border-bottom: 1px solid #1e88e5;
+    box-shadow: 0 1px 0 0 #1e88e5;
+}
+/* invalid color */
+.input-field input[type=password].invalid {
+    border-bottom: 1px solid #1e88e5;
+    box-shadow: 0 1px 0 0 #1e88e5;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #0d47a1;
+}

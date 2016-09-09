@@ -1,0 +1,21 @@
+
+<div class="row fixed-section">
+   <div class="row">
+
+   </div>
+    <div class="collection black-text">
+        <a class="collection-item black-text" href="<?php echo asset('/applicant/applications/list'); ?>">Applications
+            <?php
+                $count = 0;
+                $count = ApplyAds::where('appid', '=', $app->appid)->count();                
+            ?>
+            <?php if($count > 0): ?>
+                <span class="badge new"><?php echo $count; ?> </span>
+            <?php endif; ?>    
+        </a>
+        <a class="collection-item black-text" href="<?php echo asset('/applicant/shortlist/'); ?>">Ad shortlist</a>
+        <a class="collection-item black-text" href="<?php echo asset('/employer/job/request'); ?>">Employers request</a>
+        <a class="collection-item black-text" href="<?php echo asset('/applicant/messagebox'); ?>">Message box</a>
+        <a class="collection-item black-text" href="<?php echo asset('/applicant/profile'); ?>">Profile</a>
+    </div>
+</div>

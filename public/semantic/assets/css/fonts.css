@@ -18,4 +18,32 @@
     src: url("../fonts/Raleway-Regular.ttf") format('truetype');
     font-weight: bold;
 }
+/*Lat0*/
+@font-face
+{
+    font-family: "Lato-Regular";
+    src: url("../fonts/Lato-Regular.ttf") format('truetype');
+
+}
+@font-face
+{
+    font-family: "Lato-Bold";
+    src: url("../fonts/Lato-Bold.ttf") format('truetype');
+
+}
+@font-face
+{
+    font-family: "Lato-Hairline";
+    src: url("../fonts/Lato-Hairline.ttf") format('truetype');
+
+}
+@font-face
+{
+    font-family: "Lato-Light";
+    src: url("../fonts/Lato-Light.ttf") format('truetype');
+
+}
+
+
+
 

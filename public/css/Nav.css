@@ -1,0 +1,36 @@
+nav{
+    font-family: "Lato Light";
+    background: #5fb4fa;
+}
+.sideNav{
+    margin-left:-10px;
+    margin-top:-8px;
+    font-family: "Lato Light";
+    font-size: 1.1em;
+}
+.sideNav .collection a.collection-item
+{
+    background: #eff0f1;
+    color: #828486;
+    padding: 15px;
+    font-size: 1em;
+}
+.sideNav .collection a.collection-item:hover
+{
+    background: #d0dcea;
+    color:#5b5b5c;
+}
+body{
+    font-family: 'Lato-Regular';
+}
+.cText
+{
+    text-transform: capitalize;
+}
+.tIcon
+{
+    font-family: 'Lato-Light';
+    font-size: 1em;
+    color: #5b5b5c;
+    margin:5px;
+}

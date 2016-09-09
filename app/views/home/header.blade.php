@@ -1,10 +1,14 @@
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content gray-text browser-default">
-    <li><a class="black-text" href="{{ asset('/account/logout') }}">Logout</a></li>
+    <li><a class="black-text" href="{{ asset('employer/profile') }}">My profile</a></li>
+    <li><a class="black-text" href="#!">Subscription</a></li>
+    <li><a class="black-text" href="{{ asset('employer/logout') }}">Logout</a></li>
 </ul>
 <!-- Dropdown Structure -->
 <ul id="dropdown2" class="dropdown-content gray-text browser-default">
-    <li><a class="black-text" href="{{ asset('/account/logout') }}">Logout</a></li>
+    <li><a class="black-text" href="{{ asset('employer/profile') }}">My profile</a></li>
+    <li><a class="black-text" href="#!">Subscription</a></li>
+    <li><a class="black-text" href="{{ asset('employer/logout') }}">Logout</a></li>
 </ul>
 <div class="navbar-fixed">
     <nav class="white navHeader">
@@ -17,13 +21,9 @@
                 <li><a class="black-text" href="{{ asset('helpers') }}">Find Helpers</a></li>
                 <li><a class="black-text" href="{{ asset('helpers') }}">Find Job</a></li>
                 <li><a class="black-text" href="badges.html">Recommendations</a></li>
-                @if(!isset($user))
-                    <li><a class="" href="{{ asset('/user-login') }}">Sign in</a></li>
-                    <li><a class="btn blue white-text waves-effect waves-light" href="{{ asset('/user-register') }}">Sign up</a></li>
-                @else
-                    <li><a class="black-text dropdown-button" data-hover="true" data-beloworigin="true"  data-activates="dropdown1"><strong>{{ $user->fname }}<i class="material-icons right">arrow_drop_down</i></strong></a></li>
-                @endif
-                    <!-- Dropdown Trigger -->
+                <li><a class="black-text" href="{{ asset('/user-login') }}">Sign in</a></li>
+                <li><a class="btn blue white-text waves-effect waves-light" href="{{ asset('/user-register') }}">Sign up</a></li>
+                <!-- Dropdown Trigger -->
             </ul>
             <ul class="side-nav blue " id="mobile-demo">
                 <li class="blue">
@@ -42,3 +42,4 @@
         </div>
     </nav>
 </div>
+

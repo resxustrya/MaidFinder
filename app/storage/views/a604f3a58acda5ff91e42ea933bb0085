@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/material/css/mycss.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/material/css/materialize.min.css'); ?>" />
+
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/semantic/assets/css/fonts.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/material/css/page.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/css/style.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/css/animate.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/css/materialdesignicons.min.css'); ?>"/>
+    <link rel="icon" href="<?php echo asset('public/images/icon2.png'); ?>">
+    <?php $__env->startSection('css'); ?>
+
+    <?php echo $__env->yieldSection(); ?>
+    <?php $__env->startSection('title'); ?>
+        <title>MaidFinderPH</title>
+    <?php echo $__env->yieldSection(); ?>
+</head>
+<body class="grey lighten-5">
+<?php echo $__env->make('home.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php if(Session::has('message')): ?>
+        <div class="card-panel pink lighten-4"><?php echo Session::get('message'); ?></div>
+    <?php endif; ?>
+    <?php echo $__env->yieldContent('content'); ?>
+<?php echo $__env->make('shared.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <!--  Scripts-->
+<script src="<?php echo asset('public/material/js/jquery.js'); ?>"></script>
+<script src="<?php echo asset('public/material/js/jquery.js'); ?>"></script>
+<script src="<?php echo asset('public/material/js/materialize.min.js'); ?>" ></script>
+<script>
+    $(document).ready(function() {
+        $(".button-collapse").sideNav();
+        $('select').material_select();
+        $('.parallax').parallax();
+        //$('.fixed-section').pushpin({ top: $('.fixed-section').offset().top });
+    });
+</script>
+<?php $__env->startSection('js'); ?>
+<?php echo $__env->yieldSection(); ?>
+</body>
+</html>
+
+</body>
+</html>

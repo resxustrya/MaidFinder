@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/material/css/mycss.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/material/css/materialize.min.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/material/css/page.css'); ?>" />
+    <?php $__env->startSection('css'); ?>
+
+    <?php echo $__env->yieldSection(); ?>
+    <?php $__env->startSection('title'); ?>
+        <title>MaidFinder PH</title>
+    <?php echo $__env->yieldSection(); ?>
+</head>
+<body class="grey lighten-3">
+
+<?php echo $__env->make('applicant.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col s12 m12 l2 hide-on-med-and-down" style="height: 400px;">
+            <?php echo $__env->make('applicant.sidenav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        </div>
+        <div class="col s12 m12 l9" style="padding:0px;">
+            <?php echo $__env->yieldContent('content'); ?>
+        </div>
+    </div>
+    <?php echo $__env->make('shared.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+</div>
+
+<script src="<?php echo asset('public/material/js/jquery.js'); ?>"></script>
+<script src="<?php echo asset('public/material/js/materialize.min.js'); ?>" ></script>
+<script>
+    $(document).ready(function() {
+        $(".button-collapse").sideNav();
+        $('select').material_select();
+       // $('.fixed-section').pushpin({ top: $('.fixed-section').offset().top });
+    });
+</script>
+<?php $__env->startSection('js'); ?>
+<?php echo $__env->yieldSection(); ?>
+</body>
+</html>

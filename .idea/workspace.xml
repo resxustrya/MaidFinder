@@ -2,51 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e346daf6-0934-4f88-afae-fcc543f21484" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/Nav.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/animate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/card.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/materialdesignicons.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/Lato-Black.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/Lato-BlackItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/Lato-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/Lato-BoldItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/Lato-Hairline.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/Lato-HairlineItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/Lato-Italic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/Lato-Light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/Lato-LightItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/Lato-Regular.ttf" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/darwin@gmail.com13700021_1754141688132934_1686246729266795426_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/jolly@gmail.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/mark@gmail.com13700021_1754141688132934_1686246729266795426_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/rex@outlook.comr0064LynW1GvuVJ8eUdhKsD_XTJtWgAxtDwOBnmlC5E.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/rexustraya@gmail.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/icon4.png" afterPath="$PROJECT_DIR$/public/images/icon4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/basic/assets/fonts/icons.eot" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/basic/assets/fonts/icons.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/basic/assets/fonts/icons.woff" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/basic/assets/fonts/icons.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.eot" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.otf" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.woff" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.woff2" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.woff2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/database.php" afterPath="$PROJECT_DIR$/app/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/header.blade.php" afterPath="$PROJECT_DIR$/app/views/home/header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/home.blade.php" afterPath="$PROJECT_DIR$/app/views/home/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/layout.blade.php" afterPath="$PROJECT_DIR$/app/views/home/layout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/footer.blade.php" afterPath="$PROJECT_DIR$/app/views/shared/footer.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/material/css/materialize.css" afterPath="$PROJECT_DIR$/public/material/css/materialize.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/material/css/materialize.min.css" afterPath="$PROJECT_DIR$/public/material/css/materialize.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/material/js/materialize.min.js" afterPath="$PROJECT_DIR$/public/material/js/materialize.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/fonts.css" afterPath="$PROJECT_DIR$/public/semantic/assets/css/fonts.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/basic/assets/fonts/icons.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/basic/assets/fonts/icons.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/fonts/Angeline Vintage_Demo.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/Angeline Vintage_Demo.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/fonts/DancingScript-Bold.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/DancingScript-Bold.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/fonts/DancingScript-Regular.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/DancingScript-Regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/fonts/Raleway-Regular.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/Raleway-Regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/fonts/YatraOne-Regular.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/YatraOne-Regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/fonts/riesling.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/riesling.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/0d279111b7862617ba8e58c753019141" afterPath="$PROJECT_DIR$/app/storage/views/0d279111b7862617ba8e58c753019141" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/7defa879b9ddf8da011d3359b5e2e478" afterPath="$PROJECT_DIR$/app/storage/views/7defa879b9ddf8da011d3359b5e2e478" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/aa53911fb637c8ea438d600182dd218b" afterPath="$PROJECT_DIR$/app/storage/views/aa53911fb637c8ea438d600182dd218b" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/af94715e9734d140dd2f19396b0951bd" afterPath="$PROJECT_DIR$/app/storage/views/af94715e9734d140dd2f19396b0951bd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/header.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/layout.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/layout.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/profile.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/profile.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/sidenav.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/sidenav.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/user-type.blade.php" afterPath="$PROJECT_DIR$/app/views/home/user-type.blade.php" />
     </list>
     <ignored path="MaidFinder.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,31 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Nav.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/Nav.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4230769">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-4.423077">
               <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/storage/cache/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -121,30 +66,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/footer.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769">
-              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home-style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/material/css/home-style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="160" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="198" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6761364">
+            <state vertical-scroll-proportion="-6.490909">
               <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
               <folding>
                 <element signature="e#89#123#0#HTML" expanded="true" />
@@ -156,23 +81,80 @@
         </entry>
       </file>
       <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/header.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/views/employer/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.269231">
-              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+            <state vertical-scroll-proportion="-20.115385">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
+                <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#li#1;n#ul#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#li#0;n#ul#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#li#1;n#ul#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#1;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mycss.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/material/css/mycss.css">
+      <file leaf-file-name="message-inbox.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/employer/message-inbox.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/employer/layout.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.115385">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidenav.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/employer/sidenav.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231">
+              <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user-type.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/home/user-type.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.24236985">
+              <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+              <folding>
+                <element signature="e#74#94#0#HTML" expanded="true" />
+                <element signature="e#164#208#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/employer/profile.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.2">
+              <caret line="30" column="211" selection-start-line="30" selection-start-column="211" selection-end-line="30" selection-end-column="211" />
+              <folding>
+                <element signature="e#880#932#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -210,11 +192,9 @@
         <option value="$PROJECT_DIR$/app/controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/app/views/admin/header.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/admin-login.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/home/user-type.blade.php" />
         <option value="$PROJECT_DIR$/app/views/home/employer-profile.blade.php" />
         <option value="$PROJECT_DIR$/public/material/css/materialize.css" />
         <option value="$PROJECT_DIR$/app/views/applicant/profile.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/employer/profile.blade.php" />
         <option value="$PROJECT_DIR$/app/views/home/profile.blade.php" />
         <option value="$PROJECT_DIR$/app/views/home/upload.blade.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
@@ -236,6 +216,11 @@
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/app/views/home/layout.blade.php" />
         <option value="$PROJECT_DIR$/app/views/home/home.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/layout.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/profile.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/sidenav.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/home/user-type.blade.php" />
       </list>
     </option>
   </component>
@@ -369,24 +354,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaidFinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaidFinder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -450,6 +417,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaidFinder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaidFinder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="employer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -545,7 +534,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26701966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26701966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07715582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -599,27 +588,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/seeds/AdminTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.076923">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/seeds/SalaryTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -662,20 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/user-type.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="263" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="263" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/applicant/application.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -701,13 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="111" selection-start-line="75" selection-start-column="111" selection-end-line="75" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="94" selection-start-line="83" selection-start-column="94" selection-end-line="83" selection-end-column="94" />
         </state>
       </provider>
     </entry>
@@ -978,12 +925,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6761364">
+        <state vertical-scroll-proportion="-6.490909">
           <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
           <folding>
             <element signature="e#89#123#0#HTML" expanded="true" />
             <element signature="e#854#877#0#HTML" expanded="true" />
             <element signature="e#3791#3827#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employer/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.115385">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#li#1;n#ul#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#li#0;n#ul#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#li#1;n#ul#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employer/message-inbox.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employer/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.115385">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employer/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2">
+          <caret line="30" column="211" selection-start-line="30" selection-start-column="211" selection-end-line="30" selection-end-column="211" />
+          <folding>
+            <element signature="e#880#932#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employer/sidenav.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/user-type.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24236985">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <folding>
+            <element signature="e#74#94#0#HTML" expanded="true" />
+            <element signature="e#164#208#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

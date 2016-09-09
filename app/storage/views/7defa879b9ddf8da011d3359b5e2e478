@@ -1,107 +1,125 @@
 <?php $__env->startSection('content'); ?>
     <div class="row" style="padding: 0px;">
         <div class="col s12 m12 l12">
-            <ul class="collection with-header">
-                <li class="collection-header">
-                    <strong><h5 class="grey-text">Employer profile</h5></strong>
-                </li>
-                <li class="collection-item">
+            <div class="row">
+                <div class="card-panel">
                     <div class="row">
                         <div class="col s12 m12 l4">
-                            <form action="<?php echo asset('/employer/update/picture'); ?>" method="post" enctype="multipart/form-data" />
+                            <form action="<?php echo asset('/employer/update/picture'); ?>" method="post" enctype="multipart/form-data" >
                                 <div class="row">
-                                    <img id="editpicture" class="right-align square" src="<?php echo asset('public/uploads/profile/'.(($emp['profilepic']) != null ? $emp['profilepic'] :'facebook.jpg' )); ?>" />
-                                </div>
-                                <div class="row">
-                                    <div class="file-field input-field">
-                                        <a class="" style="text-decoration: underline;">
-                                            <span>Change Photo</span>
-                                            <input type="file" class="photo" name="profilepic">
-                                        </a>
-                                        <div class="file-path-wrapper reveal">
-                                            <input class="file-path validate" type="text">
+                                    <div class="col s12 m12 l12 valign-wrapper">
+                                        <img id="editpicture"  class="center  circle" src="<?php echo asset('public/uploads/profile/'.(($emp['profilepic']) != null ? $emp['profilepic'] :'facebook.jpg' )); ?>" />
+                                        <div class="file-field input-field">
+                                            <a style="text-decoration: underline; margin-top: 10px">
+                                                <span><i class="mdi mdi-camera small "></i></span>
+                                                <input type="file" class="photo right" name="profilepic">
+                                            </a>
+                                            <div class="file-path-wrapper blue-text reveal">
+                                                <input class="file-path blue-text validate" type="text">
+                                            </div>
                                         </div>
                                     </div>
-                                    <input type="submit" class="btn reveal" name="upload" value="Upload Photo" />
+                                    <div class="row">
+                                        <input type="submit" class="btn reveal blue" name="upload" value="Upload Photo" />
+                                    </div>
                                 </div>
                             </form>
                         </div>
                         <div class="col s12 m12 l8">
-                            <div class="row">
-                                <div class="col s12 m12 l12">
-                                    <h6 class="right-align">
-                                        <a href="<?php echo asset('/employer/update'); ?>">[Edit Profile]</a>
-                                    </h6>
+                            <a class="btn-floating tooltipped btn-large waves-effect waves-light right  red  " data-position="bottom" data-delay="50" data-tooltip="Edit Profile"  href="<?php echo asset('/employer/update/'); ?>"><i class="material-icons">mode_edit</i></a>
+                            <div class="section">
+                                <div class="cText grey-text text-darken-4 name">
+                                    <i class="mdi mdi-account"></i>
+                                    <?php echo $emp->fname ." ". $emp->lname; ?>
+
+                                    <div class="divider"></div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <table>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4 name"><i class="material-icons">perm_identity</i> </span> </td>
-                                        <td><span class="grey-text text-darken-4 name"><?php echo $emp->fname ." ". $emp->lname; ?></span></td>
-                                    </tr>
-                                    <tr>
-                                        <?php $month = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"); ?>
-                                        <?php $bdate = explode('-', $emp->bdate); ?>
-                                        <td><span class="grey-text text-darken-4"><i class="material-icons">redeem</i> </span> </td>
-                                        <td><span class="grey-text text-darken-4"><?php echo $month[$bdate[1]].'/' . $bdate[2] .'/' . $bdate[0]; ?></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4"><i class="material-icons">email</i> </span> </td>
-                                        <td><span class="grey-text text-darken-4"><?php echo $emp->email; ?></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4"><i class="material-icons">location_on</i></span></td>
-                                        <td><span class="grey-text text-darken-4"><?php echo $location->location; ?></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4"><i class="material-icons">phone</i></span></td>
-                                        <td><span class="grey-text text-darken-4"><?php echo $emp->contactno; ?></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4"><i class="material-icons">supervisor_account</i> </span> </td>
-                                        <td><span class="grey-text text-darken-4"><?php echo $emp->gender; ?></span></td>
-                                    </tr>
-                                </table>
+                                <div class="cText grey-text text-darken-4 valign-wrapper">
+                                    <?php $month = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"); ?>
+                                    <?php $bdate = explode('-', $emp->bdate); ?>
+                                    <i class="tIcon mdi mdi-cake-variant "></i>
+                                    <?php echo $month[$bdate[1]].' ' . $bdate[2] .', ' . $bdate[0]; ?>
+
+                                </div>
+                                <div class=" grey-text text-darken-4 valign-wrapper">
+                                    <i class="tIcon mdi mdi-email"></i>
+                                    <?php echo $emp->email; ?>
+
+                                </div>
+                                <div class="grey-text text-darken-4 valign-wrapper">
+                                    <i class="tIcon  mdi mdi-account-location"></i>
+                                    <?php echo $location->location; ?>
+
+                                </div>
+                                <div class="grey-text text-darken-4 valign-wrapper">
+                                    <i class="tIcon mdi mdi-phone"></i>
+                                    <?php echo $emp->contactno; ?>
+
+                                </div>
+                                <div class=" valign-wrapper">
+
+                                    <?php
+                                    if( $emp->gender  == "Female")
+                                    {
+                                        echo "<i class=\"tIcon mdi mdi-gender-female \"></i>";
+                                    } else
+                                    {
+                                        echo "<i class=\"tIcon mdi mdi-gender-male \"></i>";
+                                    }
+                                    ?>
+                                    <?php echo $emp->gender; ?>
+
+                                </div>
+
                             </div>
                             <h6 class="divider"></h6>
                             <div class="row">
-                                <div class="col s12 m12 l6">
-                                    <table class="other_info">
-                                        <tr>
-                                            <td><span class="grey-text text-darken-4">Nationanlity :</span></td>
-                                            <td><span class="grey-text text-darken-4"><?php echo $emp->nationality; ?></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="grey-text text-darken-4">Religion :</span> </td>
-                                            <td><span class="grey-text text-darken-4"><?php echo $emp->religion; ?></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="grey-text text-darken-4">Civil Status :</span> </td>
-                                            <?php $status = array('Single', 'Married', 'Divorced', 'Widowed'); ?>
-                                            <td><span class="grey-text text-darken-4"><?php echo $status[$emp->civilstatus]; ?></span></td>
-                                        </tr>
-                                    </table>
+                                <div class="col s12 m12 l12">
+                                    <div class="section">
+                                        <div class="valign-wrapper">
+                                            <i class="tIcon mdi mdi-flag">Nationality: </i>
+                                            <?php echo $emp->nationality; ?>
+
+                                        </div>
+                                        <div class="valign-wrapper">
+                                            <i class="tIcon mdi mdi-church">Religion:</i>
+
+                                            <?php echo $emp->religion; ?>
+
+                                        </div>
+
+                                        <div class="valign-wrapper">
+                                            <i class="tIcon mdi mdi-account-multiple ">Civil Status:</i>
+                                            <?php echo $emp->civilstatus; ?>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </li>
-            </ul>
-
-            <?php if($ads and count($ads) >0): ?>
-                <ul class="collection with-header">
-                    <li class="collection-header  light-blue darken-1"><h6 class="white-text">Your ads</h6></li>
-                </ul>
-            <?php else: ?>
-                <div class="row">
-                    <div class="col s12 m12 l6">
-                        <a href="<?php echo asset('/create/ad'); ?>" class="orange btn">Create ad</a>
-                    </div>
                 </div>
-            <?php endif; ?>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col s12 m12 l3">
+                    <?php if($ads and count($ads) >0): ?>
+                        <ul class="collection with-header">
+                            <li class="collection-header  light-blue darken-1"><h6 class="white-text">Your ads</h6></li>
+                        </ul>
+                    <?php else: ?>
+                        <div class="row">
+                            <div class="col s12 m12 l6">
+                                <a href="<?php echo asset('/create/ad'); ?>" class="orange btn">Create ad</a>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
+                </div>
+            </div>
         </div>
     </div>
+
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('js'); ?>
@@ -119,12 +137,12 @@
 <?php $__env->startSection('css'); ?>
     @parent
     <style>
-      .name {
-          font-size: 2em;
-      }
-      table tr td {
-          padding: 0px;
-      }
+        .name {
+            font-size: 2em;
+        }
+        table tr td {
+            padding: 0px;
+        }
     </style>
 <?php $__env->stopSection(); ?>
 

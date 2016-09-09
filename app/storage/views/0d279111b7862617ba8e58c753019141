@@ -3,40 +3,48 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="<?php echo asset('public/material/css/mycss.css'); ?>" />
-    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/material/css/materialize.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/material/css/materialize.min.css'); ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo asset('public/material/css/page.css'); ?>" />
+
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/semantic/assets/css/fonts.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/material/css/page.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('/public/css/Nav.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/css/animate.css'); ?>" />
+    <link rel="stylesheet" href="<?php echo asset('public/css/materialdesignicons.min.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/material/css/home-style.css'); ?>" />
+    <link rel="icon" href="<?php echo asset('public/images/icon2.png'); ?>">
     <?php $__env->startSection('css'); ?>
 
     <?php echo $__env->yieldSection(); ?>
     <?php $__env->startSection('title'); ?>
-        <title>MaidFinder PH</title>
+        <title>MaidFinderPH</title>
     <?php echo $__env->yieldSection(); ?>
 </head>
-<body class="grey lighten-3">
+<body class="grey lighten-4">
 
 <?php echo $__env->make('employer.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <div class="container-fluid">
     <div class="row">
-        <div class="col s12 m12 l2 hide-on-med-and-down" style="height: 400px;">
+        <div class="col s12 m4 l3 hide-on-med-and-down"  style="background: #eff0f1; height: 40em; padding: 2px;">
             <?php echo $__env->make('employer.sidenav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div>
-        <div class="col s12 m12 l10" style="padding: 0px;">
+        <div class="col s12 m8 l9">
             <?php echo $__env->yieldContent('content'); ?>
         </div>
     </div>
-    <?php echo $__env->make('shared.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
 </div>
 
 <script src="<?php echo asset('public/material/js/jquery.js'); ?>"></script>
 <script src="<?php echo asset('public/material/js/materialize.min.js'); ?>" ></script>
 <script>
     $(document).ready(function() {
-            $(".button-collapse").sideNav();
-            $('select').material_select();
+        $(".button-collapse").sideNav();
+        $('select').material_select();
+        //$('.fixed-section').pushpin({ top: $('.fixed-section').offset().top });
     });
 </script>
 <?php $__env->startSection('js'); ?>
-
 <?php echo $__env->yieldSection(); ?>
 </body>
 </html>

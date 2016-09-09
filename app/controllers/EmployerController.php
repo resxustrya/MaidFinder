@@ -21,7 +21,7 @@ class EmployerController extends BaseController {
 
     public function employer_home() {
         $application = Applications::all();
-      $ads = Ads::where('empid', '=', $this->emp->empid)->get();
+      $ads = Ads::where('empid', '=', $this->emp->empid)->paginate(1);
       return View::make('employer.home')
                     ->with('emp', $this->emp)
                     ->with('ads',$ads)

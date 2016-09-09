@@ -10,7 +10,6 @@
             <div class="col s12 m12 l11">
                <div class="row">
                    <h5>Your current ad</h5>
-                   <div class="carousel carousel-slider white" data-indicators="true">
                        @foreach($ads as $ad)
                            <?php
                                $dayof =  array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday');
@@ -21,28 +20,34 @@
                                $location = Regions::where('regionid', '=', $ad->regionid)->first();
                                $job_desc = AdDesc::where('adid', '=', $ad->adid)->get();
                            ?>
-                           <div class="carousel-item white black-text" href="#{{ $ad->adid }}">
+                            <div class="card-panel">
                                <div class="row" style="padding:10px;">
-                                   <div class="row">
-                                       <div class="col s12 m12 l10">
-                                           <h5><span>Position -  </span>{{ $jobtype->description }}</h5>
-                                           <span><i class="material-icons">location_on</i> </span><span><strong>{{ $location->location }}</strong></span>
-                                           <br/>
-                                           <span><i class="material-icons">redeem</i></span><span><strong>{{$salary->amount_range}} - (peso)</strong></span>
-                                           <br />
-                                           <?php $capacity = array('Full Time', 'Part Time'); ?>
-                                           <span><strong>Capacity</strong></span> - <span><strong>{{ $capacity[$ad->capacity] }}</strong></span>
-                                       </div>
-                                       <div class="col s12 m12 l2">
-                                           <a class="btn light-blue darken-3 waves-effect col s12 m12 l12 white-text" href="{{asset ('/employer/ad/edit/'. $ad->adid)}}">Edit ad</a>
-                                       </div>
+                                   <div class="col s12 m12 l10">
+                                       <h5><span>Position -  </span>{{ $jobtype->description }}</h5>
+                                       <span><i class="material-icons">location_on</i> </span><span><strong>{{ $location->location }}</strong></span>
+                                       <br/>
+                                       <span><i class="material-icons">redeem</i></span><span><strong>{{$salary->amount_range}} - (peso)</strong></span>
+                                       <br />
+                                       <?php $capacity = array('Full Time', 'Part Time'); ?>
+                                       <span><strong>Capacity</strong></span> - <span><strong>{{ $capacity[$ad->capacity] }}</strong></span>
+                                   </div>
+                                   <div class="col s12 m12 l2">
+                                       <a class="btn light-blue darken-3 waves-effect col s12 m12 l12 white-text" href="{{asset ('/employer/ad/edit/'. $ad->adid)}}">Edit ad</a>
                                    </div>
                                </div>
-                           </div>
+                            </div>
+                            <div class="divider"></div>
                        @endforeach
                    </div>
                </div>
             </div>
+        </div>
+        <div class="row">
+            @if($ads->count() < $ads->getTotal())
+                <ul class="pagination center-align">
+                    {{ $ads->links() }}
+                </ul>
+            @endif
         </div>
     @else
        <span>&nbsp;</span>

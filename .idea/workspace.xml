@@ -2,119 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e346daf6-0934-4f88-afae-fcc543f21484" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webResources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/AdminAccountController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/seeds/AdminTableSeeder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/admin-login.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/header.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/home.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/layout.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/sidenav.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/staffs-err.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/staffs.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/user-accounts.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/home/upload.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/home/user-type.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dohdtr.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2016_07_19_034136_admin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2016_08_30_054750_apply_ad.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2016_09_02_144433_admin_staff.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/account/footer.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/account/header.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/account/layout.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/account/login.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/account/next.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/account/register.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/helpers/applicant-application.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/nav.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/semantic/landing.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/semantic/npm-debug.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/upload.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/banner2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/adik2@yahoo.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/alleli1992@yahoo.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/aubreyapollo@yahoo.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/bryan198912@yahoo.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/chanel_martinez@gmail.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/darwin@gmail.com544945_1551656221714816_4117949326822551353_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/ephraim23@gmail.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/j.alce@yahoo.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/jhon@gmail.com544945_1551656221714816_4117949326822551353_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/johan.everly@gmail.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/kelly@gmail.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/kimberly12@gmail.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/leahtedor@gmail.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/lourence@gmail.com13700021_1754141688132934_1686246729266795426_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/rex@outlook.com13700021_1754141688132934_1686246729266795426_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/rex@outlook.com21.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/rex@outlook.com544945_1551656221714816_4117949326822551353_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/rextraya@gmail.com544945_1551656221714816_4117949326822551353_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/rexustraya@gmail.com13700021_1754141688132934_1686246729266795426_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/rexustraya@gmail.com544945_1551656221714816_4117949326822551353_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/rexustraya@gmail.comr0064LynW1GvuVJ8eUdhKsD_XTJtWgAxtDwOBnmlC5E.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/roxs231992@yahoo.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/tecson.al@gmail.comClassical Girl=wangshiyong.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/profile/xheartless23@yahoo.comr0064LynW1GvuVJ8eUdhKsD_XTJtWgAxtDwOBnmlC5E.jpg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/test.blade.php" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/basic/assets/fonts/icons.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/basic/assets/fonts/icons.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/basic/assets/fonts/icons.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/basic/assets/fonts/icons.woff" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/basic/assets/fonts/icons.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.eot" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.otf" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.woff" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.woff2" afterPath="$PROJECT_DIR$/public/semantic/assets/css/themes/default/assets/fonts/icons.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/fonts/Angeline Vintage_Demo.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/Angeline Vintage_Demo.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/fonts/DancingScript-Bold.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/DancingScript-Bold.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/fonts/DancingScript-Regular.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/DancingScript-Regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/fonts/Raleway-Regular.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/Raleway-Regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/fonts/YatraOne-Regular.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/YatraOne-Regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/semantic/assets/fonts/riesling.ttf" afterPath="$PROJECT_DIR$/public/semantic/assets/fonts/riesling.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AccountController.php" afterPath="$PROJECT_DIR$/app/controllers/AccountController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AdminController.php" afterPath="$PROJECT_DIR$/app/controllers/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ApplicantController.php" afterPath="$PROJECT_DIR$/app/controllers/ApplicantController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/EmployerController.php" afterPath="$PROJECT_DIR$/app/controllers/EmployerController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/HelperController.php" afterPath="$PROJECT_DIR$/app/controllers/HelperController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filters.php" afterPath="$PROJECT_DIR$/app/filters.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/AdminStaffs.php" afterPath="$PROJECT_DIR$/app/models/AdminStaffs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/25c762c447471f52e8503432f8c09067" afterPath="$PROJECT_DIR$/app/storage/views/25c762c447471f52e8503432f8c09067" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/320f0916fe88836916f43dadd1b1eb4e" afterPath="$PROJECT_DIR$/app/storage/views/320f0916fe88836916f43dadd1b1eb4e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/3b8cbb4da243d75491875c0a1ae2e7e8" afterPath="$PROJECT_DIR$/app/storage/views/3b8cbb4da243d75491875c0a1ae2e7e8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/421a22e33764b6f7d1f5647ee21b2995" afterPath="$PROJECT_DIR$/app/storage/views/421a22e33764b6f7d1f5647ee21b2995" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/4d81fc0537dbbad0e333f8a9eb0ebe4d" afterPath="$PROJECT_DIR$/app/storage/views/4d81fc0537dbbad0e333f8a9eb0ebe4d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/5f68382b7ed197edd604a5ab808b6ebd" afterPath="$PROJECT_DIR$/app/storage/views/5f68382b7ed197edd604a5ab808b6ebd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/68a534af516c073aded161fb3868e88f" afterPath="$PROJECT_DIR$/app/storage/views/68a534af516c073aded161fb3868e88f" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/b4b779638a4ee25fe1a6ebf2664ecd39" afterPath="$PROJECT_DIR$/app/storage/views/b4b779638a4ee25fe1a6ebf2664ecd39" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/c0ddcda2afffcf83229a551a2c5ba1fe" afterPath="$PROJECT_DIR$/app/storage/views/c0ddcda2afffcf83229a551a2c5ba1fe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/ce7bff4a87385d9d01bbf59ade6dbc0b" afterPath="$PROJECT_DIR$/app/storage/views/ce7bff4a87385d9d01bbf59ade6dbc0b" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/d5eccb93a8eedebc4581d8791502d5dd" afterPath="$PROJECT_DIR$/app/storage/views/d5eccb93a8eedebc4581d8791502d5dd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/dc2ac181d95f9bdc69d88fb30e4adc09" afterPath="$PROJECT_DIR$/app/storage/views/dc2ac181d95f9bdc69d88fb30e4adc09" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/dce9b92b00a0c4a8ecb09e6e18ba55a2" afterPath="$PROJECT_DIR$/app/storage/views/dce9b92b00a0c4a8ecb09e6e18ba55a2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/dd7dc2e7bc878488b91bb0f4ec6f99b1" afterPath="$PROJECT_DIR$/app/storage/views/dd7dc2e7bc878488b91bb0f4ec6f99b1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/ads/employer-ads-profile.blade.php" afterPath="$PROJECT_DIR$/app/views/ads/employer-ads-profile.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/ads/layout.blade.php" afterPath="$PROJECT_DIR$/app/views/ads/layout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/application-update.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/application-update.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/profile.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/profile.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/sidenav.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/sidenav.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/update.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/update.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/home.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/layout.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/layout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/profile.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/profile.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/helpers/subscribed/helpers.blade.php" afterPath="$PROJECT_DIR$/app/views/helpers/subscribed/helpers.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/header.blade.php" afterPath="$PROJECT_DIR$/app/views/home/header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/layout.blade.php" afterPath="$PROJECT_DIR$/app/views/home/layout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/login.blade.php" afterPath="$PROJECT_DIR$/app/views/home/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/register.blade.php" afterPath="$PROJECT_DIR$/app/views/home/register.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/material/css/materialize.css" afterPath="$PROJECT_DIR$/public/material/css/materialize.css" />
     </list>
     <ignored path="MaidFinder.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -167,11 +58,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EmployerController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmployerController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/EmployerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.3429054">
+              <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -187,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app-pending.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app-pending.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/app-pending.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5574324">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.923077">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -240,24 +131,21 @@
       <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/employer/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
-              <folding />
+            <state vertical-scroll-proportion="-13.730769">
+              <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+              <folding>
+                <element signature="e#1132#1153#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maidfinder.applicant" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/b49529cd/41fef7b6-5da6-4415-9900-5e35fbf0b0b1/maidfinder.applicant">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+      <file leaf-file-name="helpers.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/helpers/helpers.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.653846">
+              <caret line="229" column="18" selection-start-line="228" selection-start-column="11" selection-end-line="232" selection-end-column="18" />
               <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -307,12 +195,12 @@
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/controllers/AccountController.php" />
         <option value="$PROJECT_DIR$/app/views/applicant/update.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/employer/home.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/EmployerController.php" />
         <option value="$PROJECT_DIR$/app/views/admin/layout.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/sidenav.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/user-accounts.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/app-pending.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/employer/home.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/EmployerController.php" />
       </list>
     </option>
   </component>
@@ -462,7 +350,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaidFinder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaidFinder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="employer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -585,13 +495,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/dompdf/dompdf/dompdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="265" column="47" selection-start-line="265" selection-start-column="47" selection-end-line="265" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fb/src/Facebook/FacebookSession.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -895,22 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/EmployerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/layout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -953,8 +840,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/app-pending.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5574324">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="-5.923077">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/helpers/helpers.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.653846">
+          <caret line="229" column="18" selection-start-line="228" selection-start-column="11" selection-end-line="232" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employer/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+          <folding>
+            <element signature="e#1132#1153#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/EmployerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3429054">
+          <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
           <folding />
         </state>
       </provider>

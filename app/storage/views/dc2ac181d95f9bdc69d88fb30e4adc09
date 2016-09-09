@@ -5,7 +5,6 @@
             <div class="col s12 m12 l11">
                <div class="row">
                    <h5>Your current ad</h5>
-                   <div class="carousel carousel-slider white" data-indicators="true">
                        <?php foreach($ads as $ad): ?>
                            <?php
                                $dayof =  array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday');
@@ -16,28 +15,35 @@
                                $location = Regions::where('regionid', '=', $ad->regionid)->first();
                                $job_desc = AdDesc::where('adid', '=', $ad->adid)->get();
                            ?>
-                           <div class="carousel-item white black-text" href="#<?php echo $ad->adid; ?>">
+                            <div class="card-panel">
                                <div class="row" style="padding:10px;">
-                                   <div class="row">
-                                       <div class="col s12 m12 l10">
-                                           <h5><span>Position -  </span><?php echo $jobtype->description; ?></h5>
-                                           <span><i class="material-icons">location_on</i> </span><span><strong><?php echo $location->location; ?></strong></span>
-                                           <br/>
-                                           <span><i class="material-icons">redeem</i></span><span><strong><?php echo $salary->amount_range; ?> - (peso)</strong></span>
-                                           <br />
-                                           <?php $capacity = array('Full Time', 'Part Time'); ?>
-                                           <span><strong>Capacity</strong></span> - <span><strong><?php echo $capacity[$ad->capacity]; ?></strong></span>
-                                       </div>
-                                       <div class="col s12 m12 l2">
-                                           <a class="btn light-blue darken-3 waves-effect col s12 m12 l12 white-text" href="<?php echo asset ('/employer/ad/edit/'. $ad->adid); ?>">Edit ad</a>
-                                       </div>
+                                   <div class="col s12 m12 l10">
+                                       <h5><span>Position -  </span><?php echo $jobtype->description; ?></h5>
+                                       <span><i class="material-icons">location_on</i> </span><span><strong><?php echo $location->location; ?></strong></span>
+                                       <br/>
+                                       <span><i class="material-icons">redeem</i></span><span><strong><?php echo $salary->amount_range; ?> - (peso)</strong></span>
+                                       <br />
+                                       <?php $capacity = array('Full Time', 'Part Time'); ?>
+                                       <span><strong>Capacity</strong></span> - <span><strong><?php echo $capacity[$ad->capacity]; ?></strong></span>
+                                   </div>
+                                   <div class="col s12 m12 l2">
+                                       <a class="btn light-blue darken-3 waves-effect col s12 m12 l12 white-text" href="<?php echo asset ('/employer/ad/edit/'. $ad->adid); ?>">Edit ad</a>
                                    </div>
                                </div>
-                           </div>
+                            </div>
+                            <div class="divider"></div>
                        <?php endforeach; ?>
                    </div>
                </div>
             </div>
+        </div>
+        <div class="row">
+            <?php if($ads->count() < $ads->getTotal()): ?>
+                <ul class="pagination center-align">
+                    <?php echo $ads->links(); ?>
+
+                </ul>
+            <?php endif; ?>
         </div>
     <?php else: ?>
        <span>&nbsp;</span>

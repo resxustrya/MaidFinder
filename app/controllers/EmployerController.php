@@ -224,6 +224,12 @@ class EmployerController extends BaseController {
                     ->with('jobtype', JobTypes::all())
                     ->with('salary', Salaries::all());
     }
+    public function delete($id) {
+        $ad = Ads::find($id);
+        $ad->delete();
+        return Redirect::to('/employer/ads')
+                        ->with('message','Job ad was deleted.');
+    }
     public function handle_ad_update() {
 
           $ads = Ads::find(Input::get('adid'));

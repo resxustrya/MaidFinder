@@ -69,6 +69,7 @@ Route::get('/employer/ads', 'EmployerController@job_ads');
 Route::get('/create/ad', 'EmployerController@create_ads');
 Route::post('/create/ad','EmployerController@new_ads');
 Route::get('/employer/ad/edit/{id}', 'EmployerController@update_ads');
+Route::get('/employer/ad/delete/{id}','EmployerController@delete');
 Route::post('/employer/ad/edit','EmployerController@handle_ad_update');
 Route::post('/update/ad', 'EmployerController@handle_ad_update');
 Route::get('/employer/message/inbox', 'EmployerController@message_inbox');

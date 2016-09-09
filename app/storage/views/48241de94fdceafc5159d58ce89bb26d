@@ -152,6 +152,10 @@
                                     <div class="row">
                                         <a class="btn light-blue darken-3 waves-effect col s12 m12 l12 white-text" href="<?php echo asset ('/employer/ad/edit/'. $ad->adid); ?>">Edit ad</a>
                                     </div>
+                                    <br />
+                                    <div class="row">
+                                        <a class="btn light-blue darken-3 waves-effect col s12 m12 l12 white-text" href="<?php echo asset ('/employer/ad/delete/'. $ad->adid); ?>">Delete ad</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

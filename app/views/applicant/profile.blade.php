@@ -102,7 +102,7 @@
                 <div class="col s12 m12 l3">
                     <p class="center">
                         <a class="add_new btn blue lighten-2" href="{{ asset('/applicant/create/application') }}">
-                            <i class="mdi mdi-newspaper small left"></i></i>Create New
+                            <i class="mdi mdi-newspaper small left"></i></i>Create 
                         </a>
                     </p>
                 </div>

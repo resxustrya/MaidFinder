@@ -35,7 +35,7 @@
 
             <div class="divider"></div>
             <div class="row">
-                <p class="center sub"> Suggested Employer<p>
+                <p class="center sub"> Suggested Employers<p>
                     <div class="col s4 ">
                         <div class="card ">
                             <div class="card-image waves-effect waves-block waves-light">

@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e346daf6-0934-4f88-afae-fcc543f21484" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/0d279111b7862617ba8e58c753019141" afterPath="$PROJECT_DIR$/app/storage/views/0d279111b7862617ba8e58c753019141" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/7defa879b9ddf8da011d3359b5e2e478" afterPath="$PROJECT_DIR$/app/storage/views/7defa879b9ddf8da011d3359b5e2e478" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/aa53911fb637c8ea438d600182dd218b" afterPath="$PROJECT_DIR$/app/storage/views/aa53911fb637c8ea438d600182dd218b" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/af94715e9734d140dd2f19396b0951bd" afterPath="$PROJECT_DIR$/app/storage/views/af94715e9734d140dd2f19396b0951bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/header.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/layout.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/layout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/profile.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/profile.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/sidenav.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/sidenav.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/user-type.blade.php" afterPath="$PROJECT_DIR$/app/views/home/user-type.blade.php" />
     </list>
     <ignored path="MaidFinder.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -134,15 +126,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user-type.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user-type.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/user-type.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24236985">
+            <state vertical-scroll-proportion="-5.1923075">
               <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
               <folding>
                 <element signature="e#74#94#0#HTML" expanded="true" />
                 <element signature="e#164#208#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.06115108">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,16 +157,6 @@
               <folding>
                 <element signature="e#880#932#0#HTML" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/material/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="9.076923">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -221,6 +213,7 @@
         <option value="$PROJECT_DIR$/app/views/employer/profile.blade.php" />
         <option value="$PROJECT_DIR$/app/views/employer/sidenav.blade.php" />
         <option value="$PROJECT_DIR$/app/views/home/user-type.blade.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -532,9 +525,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26701966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26701966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07715582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -588,13 +581,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2016_09_07_124628_admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -993,12 +979,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/user-type.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24236985">
+        <state vertical-scroll-proportion="-5.1923075">
           <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
           <folding>
             <element signature="e#74#94#0#HTML" expanded="true" />
             <element signature="e#164#208#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06115108">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>

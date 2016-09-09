@@ -1,0 +1,19 @@
+<div class="row fixed-section">
+   <div class="row">
+
+   </div>
+    <div class="collection black-text">
+        <a class="collection-item black-text" href="<?php echo asset('/employer/hired/list'); ?>">Hired list</a>
+        <a class="collection-item black-text" href="<?php echo asset('/employer/job/request'); ?>">Job request
+            <?php
+                $app_ad = ApplyAds::where('empid','=', $emp->empid)->get();
+                $count = count($app_ad);
+            ?>
+            <?php if($count > 0): ?>
+                <span class="new badge green"><?php echo $count; ?></span>
+            <?php endif; ?>
+        </a>
+        <a class="collection-item black-text" href="<?php echo asset('/employer/message/inbox'); ?>">Message inbox</a>
+        <a class="collection-item black-text" href="<?php echo asset('/employer/ads'); ?>">Job ads</a>
+    </div>
+</div>

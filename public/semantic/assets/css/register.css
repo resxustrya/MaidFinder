@@ -1,0 +1,19 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 5, 2016, 1:48:46 PM
+    Author     : Hp
+*/
+
+ body {
+      background-color: #FAFAFA;
+    }
+    body > .grid {
+      height: 100%;
+    }
+      .signUp.column {
+      max-width: 450px;
+    }

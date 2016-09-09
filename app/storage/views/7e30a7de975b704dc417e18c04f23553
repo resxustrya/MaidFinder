@@ -1,0 +1,136 @@
+<?php $__env->startSection('content'); ?>
+    <div class="row" style="padding: 0px;">
+        <div class="row">
+            <h4 class="black-text">Job application</h4>
+        </div>
+        <div class="card-panel">
+            <div class="row">
+                <div class="col s12 m12 l2">
+                   <?php echo $application->created_at; ?>
+
+                </div>
+                <div class="col s12 m12 l8 grey lighten-5">
+                    <div class="row">
+                        <h5 class="center-align">Basic job ad information</h5>
+                        <table>
+                            <tr>
+                                <td>Job Title : </td>
+                                <td><strong style="text-decoration: underline"><?php echo $jobtype->description; ?></strong></td>
+                            </tr>
+                            <tr>
+                                <td>Contact :</td>
+                                <td><?php echo $app->contactno; ?></td>
+                            </tr>
+                            <tr>
+                                <?php $capacity = array('Full Time', 'Part Time'); ?>
+                                <td>Capacity : </td>
+                                <td><?php echo $capacity[$application->capacity]; ?></td>
+                            </tr>
+                            <tr>
+                                <td>Exptected salary :</td>
+                                <td><?php echo $salary->amount_range; ?> (pesos)</td>
+                            </tr>
+                            <tr>
+                                <td>Helper gender :</td>
+                                <td><?php echo $app->gender; ?></td>
+                            </tr>
+                            <tr>
+                                <td>Education level :</td>
+                                <td><?php echo $edlevel; ?></td>
+                            </tr>
+                            <tr>
+                                <td>Experience :</td>
+                                <td><?php echo $application->yearexp; ?> years</td>
+                            </tr>
+                            <tr>
+                                <td>Contract years</td>
+                                <td><?php echo $application->contractyears; ?> years</td>
+                            </tr>
+                        </table>
+                        <p>
+                        <h6><strong>Job description</strong></h6>
+                        <?php echo $application->pitch; ?>
+
+                        </p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="row">
+                        <div class="col s12 m12 l12">
+                            <h6><strong>Perfurmed duties</strong></h6>
+                            <?php if(isset($duties)): ?>
+                                <?php if($duties->cooking != null): ?>
+                                    <div class="col s12 m12 l4">
+                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cooking; ?></strong>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if($duties->laundry != null): ?>
+                                    <div class="col s12 m12 l4">
+                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->laundry; ?></strong>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if($duties->gardening != null): ?>
+                                    <div class="col s12 m12 l4">
+                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->gardening; ?></strong>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if($duties->grocery != null): ?>
+                                    <div class="col s12 m12 l4">
+                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->grocery; ?></strong>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if($duties->cleaning != null): ?>
+                                    <div class="col s12 m12 l4">
+                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cleaning; ?></strong>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if($duties->tuturing != null): ?>
+                                    <div class="col s12 m12 l4">
+                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->tuturing; ?></strong>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if($duties->driving != null): ?>
+                                    <div class="col s12 m12 l4">
+                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->driving; ?></strong>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if($duties->pet != null): ?>
+                                    <div class="col s12 m12 l4">
+                                        <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->pet; ?></strong>
+                                    </div>
+                                <?php endif; ?>
+                                <p>
+                                    <?php echo $duties->other; ?>
+
+                                </p>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l2">
+                    <div class="center-align">
+                        <div class="row">
+                            <a class="btn blue lighten-3 col s12 m12 l12" href="<?php echo asset ('/applicant/job/application/edit/'. $application->applicationid); ?>"><i class="material-icons">mode_edit</i></a>
+                        </div>
+                        <div class="row">
+                            <a class="btn grey lighten-4 black-text col s12 m12 l12" href="<?php echo asset ('/applicant/job/application/delete/'. $application->adid); ?>"><i class="material-icons">delete</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('js'); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('css'); ?>
+    @parent
+    <style>
+        table tr td {
+            padding:0px;
+        }
+    </style>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('applicant.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

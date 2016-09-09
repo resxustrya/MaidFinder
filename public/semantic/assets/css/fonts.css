@@ -1,0 +1,21 @@
+/*fonts*/
+
+/*DancingScript*/
+@font-face {
+    font-family: "DancingScript";
+    src: url("../fonts/DancingScript-Bold.ttf") format('truetype');
+    font-weight: bold;
+}
+/*YatraOne*/
+@font-face {
+    font-family: "YatraOne";
+    src: url("../fonts/YatraOne-Regular.ttf") format('truetype');
+    font-weight: bold;
+}
+/*Raleway*/
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway-Regular.ttf") format('truetype');
+    font-weight: bold;
+}
+

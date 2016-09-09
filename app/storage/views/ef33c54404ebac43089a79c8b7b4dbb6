@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
+    <link rel="stylesheet" href="<?php echo asset('public/material/css/mycss.css'); ?>" type="text/css" />
+    <link rel="stylesheet" href="<?php echo asset('public/material/css/materialize.css'); ?>" type="text/css" />
+    <link src="<?php echo asset('public/material/css/style.css'); ?>" type="text/css" rel="stylesheet" />
+    <?php $__env->startSection('title'); ?>
+    <?php echo $__env->yieldSection(); ?>
+    <?php $__env->startSection('css'); ?>
+        <style>
+            body {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+            main {
+                flex: 1 0 auto;
+            }
+        </style>
+    <?php echo $__env->yieldSection(); ?>
+</head>
+<body class="grey lighten-3">
+    <?php echo $__env->make('helpers.subscribed.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php echo $__env->yieldContent('content'); ?>
+    <?php echo $__env->make('shared.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<script src="<?php echo asset('public/material/js/jquery.js'); ?>"></script>
+<script src="<?php echo asset('public/material/js/materialize.js'); ?>"></script>
+<script>
+    $(document).ready(function() {
+        $(".button-collapse").sideNav();
+        $('select').material_select();
+    });
+</script>
+<?php $__env->startSection('js'); ?>
+    <script>
+        $(document).ready(function() {
+            $('.modal-trigger').leanModal();
+
+            $('.close').click(function (e) {
+                e.closeModal();
+            });
+        });
+    </script>
+<?php echo $__env->yieldSection(); ?>
+</body>
+</html>

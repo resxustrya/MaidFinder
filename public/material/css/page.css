@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+#rightimage {
+    display: block;
+    max-height :200px;
+    max-width: 100px;
+    height: auto;
+    width: auto;
+}
+#editpicture {
+    display: block;
+    max-height: 200px;
+    max-width : 150px;
+    height: auto;
+    width:auto;
+}

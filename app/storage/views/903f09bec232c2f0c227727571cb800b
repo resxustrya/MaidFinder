@@ -1,0 +1,8 @@
+
+
+<div class="collection hide-on-med-and-down" style="height: 500px;">
+    <a href="<?php echo asset('/admin/staffs'); ?>" class="collection-item <?php echo (isset($url) and $url == 'staffs') ? 'active' : ''; ?>" >Admin staff's</a>
+    <a href="<?php echo asset('/admin/account/users'); ?>" class="collection-item <?php echo (isset($url) and $url == 'users') ? 'active' : ''; ?>">User accounts</a>
+    <a href="#!" class="collection-item">Alvin</a>
+    <a href="#!" class="collection-item">Alvin</a>
+</div>

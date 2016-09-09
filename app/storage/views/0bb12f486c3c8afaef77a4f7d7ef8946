@@ -1,0 +1,11 @@
+
+
+
+<table>
+    <?php foreach($employers as $emp): ?>
+        <tr>
+           <td>Name</td>
+            <td><?php echo $emp->fname ." ".$emp->lname; ?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>

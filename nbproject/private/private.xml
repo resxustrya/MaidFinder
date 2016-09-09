@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/MaidFinder/app/routes.php</file>
+            <file>file:/C:/xampp/htdocs/MaidFinder/app/views/ads/ads.blade.php</file>
+            <file>file:/C:/xampp/htdocs/MaidFinder/app/views/employer/message-inbox.blade.php</file>
+            <file>file:/C:/xampp/htdocs/MaidFinder/app/controllers/EmployerController.php</file>
+            <file>file:/C:/xampp/htdocs/MaidFinder/app/views/employer/update.blade.php</file>
+            <file>file:/C:/xampp/htdocs/MaidFinder/app/views/ads/employer-ads-profile.blade.php</file>
+            <file>file:/C:/xampp/htdocs/MaidFinder/app/views/employer/create-ad.blade.php</file>
+            <file>file:/C:/xampp/htdocs/MaidFinder/app/views/applicant/message.blade.php</file>
+            <file>file:/C:/xampp/htdocs/MaidFinder/app/views/applicant/header.blade.php</file>
+        </group>
+    </open-files>
+</project-private>

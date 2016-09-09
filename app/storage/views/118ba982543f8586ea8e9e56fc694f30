@@ -1,0 +1,81 @@
+<?php $__env->startSection('title'); ?>
+    <title>Job Seekers</title>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+    <div class="container-fluid">
+        <div class="row">
+            <section class="col s12 m12 l12">
+                <div class="container">
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header center-align orange lighten-1"><i class="material-icons">play_arrow</i>Search Criteria</div>
+                            <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <form action="<?php echo asset('app/ads'); ?>" method="POST">
+                        <?php $count = 1; ?>
+                        <?php foreach($applicant as $app) : ?>
+                            <?php
+                                $location = Regions::find($app->regionid);
+                            ?>
+                            <div class="col s12 m6 l4">
+                                <div class="card-panel">
+                                    <div class="row">
+                                        <div class="col s12 m12 l6">
+                                            <div class="employer-image col s12 m12 l12">
+                                                <img src="<?php echo asset('public/uploads/profile/'.(($app->profilepic) != null ? $app->profilepic :'facebook.jpg' )); ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m12 l6">
+                                            <table>
+                                                <tr>
+                                                    <td><i class="material-icons">perm_identity</i> </td>
+                                                    <td><strong id="name"><?php echo $app->fname ." ". $app->lname; ?></strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="material-icons">room</i> </td>
+                                                    <td><?php echo $location->location; ?></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                       <a href="<?php echo asset(''); ?>" class="btn green col s12 m12 l12">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php $count++ ?>
+                        <?php endforeach; ?>
+                    </form>
+                </div>
+                <div class="card-panel">
+                    <?php echo $applicant->links(); ?>
+
+                </div>
+            </section>
+        </div>
+    </div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('css'); ?>
+    <style>
+        .employer-image {
+            height: 200px;
+            width: 200px;
+        }
+        .employer-image img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        #name {
+            font-size: large;
+        }
+    </style>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('js'); ?>
+    @parent
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('hiring.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

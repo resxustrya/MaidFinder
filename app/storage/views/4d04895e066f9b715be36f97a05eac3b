@@ -1,0 +1,26 @@
+<?php $__env->startSection('content'); ?>
+    <div class="row">
+        <h4>Your shortlist</h4>
+    </div>
+    <?php if($shortlist != null and count($shortlist) > 0): ?>
+
+
+    <?php else: ?>
+        <div class="row">
+            <div class="card-panel" style="padding:10px;">
+                <p class="grey-text">Your shortlist is empty. Browse for helper profiles, add them to your shortlist if you like a helper profile. <a class="btn green" href="<?php echo asset('/helpers'); ?>">Helpers</a></p>
+            </div>
+        </div>
+    <?php endif; ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('css'); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('js'); ?>
+
+<?php $__env->stopSection(); ?>
+
+
+<?php echo $__env->make('employer.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

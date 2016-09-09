@@ -1,0 +1,136 @@
+/*content*/
+body, h3,h2,h4{
+    font-family:'Raleway' ;
+}
+.landing{
+    background-image: url('../img/4.jpg')   !important;
+    background-repeat: no-repeat;
+    height: auto;
+    max-width: 100%;
+    background-size: cover;
+    top: 0;
+    left: 0;
+
+}
+
+.landing.segment{
+    min-height: 100%;
+    padding: 0em 0em;
+}
+.transbg{
+    min-height:800px;
+    background: rgba(32, 154, 189, 0.7);
+}
+.menu{
+    border: 0px!important;
+}
+.landing h1.ui.header{
+    margin-top: 4.2em;
+    margin-bottom: 0.11em;
+    font-weight: 100;
+    font-family:'Raleway';
+}
+
+.findbg{
+    padding: 1em 1.5em;
+    width: 100%;
+    background: rgba(255,255,255,0.7)
+}
+    .hidden.menu {
+      display: none;
+    }
+    /*backgrounds*/
+.blue1
+{
+    background-color: #88d3f6;
+}
+/*font*/
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Dancing Script'), local('DancingScript'), url(https://fonts.gstatic.com/s/dancingscript/v7/DK0eTGXiZjN6yA8zAEyM2Ud0sm1ffa_JvZxsF_BEwQk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.3);
+    background-color:#E0E3DA;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+    background: rgba(136,211,246,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(209,185,255,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #88d3f6;
+}
+
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+    .ui.vertical.stripe .button + h3,
+    .ui.vertical.stripe p + h3 {
+      margin-top: 3em;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }

@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+.employer-image {
+    height: 200px;
+    width: 200px;
+}
+.employer-image img {
+    width: 100%;
+    height: 100%;
+}
+#name {
+    font-size: large;
+}
+.view:hover {
+    text-decoration: underline;
+}
+.jobtype {
+    font-size: 1.5em;
+    font-family: "DejaVu Sans", sans-serif;
+}
+.job-desc {
+    font-size: 17px;
+}

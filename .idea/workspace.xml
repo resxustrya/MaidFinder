@@ -2,31 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e346daf6-0934-4f88-afae-fcc543f21484" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/profile/kelly@gmail.comjolly.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/profile/kelly@gmail.comling.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/views/20e9ebb58085d9f2049136f4252e1ff6" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/views/482e8308e27e1c5329b344ae1f6df93c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/views/757e416d3303d1d1e0ce79ac005d3129" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/views/827a3f031b4c16841738a75a1b54aced" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/views/97f4076d10a6723fe0dcfcbbc0518d7e" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/views/eb039da3ef1eed09c57bb77881f1003a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/views/ebd5164309865fa2c06fadd1da39c0d8" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/19d90a4a84bac7f60f20df7119a4dec1" afterPath="$PROJECT_DIR$/app/storage/views/19d90a4a84bac7f60f20df7119a4dec1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/4fdbaf2e6d9257ed44623d9b3d6ec0e2" afterPath="$PROJECT_DIR$/app/storage/views/4fdbaf2e6d9257ed44623d9b3d6ec0e2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/5048a634be1a46b4301ba722d02ad24e" afterPath="$PROJECT_DIR$/app/storage/views/5048a634be1a46b4301ba722d02ad24e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/5bf56baa6b90a229f9a53d65cd5f8b7d" afterPath="$PROJECT_DIR$/app/storage/views/5bf56baa6b90a229f9a53d65cd5f8b7d" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/602ce55dea5524be4379ffd91bf3bccd" afterPath="$PROJECT_DIR$/app/storage/views/602ce55dea5524be4379ffd91bf3bccd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/aa53911fb637c8ea438d600182dd218b" afterPath="$PROJECT_DIR$/app/storage/views/aa53911fb637c8ea438d600182dd218b" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/af94715e9734d140dd2f19396b0951bd" afterPath="$PROJECT_DIR$/app/storage/views/af94715e9734d140dd2f19396b0951bd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/bda6e24207b68362b27fe825598992bc" afterPath="$PROJECT_DIR$/app/storage/views/bda6e24207b68362b27fe825598992bc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/header.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/home.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/layout.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/layout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/profile.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/profile.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/sidenav.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/sidenav.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/header.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/home.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/home.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/employer/sidenav.blade.php" afterPath="$PROJECT_DIR$/app/views/employer/sidenav.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/Nav.css" afterPath="$PROJECT_DIR$/public/css/Nav.css" />
     </list>
@@ -63,11 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sidenav.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sidenav.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/employer/sidenav.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3357271">
-              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+            <state vertical-scroll-proportion="-9.807693">
+              <caret line="15" column="150" selection-start-line="15" selection-start-column="150" selection-end-line="15" selection-end-column="150" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -79,10 +58,9 @@
       <file leaf-file-name="sidenav.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/applicant/sidenav.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            <state vertical-scroll-proportion="-0.65384614">
+              <caret line="1" column="60" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -109,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Nav.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Nav.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/Nav.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.48833033">
+              <caret line="16" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -240,12 +218,12 @@
         <option value="$PROJECT_DIR$/app/views/applicant/layout.blade.php" />
         <option value="$PROJECT_DIR$/app/views/applicant/header.blade.php" />
         <option value="$PROJECT_DIR$/app/views/employer/header.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/Nav.css" />
         <option value="$PROJECT_DIR$/app/views/applicant/profile.blade.php" />
         <option value="$PROJECT_DIR$/app/views/applicant/home.blade.php" />
         <option value="$PROJECT_DIR$/app/views/employer/home.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/applicant/sidenav.blade.php" />
         <option value="$PROJECT_DIR$/app/views/employer/sidenav.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/applicant/sidenav.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/Nav.css" />
       </list>
     </option>
   </component>
@@ -1018,14 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/Nav.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/employer/profile.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.2909093">
@@ -1064,10 +1034,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/sidenav.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/employer/sidenav.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="15" column="150" selection-start-line="15" selection-start-column="150" selection-end-line="15" selection-end-column="150" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1075,14 +1045,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employer/sidenav.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/applicant/sidenav.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3357271">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="60" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/Nav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48833033">
+          <caret line="16" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

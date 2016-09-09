@@ -1,0 +1,38 @@
+<?php $__env->startSection('content'); ?>
+    <div class="row">
+        <h4>Your ads shortlist</h4>
+        <?php if(count($list) > 0): ?>
+            <ul class="collection">
+                <?php foreach($list as $item): ?>
+                    <?php
+                        $ad = Ads::find($item->adid);
+                        $employer = Employers::find($ad->empid);
+                        $jobtype = JobTypes::find($ad->regionid);
+                        $location = Regions::find($ad->regionid);
+                    ?>
+                    <li class="collection-item avatar">
+                        <img src="<?php echo asset('public/uploads/profile/'.(($employer->profilepic) != null ? $employer->profilepic :'facebook.jpg' )); ?>" alt="" class="circle">
+                        <span class="title"><strong><?php echo $employer->fname ." ".$employer->lname; ?></strong></span>
+                        <p><br>
+                            <?php echo $jobtype->description; ?> <br />
+                            <?php echo $location->location; ?>
+
+                        </p>
+                        <a href="<?php echo asset('employer/ad/profile/'.$ad->adid); ?>" class="secondary-content btn green">View ad</a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php else: ?>
+            <h5>Shortlist is empty</h5>
+        <?php endif; ?>
+    </div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('css'); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('js'); ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('applicant.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

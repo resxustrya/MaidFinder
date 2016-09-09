@@ -2,84 +2,98 @@
     <div class="row" style="padding: 0px;">
         <div class="col s12 m12 l12">
             <div class="row">
-                <h5 class="black-text">Your profile</h5>
-            </div>
-            <div class="row">
                 <div class="card-panel">
                     <div class="row">
                         <div class="col s12 m12 l4">
-                            <form action="<?php echo asset('/applicant/update/picture'); ?>" method="post" enctype="multipart/form-data" />
-                            <div class="row">
-                                <img id="editpicture" class="right-align circle" src="<?php echo asset('public/uploads/profile/'.(($app['profilepic']) != null ? $app['profilepic'] :'facebook.jpg' )); ?>" />
-                            </div>
-                            <div class="row">
-                                <div class="file-field input-field">
-                                    <a class="" style="text-decoration: underline;">
-                                        <span>Change Photo</span>
-                                        <input type="file" class="photo" name="profilepic">
-                                    </a>
-                                    <div class="file-path-wrapper reveal">
-                                        <input class="file-path validate" type="text">
+                            <form action="<?php echo asset('/applicant/update/picture'); ?>" method="post" enctype="multipart/form-data" >
+                                <div class="row">
+                                    <div class="col s12 m12 l12 valign-wrapper">
+                                        <img id="editpicture"  class="center  circle" src="<?php echo asset('public/uploads/profile/'.(($app['profilepic']) != null ? $app['profilepic'] :'facebook.jpg' )); ?>" />
+                                        <div class="file-field input-field">
+                                            <a style="text-decoration: underline; margin-top: 10px">
+                                                <span><i class="mdi mdi-camera small "></i></span>
+                                                <input type="file" class="photo right" name="profilepic">
+                                            </a>
+                                            <div class="file-path-wrapper blue-text reveal">
+                                                <input class="file-path blue-text validate" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <input type="submit" class="btn reveal blue" name="upload" value="Upload Photo" />
                                     </div>
                                 </div>
-                                <input type="submit" class="btn reveal" name="upload" value="Upload Photo" />
-                            </div>
                             </form>
                         </div>
                         <div class="col s12 m12 l8">
-                            <div class="row">
-                                <table>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4 name"><i class="material-icons">perm_identity</i> </span> </td>
-                                        <td><span class="grey-text text-darken-4 name"><?php echo $app->fname ." ". $app->lname; ?></span></td>
-                                    </tr>
-                                    <tr>
-                                        <?php $month = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"); ?>
-                                        <?php $bdate = explode('-', $app->birth); ?>
-                                        <td><span class="grey-text text-darken-4"><i class="material-icons">redeem</i> </span> </td>
-                                        <td><span class="grey-text text-darken-4"><?php echo $month[$bdate[1]].'/' . $bdate[2] .'/' . $bdate[0]; ?></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4"><i class="material-icons">email</i> </span> </td>
-                                        <td><span class="grey-text text-darken-4"><?php echo $app->email; ?></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4"><i class="material-icons">location_on</i></span></td>
-                                        <td><span class="grey-text text-darken-4"><?php echo $location->location; ?></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4"><i class="material-icons">phone</i></span></td>
-                                        <td><span class="grey-text text-darken-4"><?php echo $app->contactno; ?></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4"><i class="material-icons">supervisor_account</i> </span> </td>
-                                        <td><span class="grey-text text-darken-4"><?php echo $app->gender; ?></span></td>
-                                    </tr>
-                                </table>
+                            <a class="btn-floating tooltipped btn-large waves-effect waves-light right  red  " data-position="bottom" data-delay="50" data-tooltip="Edit Profile"  href="<?php echo asset('/applicant/profile/edit/'); ?>"><i class="material-icons">mode_edit</i></a>
+                            <div class="section">
+                                <div class="cText grey-text text-darken-4 name">
+                                    <i class="mdi mdi-account"></i>
+                                    <?php echo $app->fname ." ". $app->lname; ?>
+
+                                    <div class="divider"></div>
+                                </div>
+                                <div class="cText grey-text text-darken-4 valign-wrapper">
+                                    <?php $month = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"); ?>
+                                    <?php $bdate = explode('-', $app->birth); ?>
+                                    <i class="tIcon mdi mdi-cake-variant "></i>
+                                    <?php echo $month[$bdate[1]].' ' . $bdate[2] .', ' . $bdate[0]; ?>
+
+                                </div>
+                                <div class=" grey-text text-darken-4 valign-wrapper">
+                                    <i class="tIcon mdi mdi-email"></i>
+                                    <?php echo $app->email; ?>
+
+                                </div>
+                                <div class="grey-text text-darken-4 valign-wrapper">
+                                    <i class="tIcon  mdi mdi-account-location"></i>
+                                    <?php echo $location->location; ?>
+
+                                </div>
+                                <div class="grey-text text-darken-4 valign-wrapper">
+                                    <i class="tIcon mdi mdi-phone"></i>
+                                    <?php echo $app->contactno; ?>
+
+                                </div>
+                                <div class=" valign-wrapper">
+
+                                    <?php
+                                    if( $app->gender  == "Female")
+                                    {
+                                        echo "<i class=\"tIcon mdi mdi-gender-female \"></i>";
+                                    } else
+                                    {
+                                        echo "<i class=\"tIcon mdi mdi-gender-male \"></i>";
+                                    }
+                                    ?>
+                                    <?php echo $app->gender; ?>
+
+                                </div>
+
                             </div>
                             <h6 class="divider"></h6>
                             <div class="row">
-                                <table>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4">Nationanlity :</span></td>
-                                        <td><span class="grey-text text-darken-4"><?php echo $app->nationality; ?></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4">Religion :</span> </td>
-                                        <td><span class="grey-text text-darken-4"><?php echo $app->religion; ?></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4">Civil Status :</span> </td>
-                                        <?php $status = array('Single', 'Married', 'Divorced', 'Widowed'); ?>
-                                        <td><span class="grey-text text-darken-4"><?php echo $status[$app->civilstatus]; ?></span></td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="row">
                                 <div class="col s12 m12 l12">
-                                    <h6 class="right-align">
-                                        <a class="btn blue darken-1" href="<?php echo asset('/applicant/profile/edit/'); ?>">Edit Profile</a>
-                                    </h6>
+                                    <div class="section">
+                                        <div class="valign-wrapper">
+                                            <i class="tIcon mdi mdi-flag">Nationality: </i>
+                                            <?php echo $app->nationality; ?>
+
+                                        </div>
+                                        <div class="valign-wrapper">
+                                            <i class="tIcon mdi mdi-church">Religion:</i>
+
+                                            <?php echo $app->religion; ?>
+
+                                        </div>
+
+                                        <div class="valign-wrapper">
+                                            <i class="tIcon mdi mdi-account-multiple ">Civil Status:</i>
+                                            <?php echo $app->civilstatus; ?>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -87,12 +101,15 @@
                 </div>
             </div>
             <div class="divider"></div>
-            <div class="row">
-                <div class="col s12 m12 l3"><h5>Job Preferences</h5></div>
+            <div class="row ">
                 <div class="col s12 m12 l3">
-                    <p>
+                    <h5>Job Availability</h5>
+
+                </div>
+                <div class="col s12 m12 l3">
+                    <p class="center">
                         <a class="add_new btn blue lighten-2" href="<?php echo asset('/applicant/create/application'); ?>">
-                            <b>Create new</b>
+                            <i class="mdi mdi-newspaper small left"></i></i>Create New
                         </a>
                     </p>
                 </div>

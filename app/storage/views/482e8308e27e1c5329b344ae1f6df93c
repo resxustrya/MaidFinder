@@ -1,0 +1,189 @@
+<?php $__env->startSection('content'); ?>
+    <div class="row">
+        <?php if(Session::has('message')): ?>
+            <div class="card-panel light-green lighten-3">
+                <span class="center-align">
+                    <?php echo Session::get('message'); ?>
+
+                </span>
+            </div>
+        <?php endif; ?>
+    </div>
+    <?php if(count($ads) >0): ?>
+        <div class="row" style="padding: 0px;">
+            <div class="col s12 m12 l12">
+                <div class="row">
+                    <div class="col s12 m12 l6">
+                        <h4 class="black-text">Your job ads</h4>
+                    </div>
+                    <div class="col s12 m12 l6 right-align">
+                        <p>
+                            <a class="btn green" href="<?php echo asset('create/ad'); ?>">Create new ad</a>
+                        </p>
+                    </div>
+                </div>
+                    <?php $jobcount = 1; ?>
+                    <?php foreach($ads as $ad): ?>
+                        <?php
+                            $dayof =  array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday');
+                            $edlevel = array("Elementary", "High School", "College graduate");
+                            $salary = Salaries::find($ad->salaryid);
+                            $duties = Duties::where('adid', '=', $ad->adid)->first();
+                            $jobtype = JobTypes::where('jobtypeid', '=', $ad->jobtypeid)->first();
+                            $location = Regions::where('regionid', '=', $ad->regionid)->first();
+                            $job_desc = AdDesc::where('adid', '=', $ad->adid)->get();
+
+                        ?>
+                        <div class="row card-panel">
+                            <div class="col s12 m12 l2">
+                                <h6>Job ad <?php echo $jobcount; ?></h6>
+                                <span>Create at : <?php echo $ad->created_at; ?></span>
+                            </div>
+                            <div class="col s12 m12 l8">
+                                <div class="row">
+                                    <h6><strong class="material-icons">work</strong> <strong>Job ad preferences</strong></h6>
+                                    <table>
+                                        <tr>
+                                            <td>Job Title : </td>
+                                            <td><strong style="text-decoration: underline"><?php echo $jobtype->description; ?></strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Contact :</td>
+                                            <td><?php echo $ad->contactno; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <?php $capacity = array('Full Time', 'Part Time'); ?>
+                                            <td>Capacity : </td>
+                                            <td><?php echo $capacity[$ad->capacity]; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Start date :</td>
+                                            <?php $month = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"); ?>
+                                            <?php $startdate = explode('-', $ad->startdate); ?>
+                                            <td><?php echo $month[$startdate[1]].'/' . $startdate[2] .'/' . $startdate[0]; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Exptected salary :</td>
+                                            <td><?php echo $salary->amount_range; ?> (pesos)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Helper gender :</td>
+                                            <td><?php echo $ad->gender; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Education level :</td>
+                                            <td><?php echo $edlevel[$ad->edlevel]; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Experience :</td>
+                                            <td><?php echo $ad->yearexp; ?> years</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Contract years</td>
+                                            <td><?php echo $ad->contractyears; ?> years</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="row">
+                                    <h6><strong class="material-icons">description</strong> <strong>Job ad description</strong></h6>
+                                    <ul>
+                                        <?php foreach($job_desc as $desc): ?>
+                                            <li><span class="grey-text">* </span> <?php echo $desc->desc; ?></li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                                <div class="divider"></div>
+
+                                <div class="row">
+                                    <div class="col s12 m12 l12">
+                                        <h6><strong>Perfurmed duties</strong></h6>
+                                        <?php if(isset($duties)): ?>
+                                            <?php if($duties->cooking != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cooking; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($duties->laundry != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->laundry; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($duties->gardening != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->gardening; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($duties->grocery != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->grocery; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($duties->cleaning != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->cleaning; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($duties->tuturing != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->tuturing; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($duties->driving != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->driving; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($duties->pet != null): ?>
+                                                <div class="col s12 m12 l4">
+                                                    <strong><i class="material-icons">done_all</i></strong><strong><?php echo $duties->pet; ?></strong>
+                                                </div>
+                                            <?php endif; ?>
+                                            <p>
+                                                <?php echo $duties->other; ?>
+
+                                            </p>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m12 l2">
+                                <div class="center-align">
+                                    <div class="row">
+                                        <a class="btn light-blue darken-3 waves-effect col s12 m12 l12 white-text" href="<?php echo asset ('/employer/ad/edit/'. $ad->adid); ?>">Edit ad</a>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <a class="btn light-blue darken-3 waves-effect col s12 m12 l12 white-text" href="<?php echo asset ('/employer/ad/delete/'. $ad->adid); ?>">Delete ad</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                        </div>
+                        <?php $jobcount++ ?>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </div>
+    <?php endif; ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('js'); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('css'); ?>
+    @parent
+    <style>
+        table tr td {
+            padding: 1px;
+        }
+        ul.pagination li {
+            font-size: inherit;
+        }
+    </style>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('employer.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

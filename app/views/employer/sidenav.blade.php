@@ -1,6 +1,6 @@
 <div class="side-nav fixed " style="margin-top: 4.3em; width:22rem; background:#eff0f1">
     <div class="sideNav ">
-        <div class="collection" style="border:0">
+        <div class="collection" style="border:0;font-family: 'Lato-Light'">
             <a class="collection-item" href="{{ asset('/employer/hired/list') }}">Hired List<i class="mdi mdi-briefcase-download small right "></i></a>
             <a class="collection-item" href="{{ asset('/employer/hired/list') }}">Shortlist<i class="mdi mdi-format-list-bulleted small right "></i></a>
             <a class="collection-item" href="{{ asset('/employer/job/request') }}">Job request <i class="mdi mdi-human-greeting small right" ></i>
@@ -9,7 +9,7 @@
                 $count = count($app_ad);
                 ?>
                 @if($count > 0)
-                    <span class="new badge green">{{ $count }}</span>
+                    <span class="new badge red ">{{ $count }}</span>
                 @endif
             </a>
             <a class="collection-item" href="{{ asset('/employer/message/inbox') }}">Message <i class="mdi mdi-inbox-arrow-down small right"></i> </a>

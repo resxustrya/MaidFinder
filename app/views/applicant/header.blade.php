@@ -1,39 +1,46 @@
+
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content gray-text browser-default">
-    <li><a class="black-text" href="{{ asset('applicant/profile') }}">My profile</a></li>
-    <li><a class="black-text" href="#!">Subscription</a></li>
-    <li><a class="black-text" href="{{ asset('applicant/logout') }}">Logout</a></li>
+    <li><a class="black-text" href="#">Report <i class="mdi mdi-settings right" style="font-size: 1em"></i></a></li>
+    <li><a class="black-text" href="{{ asset('applicant/logout') }}">Logout <i class="mdi mdi-logout right" style="font-size: 1em"></i></a></li>
 </ul>
+
 <!-- Dropdown Structure -->
 <ul id="dropdown2" class="dropdown-content black-text browser-default">
-    <li><a class="black-text" href="{{ asset('applicant/profile') }}">My profile</a></li>
-    <li><a class="black-text" href="{{ asset('applicant/logout') }}">Logout</a></li>
+    <li><a class="black-text" href="#">Report <i class="mdi mdi-settings right" style="font-size: 1em"></i></a></li>
+    <li><a class="black-text" href="{{ asset('applicant/logout') }}">Logout <i class="mdi mdi-logout right" style="font-size: 1em"></i></a></li>
 </ul>
 <div class="navbar-fixed">
-    <nav class="white">
+    <nav class="" style="font-family: Lato-Light">
         <div class="nav-wrapper navbar-fixed container-fluid">
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <a href="{{asset('/')}}" class="brand-logo offset-s10 grey-text"><img height="55" style="padding-left:70px; padding-top: 10px;" src="{{ asset('public/images/icon3.png') }}" /></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a class="black-text" href="{{ asset('applicant/home') }}">Home</a></li>
-                <li><a class="black-text" href="{{ asset('employer/job/ads') }}">Employer ads</a></li>
-                <li><a class="black-text" href="badges.html">Recomendations</a></li>
+            <a href="#" data-activates="mobile-demo" class="button-collapse btn-floating btn-large waves-effect waves-light  blue accent-1 white-text"><i class="material-icons">menu</i></a>
+
+            <a href="{{asset('/')}}" style="font-family:DancingScript, cursive; margin-left:0;color:#46a7f7; weight:100;font-size:2em;"  class="brand-logo above "><span><img height="55"   src="{{ asset('public/images/header2.png') }}" /></span></a>
+            <ul class="right hide-on-med-and-down ">
+                <li><a class="white-text" href="{{ asset('applicant/home') }}">Home</a></li>
+                <li><a class="white-text" href="{{ asset('employer/job/ads') }}">Employer ads</a></li>
+                <li><a class="white-text" href="badges.html">Recommendations</a></li>
                 <!-- Dropdown Trigger -->
-                <li><a class="dropdown-button black-text" data-hover="true" data-beloworigin="true" href="{{ asset('applicant/profile') }}" data-activates="dropdown1">{{ $app['fname'] }}<i class="material-icons right">arrow_drop_down</i></a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
                 <li>
-                    <a class="collection-item black-text" href="{{ asset('applicant/home') }}">Home</a>
-                    <a class="collection-item black-text" href="{{ asset('applicant/shortlist') }}">Shortlist</a>
-                    <a class="collection-item black-text" href="{{ asset('employer/job/request') }}">Employers request</a>
-                    <a class="collection-item black-text" href="{{ asset('applicant/messagebox') }}">Message box</a>
-                    <a class="collection-item black-text" href="{{ asset('applicant/application') }}">Job application</a>
-                    <a class="collection-item black-text" href="{{ asset('applicant/experience') }}">Experiences</a>
+                    <a class="dropdown-button chip light-blue lighten-5" style="color:#5b5b5c;text-transform: capitalize;" data-hover="true" data-beloworigin="true" href="{{ asset('applicant/profile') }}" data-activates="dropdown1">{{ $app['fname'] }}
+                        <i class="material-icons right" style="color:#e1f5fe">arrow_drop_down</i>
+                        <img src="{{ asset('public/uploads/profile/'.(($app['profilepic']) != null ? $app['profilepic'] :'facebook.jpg' )) }}" alt="Contact Person"></a>
+                </li>
+            </ul>
+            <ul class="side-nav " id="mobile-demo">
+                <li></li>
+                </a>
+                <a class="collection-item black-text" href="{{ asset('applicant/home') }}">Home</a>
+                <a class="collection-item black-text" href="{{ asset('applicant/shortlist') }}">Shortlist</a>
+                <a class="collection-item black-text" href="{{ asset('employer/job/request') }}">Employers request</a>
+                <a class="collection-item black-text" href="{{ asset('applicant/messagebox') }}">Message box</a>
+                <a class="collection-item black-text" href="{{ asset('applicant/application') }}">Job application</a>
+                <a class="collection-item black-text" href="{{ asset('applicant/experience') }}">Experiences</a>
                 </li>
                 <li><a class="black-text" href="{{ asset('employers/job/ads') }}">Employer ads</a></li>
                 <li><a class="black-text" href="badges.html">Recomendations</a></li>
                 <!-- Dropdown Trigger -->
-                <li><a class="dropdown-button" href="#_" data-activates="dropdown2">{{ $app['fname'] }}<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-button" style="text-transform: capitalize" href="#_" data-activates="dropdown2">{{ $app['fname'] }}<i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
         </div>
     </nav>

@@ -10,7 +10,7 @@
 
 </ul>
 <div class="navbar-fixed">
-    <nav class="">
+    <nav class="" style="font-family: Lato-Light">
         <div class="nav-wrapper navbar-fixed container-fluid">
             <a href="#" data-activates="mobile-demo" class="grey-text button-collapse"><i class="material-icons">menu</i></a>
             <a href="<?php echo asset('/'); ?>" style="font-family:DancingScript, cursive; margin-left:0;color:#46a7f7; weight:100;font-size:2em;"  class="brand-logo above "><span><img height="55"   src="<?php echo asset('public/images/header2.png'); ?>" /></span></a>

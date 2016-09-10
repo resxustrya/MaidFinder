@@ -3,6 +3,17 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
+
+        <!-- Page Loader -->
+<div class="page-loader">
+    <div class="preloader pls-blue">
+        <svg class="pl-circular" viewBox="25 25 50 50">
+            <circle class="plc-path" cx="50" cy="50" r="20" />
+        </svg>
+
+        <p>Please wait...</p>
+    </div>
+</div>
     <div class="row">
         <div class="card-panel">
             <h6><strong>Find helpers</strong></h6>
@@ -32,7 +43,7 @@
 
             <div class="divider"></div>
             <div class="row">
-                <p class="center sub"> Suggested Employer<p>
+                <p class="center sub"> Suggested Employers<p>
                     <div class="col s4 ">
                         <div class="card ">
                             <div class="card-image waves-effect waves-block waves-light">

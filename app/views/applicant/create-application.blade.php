@@ -80,7 +80,7 @@
                     </div>
                     <div class="col-sm-4">
                         <?php $edlevel = array("Elementary", "High School", "College Level"); ?>
-                        <label for="edlevel" class="c-black f-500 m-b-2">Capacity</label>
+                        <label for="edlevel" class="c-black f-500 m-b-2">Education Level</label>
                         <label class=" has-error" for="edlevel">{{ isset($error)? $error->first('edlevel') : '' }}</label>
                         <div class="form-group">
                             <div class="fg-line select">

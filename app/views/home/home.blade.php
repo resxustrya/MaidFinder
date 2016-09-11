@@ -1,3 +1,4 @@
+
 @extends('home.layout')
 
 @section('content')
@@ -16,9 +17,9 @@
     <div class="transbg">
       <div class="section no-pad-bot ">
         <div class="container">
-          <h3 class="header center text-white transbgText animated fadeIn" style="margin-top: 20%">Look up for a maid near you</h3>
+          <h3 class="header center white-text transbgText animated fadeIn" style="margin-top: 20%">Look up for a maid near you</h3>
           <div class="row center">
-            <h6 class="grey-lighten-5-text smlText">MaidFinderPH is a platform for home care service finder for employer and job seeker.</h6>
+            <h6 class="grey-text smlText">MaidFinderPH is a platform for home care service finder for employer and job seeker.</h6>
           </div>
           <div class="row center">
             <a  class="btn-large light-blue darken-1 waves-effect waves-light animated bounceInUp" href="{{ asset('helpers') }}">START Finder</a>
@@ -131,6 +132,7 @@
                     <i class="material-icons right">send</i>
                   </button>
                 </div>
+
 
               </div>
 

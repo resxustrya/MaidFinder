@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700);
+html {
+    background-color: #eee;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+.container {
+    width: 320px;
+    -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);	filter:progid:DXImageTransform.Microsoft.Shadow(color=rgba(0, 0, 0, 0.1), Direction=180, Strength=4);
+    color: white;
+    position: relative;
+}
+.background {
+    background-color: black;
+    background-image: url('http://idata.over-blog.com/4/19/11/95/14/mdg-wp-4555-6321--14-.jpg');
+    background-size: cover;
+    background-opacity: 0.4;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -5;
+}
+.container .avatar {
+    display: inline-block;
+    position: absolute;
+    padding: 10px 0 0 10px;
+}
+.container h4 {
+    font-weight: 400;
+    margin: 10px 0;
+    text-shadow:0 2px 1px rgba(0,0,0,.6);
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+.container .avatar img{
+    border: 4px solid #bdbdbd;
+    width: 50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+}
+.content {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+}
+.container .text {
+    margin-left: 64px;
+    padding: 10px;
+}
+.container .text p {
+    margin: 5px 0;
+    font-size: 13px;
+    text-shadow:0 2px 1px rgba(0,0,0,.6);
+}
+.counter {
+    background-color: #fff;
+    padding: 10px;
+    color: #737373;
+    font-size: 14px;
+    text-align: center;
+}
+.counter ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+.counter .playing>* {
+    display: inline-block;
+    vertical-align: top;
+    height: 24px;
+    line-height: 24px;
+    margin: 0 2px;
+}
+.playing input {
+    border: 0px none;
+    font-style: italic;
+    padding: 0;
+    font-size: inherit;
+    padding-top: 2px;
+    width: 90px;
+}

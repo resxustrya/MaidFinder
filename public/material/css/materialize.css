@@ -3471,6 +3471,7 @@ input[type=range] + .thumb {
 .row {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 }
 
 .row:after {
@@ -4528,6 +4529,7 @@ small {
 .card-panel {
   transition: box-shadow .25s;
   padding: 20px;
+  margin: 0.5rem 0 1rem 0;
   border-radius: 2px;
   background-color: #fff;
 }
@@ -5213,7 +5215,7 @@ a.waves-effect .waves-ripple {
   right: 0;
   background-color: #fafafa;
   padding: 0;
-  max-height: 100%;
+  max-height: 70%;
   width: 55%;
   margin: auto;
   overflow-y: auto;
@@ -8178,15 +8180,4 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .picker--time .picker__box {
     margin-bottom: 5em;
   }
-}
-
-.tab1 {
-  margin-left: 1em;
-}
-
-.tab2 {
-  margin-left: 2em;
-}
-.tab3 {
-  margin-left: 3em;
 }

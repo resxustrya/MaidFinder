@@ -138,27 +138,6 @@
 
                                 </a>
                             </div>
-<<<<<<< HEAD
-                            <h6 class="divider"></h6>
-                            <div class="row">
-                                <table>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4">Nationanlity :</span></td>
-                                        <?php $n = Nationalities::find($app->nationality); ?>
-                                        <td><span class="grey-text text-darken-4">{{ $n->nationality }}</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4">Religion :</span> </td>
-                                        <?php $r = Religions::find($app->religion); ?>
-                                        <td><span class="grey-text text-darken-4">{{ $r->religion }}</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="grey-text text-darken-4">Civil Status :</span> </td>
-                                        <?php $status = array('Single', 'Married', 'Divorced', 'Widowed'); ?>
-                                        <td><span class="grey-text text-darken-4">{{ $status[$app->civilstatus] }}</span></td>
-                                    </tr>
-                                </table>
-=======
                         </div>
                     </div>
                 </div>
@@ -193,7 +172,6 @@
                         <div class="pmbb-body p-l-30">
                             <div class="pmbb-view">
                                 I am from pakitsan an I am willing to work very hard.
->>>>>>> f5dc6829c45661380e7069d518b17cd4f62fef16
                             </div>
 
                             <div class="pmbb-edit">
@@ -358,16 +336,6 @@
                                     <button data-ma-action="profile-edit-cancel" class="btn btn-link btn-sm">Cancel</button>
                                 </div>
                             </div>
-<<<<<<< HEAD
-                            <div class="col s12 m12 l2">
-                                <div class="center-align">
-                                    <div class="row">
-                                        <a class="btn blue lighten-3 col s12 m12 l12" href="{{asset ('/applicant/job/application/edit/'. $application->applicationid)}}"><i class="material-icons">mode_edit</i></a>
-                                    </div>
-                                    <div class="row">
-                                        <a class="btn grey lighten-4 black-text col s12 m12 l12" href="{{asset ('/applicant/job/application/delete/'. $application->applicationid)}}"><i class="material-icons">delete</i></a>
-                                    </div>
-=======
 
                         </div>
                     </div>
@@ -431,7 +399,6 @@
                                 <div class="m-t-30">
                                     <button class="btn btn-primary btn-sm"type="submit" name="action">Save</button>
                                     <button data-ma-action="profile-edit-cancel" class="btn btn-link btn-sm">Cancel</button>
->>>>>>> f5dc6829c45661380e7069d518b17cd4f62fef16
                                 </div>
                             </div>
                         </div>

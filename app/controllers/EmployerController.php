@@ -21,7 +21,7 @@ class EmployerController extends BaseController {
 
     public function employer_home() {
         $application = Applications::all();
-      $ads = Ads::where('empid', '=', $this->emp->empid)->paginate(1);
+        $ads = Ads::where('empid', '=', $this->emp->empid)->paginate(1);
       return View::make('employer.home')
                     ->with('emp', $this->emp)
                     ->with('ads',$ads)
@@ -70,7 +70,7 @@ class EmployerController extends BaseController {
         $emp->nationality = Input::get('nationality');
         $emp->regionid = Input::get('location');
         $emp->pitch = Input::get('pitch');
-        
+
         $emp->save();
 
         return Redirect::to('employer/profile')
@@ -115,6 +115,7 @@ class EmployerController extends BaseController {
             'dayof' => Input::get('dayof'),
             'month' => Input::get('month'),
             'day' => Input::get('day'),
+            'pitch'=> Input::get('pitch'),
             'year' => Input::get('year')
         );
 
@@ -126,6 +127,7 @@ class EmployerController extends BaseController {
             'edlevel' => 'required',
             'yearexp' => 'required',
             'dayof' => 'required',
+            'pitch' => 'required',
             'month' => 'required',
             'year' => 'required',
             'day' => 'required'
@@ -140,20 +142,13 @@ class EmployerController extends BaseController {
             'yearexp.required' => 'Chose a years of experience',
             'month.required' => 'Chose a month',
             'year.required' => 'Chose a year',
+            'pitch.required' => 'Cant be blank',
             'day.required' => 'Chose a day'
         );
         $validator = Validator::make($temp,$rules,$messages);
         if($validator->fails()) {
            $messages = $validator->messages();
-            if(Input::has('job_desc') and Input::get('job_desc') > 0) {
-                $job_desc = array();
-                foreach(Input::get('job_desc') as $value) {
-                    if($value != null) {
-                        $job_desc[] = $value;
-                    }
-                }
-                Session::put('job_desc', $job_desc);
-            }
+        
             return Redirect::to('/create/ad')
                             ->with('error', $messages)
                             ->with('message','Your ad is not created');
@@ -188,19 +183,6 @@ class EmployerController extends BaseController {
         $duties->pet = Input::has('pet') ? Input::get('pet') : null;
         $duties->other = Input::has('other') ? Input::get('other') : null;
         $duties->save();
-
-
-        if(Input::has('job_desc') and count(Input::get('job_desc')) > 0) {
-            foreach(Input::get('job_desc') as $desc) {
-                if($desc != null) {
-                    $job_desc = new AdDesc();
-                    $job_desc->adid = $ads->adid;
-                    $job_desc->desc = $desc;
-                    $job_desc->save();
-                }
-            }
-            Session::forget('job_desc');
-        }
         return Redirect::to('employer/ads')
                         ->with('message','New job ad created');
 
@@ -242,6 +224,7 @@ class EmployerController extends BaseController {
             'edlevel' => Input::get('edlevel'),
             'dayof' => Input::get('dayof'),
             'month' => Input::get('month'),
+            'pitch' => Input::get('pitch'),
             'day' => Input::get('day'),
             'year' => Input::get('year')
         );
@@ -256,7 +239,9 @@ class EmployerController extends BaseController {
             'dayof' => 'required',
             'month' => 'required',
             'year' => 'required',
-            'day' => 'required'
+            'day' => 'required',
+            'pitch' => 'required'
+
         );
         $messages = array(
             'location.required' => 'Chose a location',
@@ -268,7 +253,8 @@ class EmployerController extends BaseController {
             'yearexp.required' => 'Chose a years of experience',
             'month.required' => 'Chose a month',
             'year.required' => 'Chose a year',
-            'day.required' => 'Chose a day'
+            'day.required' => 'Chose a day',
+            'pitch.required' => 'Cant be blank'
         );
         $validator = Validator::make($temp,$rules,$messages);
         if($validator->fails()) {
@@ -306,18 +292,7 @@ class EmployerController extends BaseController {
         $duties->other = Input::get('other');
         $duties->save();
 
-      /*  if(Input::has('job_desc') and count(Input::get('job_desc')) > 0) {
-            foreach(Input::get('job_desc') as $desc) {
-                if($desc != null) {
-                  //  $job_desc = where('')
-                    $job_desc->adid = $ads->adid;
-                    $job_desc->desc = $desc;
-                    $job_desc->save();
-                }
-            }
-            Session::forget('job_desc');
-
-        }*/
+     
         return Redirect::to('employer/ads')
                         ->with('message','Your job ad is updated.');
 
@@ -362,6 +337,7 @@ class EmployerController extends BaseController {
     }
     public function job_request() {
         $apply_ad = ApplyAds::where('empid', '=', $this->emp->empid)->get();
+        
         return View::make('employer.job-request')
                     ->with('apply_ad',$apply_ad)
                     ->with('emp', $this->emp);
@@ -395,7 +371,7 @@ class EmployerController extends BaseController {
       return Redirect::to('/');
     }
     public function notify() {
-        $result = $this->itexmo('09226663075', 'Hello World','LOURE663075_MK585');
+        $result = $this->itexmo('09226663075', 'MaidFinder : Jolly Ann dolloso','LOURE663075_MK585');
         if($result == "0") {
             return "Message sent";
         }

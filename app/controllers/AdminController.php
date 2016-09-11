@@ -31,13 +31,12 @@ class AdminController extends BaseController
         return View::make('admin.home');
     }
     public function admin_staffs() {
+        Session::put('url', 'staffs');
         if($this->admin->usertype == 'admin') {
-
-            $admin_staffs = Admins::where('usertype', '=', 'adminstaff')->paginate(10);
+            $admin_staffs = Admins::where('usertype', '=', 'adminstaff')->get();
             return View::make('admin.staffs')
                     ->with('admin_staffs', $admin_staffs)
-                    ->with('admin', $this->admin)
-                    ->with('url', 'staffs');
+                    ->with('admin', $this->admin);
         }
        return View::make('admin.staffs-err')->with('admin', $this->admin);
     }
@@ -76,12 +75,19 @@ class AdminController extends BaseController
     }
 
     public function account_users() {
-        return View::make('admin.user-accounts')
-                        ->with('url', 'users');
+        Session::put('url', 'accounts');
+        return View::make('admin.user-accounts');
     }
     public function applicants_pending() {
+      Session::put('url', 'accounts');
       $app = Applicants::where('isVerified', '=', 0)->get();
+      $count = count($app);
+      $accounts = Applicants::where('isVerified', '=', 0)->paginate(10);
       return View::make('admin.app-pending')
-                  ->with('applicants', $app);
+                  ->with('applicants', $accounts)
+                  ->with('count', $count);
+    }
+    public function applicant_profile_pending($id) {
+        return $id;
     }
 }

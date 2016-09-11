@@ -52,7 +52,7 @@
                                <div class="input-field col s12 m12 l6">
                                    <strong>Civil Status</strong>
                                        <select class="browser-default" name="civilstatus">
-                                           <option disabled value="">Civil status</option>
+                                           <option disabled value="" selected>Civil status</option>
                                            <?php $status = array('Single', 'Married', 'Divorced', 'Widowed'); ?>
                                            @foreach($status as $key => $value)
                                                <option {{ (isset($input['civilstatus']) and $input['civilstatus'] == $key) ? 'selected' : '' }} value="{{ $key }}">{{ $value }}</option>
@@ -95,21 +95,12 @@
                            </div>
                            <div class="row">
                                <p><strong>Contact Information</strong></p>
-                               <div class="col s12 m12 l6 input-field">
+                               <div class="col s12 m12 l12 input-field">
                                    <div class="valign-wrapper">
                                        <i class="material-icons prefix">phone</i>
                                        <input id="icon_prefix" type="text" value="{{ (isset($input['contactno'] )) ? $input['contactno'] : ''}}" name="contactno" class="validate" placeholder="Phone number">
                                    </div>
                                    <span class="red-text tab3">{{ isset($error) ? $error->first('contactno') : '' }}</span>
-                               </div>
-                               <div class="col s12 m12 l6 input-field">
-                                   <select name="location" class="browser-default">
-                                       <option value="" selected disabled>City</option>
-                                       @foreach($location as $loc)
-                                           <option {{ (isset($input['location'] ) and $input['location'] == $loc->regionid) ? 'selected' : ''}} value="{{$loc->regionid}}">{{ $loc['location'] }}</option>
-                                       @endforeach
-                                   </select>
-                                   <span class="red-text">{{ isset($error) ? $error->first('location') : '' }}</span>
                                </div>
                            </div>
                            <div class="row">
@@ -120,15 +111,42 @@
                                <span class="red-text">{{ isset($error) ? $error->first('address') : '' }}</span>
                            </div>
                            <div class="row">
+                               <div class="col s12 m12 l6 input-field">
+                                   <select name="location" class="browser-default">
+                                       <option value="" selected disabled>Select Location</option>
+                                       @foreach($location as $loc)
+                                           <option {{ (isset($input['location'] ) and $input['location'] == $loc->regionid) ? 'selected' : ''}} value="{{$loc->regionid}}">{{ $loc['location'] }}</option>
+                                       @endforeach
+                                   </select>
+                                   <span class="red-text">{{ isset($error) ? $error->first('location') : '' }}</span>
+                               </div>
+                           </div>
+                           <div class="row">
                                <p><strong>Other information</strong></p>
                                <div class="col s12 m12 l6 input-field">
                                    <div class="valign-wrapper">
-                                       <input id="icon_prefix" type="text" value="{{ (isset($input['nationality'] )) ? $input['nationality'] : ''}}" name="nationality" class="validate" placeholder="Nationality">
+                                       <span>Nationality</span>
+                                       <select name="nationality" class="browser-default">
+                                           <option value="" disabled selected>Select nationality</option>
+                                           <?php $nationality = Nationalities::all(); ?>
+                                           @foreach($nationality as $n)
+                                               <option {{ (isset($input['nationality']) and $input['nationality']) ? 'selected' : '' }} value="{{ $n->id }}">{{ $n->nationality }}</option>
+                                           @endforeach
+                                       </select>
                                    </div>
                                    <span class="red-text">{{ isset($error) ? $error->first('nationality') : '' }}</span>
                                </div>
                                <div class="col s12 m12 l6 input-field">
-                                   <input id="icon_prefix" type="text" value="{{ (isset($input['religion'] )) ? $input['religion'] : ''}}" name="religion" class="validate" placeholder="Religion">
+                                   <div class="valign-wrapper">
+                                       <span>Religion</span>
+                                       <select name="religion" class="browser-default">
+                                           <option value="" disabled selected >Select religion</option>
+                                           <?php $religion = Religions::all(); ?>
+                                           @foreach($religion as $n)
+                                               <option {{ (isset($input['religion']) and $input['religion']) ? 'selected' : '' }} value="{{ $n->id }}">{{ $n->religion }}</option>
+                                           @endforeach
+                                       </select>
+                                   </div>
                                </div>
                                <span class="red-text">{{ isset($error) ? $error->first('religion') : '' }}</span>
                            </div>

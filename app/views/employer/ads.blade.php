@@ -89,11 +89,7 @@
                                 <div class="divider"></div>
                                 <div class="row">
                                     <h6><strong class="material-icons">description</strong> <strong>Job ad description</strong></h6>
-                                    <ul>
-                                        @foreach($job_desc as $desc)
-                                            <li><span class="grey-text">* </span> {{ $desc->desc }}</li>
-                                        @endforeach
-                                    </ul>
+                                    <p class="tab3">{{ isset($ad->pitch) ? nl2br($ad->pitch) : '' }}</p>
                                 </div>
                                 <div class="divider"></div>
 

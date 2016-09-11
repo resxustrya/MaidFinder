@@ -118,6 +118,11 @@ class ApplicantController extends BaseController {
                     ->with('salary', Salaries::all())
                     ->with('duties', $duties);
     }
+    public function application_delete($id) {
+        $application = Applications::find($id);
+        $application->delete();
+        return Redirect::to('/applicant/profile')->with('message', 'Job application deleted');
+    }
     public function handle_application_update() {
 
         $application = Applications::find(Input::get('applicationid'));
@@ -329,7 +334,7 @@ class ApplicantController extends BaseController {
 
     }
     public function applications_list() {
-
+        
     }
     public function  applicantPost()
     {

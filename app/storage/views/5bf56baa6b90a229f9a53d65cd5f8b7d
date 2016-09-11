@@ -10,6 +10,9 @@
     <link rel="stylesheet" type="text/css" href="<?php echo asset('public/template/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css'); ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo asset('public/template/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css'); ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo asset('public/template/vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/template/vendors/farbtastic/farbtastic.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/template/vendors/bower_components/chosen/chosen.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/template/vendors/bower_components/summernote/dist/summernote.css'); ?>" />
 
     <!-- CSS -->
     <link href="<?php echo asset('public/template/css/app_1.min.css'); ?>" rel="stylesheet">
@@ -47,7 +50,12 @@
 <script src="<?php echo asset('public/template/vendors/bower_components/chosen/chosen.jquery.js'); ?>"></script>
 <script src="<?php echo asset('public/template/vendors/fileinput/fileinput.min.js'); ?>"></script>
 <script src="<?php echo asset('public/template/vendors/input-mask/input-mask.min.js'); ?>"></script>
+<script src="<?php echo asset('public/template/vendors/bower_components/typeahead.js/dist/typeahead.bundle.min.js'); ?>"></script>
+<script src="<?php echo asset('public/template/vendors/summernote/dist/summernote-updated.min.js'); ?>"></script>
 <script src="<?php echo asset('public/template/vendors/farbtastic/farbtastic.min.js'); ?>"></script>
+<script src="<?php echo asset('public/template/vendors/bower_components/chosen/chosen.jquery.js'); ?>"></script>
+<script src="<?php echo asset('public/template/vendors/fileinput/fileinput.min.js'); ?>"></script>
+<script src="<?php echo asset('public/template/vendors/input-mask/input-mask.min.js'); ?>"></script>
 
 <script src="<?php echo asset('public/template/js/app.min.js'); ?>"></script>
 <?php $__env->startSection('js'); ?>

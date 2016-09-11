@@ -64,11 +64,13 @@
                                 <table>
                                     <tr>
                                         <td><span class="grey-text text-darken-4">Nationanlity :</span></td>
-                                        <td><span class="grey-text text-darken-4">{{ $app->nationality }}</span></td>
+                                        <?php $n = Nationalities::find($app->nationality); ?>
+                                        <td><span class="grey-text text-darken-4">{{ $n->nationality }}</span></td>
                                     </tr>
                                     <tr>
                                         <td><span class="grey-text text-darken-4">Religion :</span> </td>
-                                        <td><span class="grey-text text-darken-4">{{ $app->religion }}</span></td>
+                                        <?php $r = Religions::find($app->religion); ?>
+                                        <td><span class="grey-text text-darken-4">{{ $r->religion }}</span></td>
                                     </tr>
                                     <tr>
                                         <td><span class="grey-text text-darken-4">Civil Status :</span> </td>
@@ -215,7 +217,7 @@
                                         <a class="btn blue lighten-3 col s12 m12 l12" href="{{asset ('/applicant/job/application/edit/'. $application->applicationid)}}"><i class="material-icons">mode_edit</i></a>
                                     </div>
                                     <div class="row">
-                                        <a class="btn grey lighten-4 black-text col s12 m12 l12" href="{{asset ('/applicant/job/application/delete/'. $application->adid)}}"><i class="material-icons">delete</i></a>
+                                        <a class="btn grey lighten-4 black-text col s12 m12 l12" href="{{asset ('/applicant/job/application/delete/'. $application->applicationid)}}"><i class="material-icons">delete</i></a>
                                     </div>
                                 </div>
                             </div>

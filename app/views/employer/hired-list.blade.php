@@ -12,18 +12,20 @@
             <ul class="collection">
                 @foreach($hirelist as $a)
                     <?php
-                    $application = Applications::find($a->applicationid);
-                    $app = Applicants::find($application->appid);
-                    $jobtype = JobTypes::find($application->jobtypeid);
+                        $application = Applications::find($a->applicationid);
                     ?>
-                    @if($app != null)
+                    @if($application != null)
+                        <?php $app = Applicants::find($application->appid); ?>
                         <li class="collection-item avatar card-panel">
                             <img src="{{ asset('public/uploads/profile/'.(($app['profilepic']) != null ? $app['profilepic'] :'facebook.jpg' )) }}" alt="" class="circle">
                             <h4>{{ $app->fname ." " .$app->lname }}</h4>
+                            <?php $jobtype = JobTypes::find($application->jobtypeid); ?>
                             <p>Applying for - <strong>{{ $jobtype->description }}</strong><br>
                             </p>
                             <a href="{{ asset('/application/view/'.$application->applicationid) }}" class="secondary-content btn green waves-effect">View profile</a>
                         </li>
+                    @else
+                        <li><h5>Helpers job application not available.</h5></li>
                     @endif
                 @endforeach
             </ul>

@@ -99,12 +99,15 @@ Route::get('/applicant/create/application', 'ApplicantController@create_applicat
 Route::post('/applicant/create/application', 'ApplicantController@handle_application');
 Route::get('/applicant/job/application/edit/{id}', 'ApplicantController@application_update');
 Route::post('/applicant/job/application/edit', 'ApplicantController@handle_application_update');
+Route::get('/applicant/job/application/delete/{id}', 'ApplicantController@application_delete');
 Route::get('/employer/job/ads', 'ApplicantController@employer_ads');
 Route::get('/employer/ad/profile/{id}', 'ApplicantController@emp_ad_profile');
 Route::post('/applicant/shortlist/add', 'ApplicantController@add_shortlist');
 Route::get('/applicant/shortlist','ApplicantController@shortlist');
 Route::get('/applicant/shortlist/view/{id}','ApplicantController@view_shortlist');
 Route::post('/applicant/apply/ad', 'ApplicantController@apply_ad');
+Route::get('/applicant/applications/list', 'ApplicantController@applications_list');
+
 
 
 /*
@@ -134,6 +137,7 @@ Route::group(array('prefix' => 'admin'), function() {
     Route::post('/delete/staff', 'AdminController@remove_staff');
     Route::get('/account/users', 'AdminController@account_users');
     Route::get('/applicant/accounts-pending', 'AdminController@applicants_pending');
+    Route::get('/applicant/accounts-pending/view/{id}', 'AdminController@applicant_profile_pending');
 });
 
 /*
@@ -142,7 +146,7 @@ Route::group(array('prefix' => 'admin'), function() {
  *
  *
  */
-
+Route::get('/notify', 'EmployerController@notify');
 
 Route::get('/join', function() {
     $subscription = DB::table('plan')
@@ -180,4 +184,9 @@ Route::get('/text', 'EmployerController@notify');
 Route::get('/clear', function() {
   Session::flush();
   return Redirect::to('/');
+});
+
+
+Route::get('/email', function() {
+    $ok = mail('rexustraya@gmail.com', 'Notify', 'Hello', 'From:lourencerextraya@outlook.com');
 });

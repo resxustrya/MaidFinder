@@ -52,13 +52,15 @@
                                             <div class="col s12 m12 l12">
                                                 <?php
                                                 $count = 1;
-                                                $application = DB::table('application')
-                                                                ->where('jobtypeid', '=', $ad->jobtypeid)
-                                                                ->orWhere('regionid' ,'=', $ad->regionid)
-                                                                ->orWhere('salaryid' ,'=', $ad->salaryid)
-                                                                ->get();
+                                                $applications = Applications::where('jobtypeid', '=', $ad->jobtypeid)
+                                                                            ->Where('deleted_at' ,'=', NULL)
+                                                                            ->orWhere('regionid', '=', $ad->regionid)
+                                                                            ->orWhere('salaryid', '=', $ad->salaryid)
+                                                                            ->orWhere('yearexp', '=', $ad->yearexp)
+                                                                            ->orderBy('applicationid', 'DESC')
+                                                                            ->get();
                                                 ?>
-                                                <?php foreach($application as $app) : ?>
+                                                <?php foreach($applications as $app) : ?>
                                                 <?php
                                                     $location = Regions::find($app->regionid);
                                                     $applicant = Applicants::find($app->appid);
@@ -71,6 +73,7 @@
                                                             <div class="row">
                                                                 <div class="profile-img col s12 m12 l4">
                                                                     <div class="center-align" style="padding-top: 10px;">
+
                                                                     </div>
                                                                 </div>
                                                                 <div class="col s12 m12 l6">

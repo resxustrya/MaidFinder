@@ -135,28 +135,7 @@
                         <div class="row">
                             <p><strong class="title">Job ad description</strong></p>
                             <div class="col s12 m12 l12">
-                                <table class="job_desc">
-                                    <?php if(Session::has('job_desc') and count(Session::get('job_desc')) > 0): ?>
-                                        <?php foreach(Session::get('job_desc') as $value): ?>
-                                            <tr>
-                                                <td><span class="orange-text">* </span></td>
-                                                <td>
-                                                    <input type="text" name="job_desc[]" value="<?php echo $value; ?>" placeholder="Write your job description here"/>
-                                                </td>
-                                            </tr>
-                                        <?php endforeach; ?>
-                                    <?php else: ?>
-                                        <tr>
-                                            <td><span class="orange-text">* </span></td>
-                                            <td>
-                                                <input type="text" name="job_desc[]" placeholder="Write your job description here"/>
-                                            </td>
-                                        </tr>
-                                    <?php endif; ?>
-
-                                    <?php Session::forget('job_desc'); ?>
-                                </table>
-                                <a href="javascript;" class="add_desc">Add new description</a>
+                                <textarea name="pitch"  placeholder="Write your job description here" style="height: 150px;" cols="20"></textarea>
                             </div>
                         </div>
                         <div class="row">

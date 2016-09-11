@@ -1,9 +1,60 @@
 <?php $__env->startSection('content'); ?>
-
-  <div class="container-fluid">
-    <div class="row">
-      
+  <div class="card-panel">
+    <div class="row valign-wrapper">
+      <span style="font-size: 2em;" class="grey-text">Pending applicant accounts -  <?php echo $count; ?> Results</span> 
     </div>
+    <div class="row">
+      <table class="centered highlight">
+        <thead>
+        <tr>
+          <th>Applicant name</th>
+          <th>Status</th>
+          <th><i class="material-icons">settings</i> </th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php $count =20; ?>
+          <?php foreach($applicants as $app): ?>
+            <tr>
+              <td><?php echo $app->fname ." " . $app->lname; ?></td>
+              <td>
+                <?php if($app->isVerified == 0): ?>
+                  <span>Unverified</span>
+                <?php endif; ?>
+              </td>
+              <td>
+                <a class='dropdown-button' href='#' data-constrainwidth="true" data-activates='dropdown<?php echo $count; ?>'><i class="material-icons black-text">play_arrow</i> </a>
+                <!-- Dropdown Structure -->
+                <ul id='dropdown<?php echo $count; ?>' class='dropdown-content'>
+                  <li><a href="<?php echo asset('/admin/applicant/accounts-pending/view/' . $app->appid); ?>" target="_blank"><span style="font-size: 0.7em;">View profile</span></a></li>
+                  <li onclick="remove(<?php echo $app->appid; ?>)"><span style="font-size: 0.7em;">Remove accnt</span> </li>
+                  <li onclick="notify(<?php echo $app->appid; ?>)"><span style="font-size: 0.7em;">Notify applicant</span> </li>
+                </ul>
+              </td>
+            </tr>
+            <?php $count++; ?>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <ul class="pagination">
+        <?php echo $applicants->links(); ?>
+      </ul>
+    </div>
+  </div>
+  <!-- VEIW MODAL PROFILE -->
+  <div id="modal2" class="modal modal-fixed-footer" style="height:100%;margin-top: -70px;">
+    <div class="row right-align" style="margin-top: 0px;">
+      <a class="modal-close btn-small circle"> <i class="material-icons ">closed</i></a>
+    </div>
+    <div class="row">
+      <div class="img">
+        <img class="profilepic" src="" />
+      </div>
+      <span id="id"></span>
+    </div>
+
   </div>
 <?php $__env->stopSection(); ?>
 
@@ -12,7 +63,10 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('js'); ?>
-
+  @parent
+  <script>
+  
+  </script>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('admin.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

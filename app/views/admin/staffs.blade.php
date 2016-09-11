@@ -83,7 +83,6 @@
             </div>
         </div>
     </div>
-
     <!-- edit modal -->
     <div id="modal2" class="modal ">
         <p class="row loader">

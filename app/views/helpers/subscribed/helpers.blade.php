@@ -130,13 +130,13 @@
                 <?php $count = 1; ?>
                 <?php foreach($application as $app) : ?>
                 <?php
-                $location = Regions::find($app->regionid);
-                $applicant = Applicants::find($app->appid);
-                $jobtype = JobTypes::find($app->jobtypeid);
+                    $location = Regions::find($app->regionid);
+                    $applicant = Applicants::find($app->appid);
+                    $jobtype = JobTypes::find($app->jobtypeid);
                 ?>
                 <div class="col s12 m6 l4 hoverable ">
                     <a href="{{ asset('application/view/'. $app->applicationid) }}" class="grey-text">
-                        <div class="card-panel" style="padding: 3px;">
+                        <div class="" style="padding: 3px;">
                             <div class="row">
                                 <div class="profile-img col s12 m12 l4">
                                     <div class="center-align" style="padding-top: 10px;">
@@ -209,10 +209,6 @@
         table.info tr td {
             padding: 0px;
             color: #333;
-        }
-        .modal {
-            width: 100% !important;
-            mex-height: 100% !important;
         }
     </style>
 @stop

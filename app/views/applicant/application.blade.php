@@ -9,7 +9,7 @@
         <div class="card-panel">
             <div class="row">
                 <div class="col s12 m12 l2">
-                   {{ $application->created_at }}
+                   {{ isset($application->created_at) ? $application->created_at : '' }}
                 </div>
                 <div class="col s12 m12 l8 grey lighten-5">
                     <div class="row">
@@ -17,41 +17,42 @@
                         <table>
                             <tr>
                                 <td>Job Title : </td>
-                                <td><strong style="text-decoration: underline">{{ $jobtype->description }}</strong></td>
+                                <td><strong style="text-decoration: underline">{{ isset($jobtype->description) ? $jobtype->description : '' }}</strong></td>
                             </tr>
                             <tr>
                                 <td>Contact :</td>
-                                <td>{{ $app->contactno }}</td>
+                                <td>{{ isset($app->contactno) ? $app->contactno : '' }}</td>
                             </tr>
                             <tr>
                                 <?php $capacity = array('Full Time', 'Part Time'); ?>
+                                <?php $index = isset($application->capacity) ? $application->capacity : 0; ?>
                                 <td>Capacity : </td>
-                                <td>{{ $capacity[$application->capacity] }}</td>
+                                <td>{{ $capacity[$index] }}</td>
                             </tr>
                             <tr>
                                 <td>Exptected salary :</td>
-                                <td>{{ $salary->amount_range }} (pesos)</td>
+                                <td>{{ isset($salary->amount_range) ? $salary->amount_range : '' }} (pesos)</td>
                             </tr>
                             <tr>
                                 <td>Helper gender :</td>
-                                <td>{{ $app->gender }}</td>
+                                <td>{{ isset($app->gender) ? $app->gender : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Education level :</td>
-                                <td>{{ $edlevel }}</td>
+                                <td>{{ isset($edlevel) ? $edlevel : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Experience :</td>
-                                <td>{{ $application->yearexp }} years</td>
+                                <td>{{ isset($application->yearexp) ? $application->yearexp : '' }} years</td>
                             </tr>
                             <tr>
                                 <td>Contract years</td>
-                                <td>{{ $application->contractyears }} years</td>
+                                <td>{{ isset($application->contractyears) ? $application->contractyears : '' }} years</td>
                             </tr>
                         </table>
                         <p>
                         <h6><strong>Job description</strong></h6>
-                        {{ $application->pitch }}
+                        {{ isset($application->pitch) ? $application->pitch : '' }}
                         </p>
                     </div>
                     <div class="divider"></div>

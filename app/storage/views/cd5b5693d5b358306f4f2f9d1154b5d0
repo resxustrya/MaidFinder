@@ -7,18 +7,20 @@
             <ul class="collection">
                 <?php foreach($hirelist as $a): ?>
                     <?php
-                    $application = Applications::find($a->applicationid);
-                    $app = Applicants::find($application->appid);
-                    $jobtype = JobTypes::find($application->jobtypeid);
+                        $application = Applications::find($a->applicationid);
                     ?>
-                    <?php if($app != null): ?>
+                    <?php if($application != null): ?>
+                        <?php $app = Applicants::find($application->appid); ?>
                         <li class="collection-item avatar card-panel">
                             <img src="<?php echo asset('public/uploads/profile/'.(($app['profilepic']) != null ? $app['profilepic'] :'facebook.jpg' )); ?>" alt="" class="circle">
                             <h4><?php echo $app->fname ." " .$app->lname; ?></h4>
+                            <?php $jobtype = JobTypes::find($application->jobtypeid); ?>
                             <p>Applying for - <strong><?php echo $jobtype->description; ?></strong><br>
                             </p>
                             <a href="<?php echo asset('/application/view/'.$application->applicationid); ?>" class="secondary-content btn green waves-effect">View profile</a>
                         </li>
+                    <?php else: ?>
+                        <li><h5>Helpers job application not available.</h5></li>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </ul>

@@ -135,45 +135,48 @@
                 $applicant = Applicants::find($app->appid);
                 $jobtype = JobTypes::find($app->jobtypeid);
                 ?>
-                <div class="col s12 m6 l4 hoverable ">
-                    <a class="modal-trigger" href="#modal{{$count}}">
-                        <div class="card-panel" style="padding: 3px;">
-                            <div class="row">
-                                <div class="profile-img col s12 m12 l6">
-                                    <div class="center-align" style="padding-top: 10px;">
-                                        <img class="image circle responsive-img" src="{{ asset('public/uploads/profile/'.(($applicant->profilepic) != null ? $applicant->profilepic :'facebook.jpg' )) }}">
+                    <div class="col s12 m6 l4 hoverable" style="margin-top: 10px;">
+                        <a href="{{ asset('application/view/'. $app->applicationid) }}" class="grey-text">
+                            <div class="card-panel" style="padding: 3px;">
+                                <div class="row">
+                                    <div class="profile-img col s12 m12 l4">
+                                        <div class="center-align" style="padding-top: 10px;">
+                                            <img class="image circle" src="{{ asset('public/uploads/profile/'.(($applicant->profilepic) != null ? $applicant->profilepic :'facebook.jpg' )) }}">
+                                        </div>
+                                    </div>
+                                    <div class="col s12 m12 l1 hide-on-med-and-down">
+                                        <p>&nbsp;</p>
+                                    </div>
+                                    <div class="col s12 m12 l6">
+                                        <p>
+                                        <table class="black-text info">
+                                            <tr>
+                                                <td><i class="material-icons">perm_identity</i></td>
+                                                <td><span class="name">{{ $applicant->fname }}</span> </td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="material-icons">room</i> </td>
+                                                <td>{{ $location->location }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="material-icons">work</i> </td>
+                                                <td>{{ $jobtype->description }}</td>
+                                            </tr>
+                                        </table>
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="col s12 m12 l6">
-                                    <p>
-                                    <table class="black-text info">
-                                        <tr>
-                                            <td><i class="material-icons">perm_identity</i></td>
-                                            <td><span class="name">{{ $applicant->fname ." ". $applicant->lname }}</span> </td>
-                                        </tr>
-                                        <tr>
-                                            <td><i class="material-icons">room</i> </td>
-                                            <td>{{ $location->location }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><i class="material-icons">work</i> </td>
-                                            <td>{{ $jobtype->description }}</td>
-                                        </tr>
-                                    </table>
-                                    </p>
+                                <div class="divider"></div>
+                                <div class="row">
+                                    <div class="col s12 m12 l6">
+                                        <p>
+                                            <a href="{{ asset('application/view/'. $app->applicationid) }}">View helper profile</a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="divider"></div>
-                            <div class="row">
-                                <div class="col s12 m12 l6">
-                                    <p>
-                                        <a class="modal-trigger" href="#modal{{$count}}">View helper profile</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
                 <div id="modal{{$count}}" class="modal modal-fixed-footer fade ql-modal" role="dialog">
                     <div class="modal-content">
                         <div class="row">
@@ -243,7 +246,7 @@
         }
         .image {
             max-width: 150px;
-            max-height: 150px;
+            height: 150px;
         }
         .name {
             font-family: "Tahoma";

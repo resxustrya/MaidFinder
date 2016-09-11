@@ -72,11 +72,13 @@
                                     <table class="other_info">
                                         <tr>
                                             <td><span class="grey-text text-darken-4">Nationanlity :</span></td>
-                                            <td><span class="grey-text text-darken-4">{{ $emp->nationality }}</span></td>
+                                            <?php $n = Nationalities::find($emp->nationality); ?>
+                                            <td><span class="grey-text text-darken-4">{{ $n->nationality }}</span></td>
                                         </tr>
                                         <tr>
                                             <td><span class="grey-text text-darken-4">Religion :</span> </td>
-                                            <td><span class="grey-text text-darken-4">{{ $emp->religion }}</span></td>
+                                            <?php $r = Religions::find($emp->religion); ?>
+                                            <td><span class="grey-text text-darken-4">{{ $r->religion }}</span></td>
                                         </tr>
                                         <tr>
                                             <td><span class="grey-text text-darken-4">Civil Status :</span> </td>

@@ -35,8 +35,8 @@
                         <span class="red badge new">{{ $count}} </span>
                     @endif</a></li>
             <li><a href="{{ asset('/employer/job/request')}}"><i class="zmdi zmdi-pin-account"></i> Employer Request</a></li>
-            <li><a href="{{ asset('/employer/job/request')}}"><i class="zmdi zmdi-case"></i> Job Availability Post</a></li>
-            <li><a href="typography.html"><i class="zmdi zmdi-filter-list"></i> Employer Ads</a></li>
+            <li><a href="{{ asset('/applicant/applicantPost')}}"><i class="zmdi zmdi-case"></i> Job Availability Post</a></li>
+            <li><a href="{{asset('/employer/job/ads')}}"><i class="zmdi zmdi-filter-list"></i> Employer Ads</a></li>
             <li><a href="typography.html"><i class="zmdi zmdi-account-box-phone"></i> Recommendations</a></li>
             <li><a href="{{ asset('/applicant/messagebox') }}"><i class="zmdi zmdi-account-box-mail"></i> Messages</a></li>
         </ul>

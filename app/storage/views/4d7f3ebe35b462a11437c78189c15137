@@ -1,0 +1,136 @@
+<?php $__env->startSection('content'); ?>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="card-panel">
+                <div class="row">
+                    <h4>Helper profile</h4>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l4">
+                        <img class="profilepic square col s12 m12 l12 responsive-img" src="<?php echo asset('public/uploads/profile/'.(($applicant->profilepic) != null ? $applicant->profilepic :'facebook.jpg' )); ?>">
+                    </div>
+                    <div class="col s12 m12 l8">
+                        <div class="row">
+                            <div class="col s12 m12 l5">
+                                <div class="collection">
+                                    <div class="collection-item">Name<span class="badge"><i class="material-icons tiny">perm_identity</i> <strong><?php echo $applicant->fname ." ".$applicant->lname; ?></strong></span></div>
+                                    <div class="collection-item">Location<span class="badge"><i class="material-icons tiny">location_on</i> <strong><?php echo $location->location; ?></strong></span></div>
+                                    <div class="collection-item">Gender<span class="badge"><i class="material-icons tiny">supervisor_account</i> <strong><?php echo $applicant->gender; ?></strong></span></div>
+                                    <div class="collection-item">Nationality<span class="badge"><i class="material-icons tiny">label</i> <strong><?php echo $applicant->nationality; ?></strong></span></div>
+                                    <div class="collection-item">Religion<span class="badge"><i class="material-icons tiny">stars</i> <strong><?php echo $applicant->religion; ?></strong></span></div>
+                                    <div class="collection-item">Contact No.<i class="material-icons tiny">telephone</i> <span class="badge green"><strong class="white-text"><?php echo $applicant->contactno; ?></strong></span></div>
+                                    <div class="collection-item">Civil status<span class="badge"><i class="material-icons tiny"></i> <strong><?php echo $applicant->civilstatus; ?></strong></span></div>
+                                    <?php $bdate = explode('-', $applicant->birth); ?>
+                                    <div class="collection-item">Age<span class="badge"><i class="material-icons tiny">redeem</i> <strong><?php echo date('Y') - $bdate[0]; ?></strong></span></div>
+                                </div>
+                            </div>
+                            <div class="col s12 m12 l6">
+                                <div class="collection center-align">
+                                    <a class="modal-trigger collection-item" href="#modal1">
+                                        <h5 class="orange-text">Send applicant a message</h5>
+                                    </a>
+                                    <a class="collection-item center-align" id="hirelist" href="#">
+                                        <h5 class="orange-text">Add to hire list</h5>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Message</h4>
+            <form action="#" method="POST">
+                <div class="row">
+                    <div class="input-field col s12 m12 l12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Write your message here</label>
+                        <span class="orange-text" id="err"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn green col s12 m12 l12 send_btn">Send message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('css'); ?>
+    @parent
+    <style>
+        .profilepic {
+            height : 300px;
+            width: 200px;
+        }
+        .name {
+            font-size: 1.5em;
+            font-family: "DejaVu Sans", sans-serif;
+        }
+        .contactno {
+            font-size: 1.5em;
+        }
+        table.info tr td {
+            padding: 0px;
+        }
+    </style>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('js'); ?>
+    @parent
+    <script>
+        $(document).ready(function() {
+            $('#hirelist').click(function(event){
+                event.preventDefault();
+                var empid = <?php echo $emp->empid; ?>;
+                var applicationid = <?php echo $application->applicationid; ?>;
+                var post_data = {
+                    "empid" : empid,
+                    "applicationid" : applicationid
+                };
+                var url = 'http://localhost/MaidFinder/employer/add/hirelist';
+                $.post(url, post_data, function(response){
+                    var name = <?php echo "'".$applicant->fname .''.$applicant->lname ."'"; ?>;
+                    if(response == "ok") {
+                        var $toastContent = $('<h5>Profile was added to your hire list.</h5>');
+                        Materialize.toast($toastContent, 5000);
+                    }
+                    if(response == "0") {
+                        var $toastContent = $('<h5>Profile was already added to your hire list.</h5>');
+                        Materialize.toast($toastContent, 5000);
+                    }
+                });
+            });
+            $('.send_btn').click(function(event){
+                event.preventDefault();
+                var msg = $('#textarea1').val();
+                if(msg == undefined || msg == null || msg == "") {
+                    $('#err').text("Please type your message");
+                    return ;
+                }
+                var empid = <?php echo $emp->empid; ?>;
+                var applicationid = <?php echo $application->applicationid; ?>;
+                var post_data = {
+                    "empid" : empid,
+                    "applicationid" : applicationid,
+                    "message" : msg
+                };
+                var url = 'http://localhost/MaidFinder/employer/applicant/send/message';
+                $.post(url,post_data, function(response){
+                    var status = JSON.parse(response);
+                    if(status.status == 200) {
+                        $('#modal1').closeModal();
+                        var $toastContent = $("<h5>Message was sent</h5>");
+                        Materialize.toast($toastContent, 5000);
+                    }
+                });
+            });
+        });
+    </script>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('helpers.subscribed.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

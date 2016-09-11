@@ -331,6 +331,15 @@ class ApplicantController extends BaseController {
     public function applications_list() {
 
     }
+    public function  applicantPost()
+    {
+
+        $application = Applications::where('appid','=', $this->app->appid)->first();
+        return View::make('applicant.applicantPost')
+            ->with('app', $this->app)
+            ->with('application', $application)
+            ->with('location', Regions::find($this->app->regionid));
+    }
     public function applicant_logout() {
        Session::forget('applicant');
        Session::flush();

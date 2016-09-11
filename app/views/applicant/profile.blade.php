@@ -5,7 +5,6 @@
                 <h2>{{ $app->fname ." ". $app->lname }}
                     <small>Nanny, Babysitter, Petsitter</small>
                 </h2>
-
                 <ul class="actions m-t-20 hidden-xs">
                     <li class="dropdown">
                         <a href="" data-toggle="dropdown">
@@ -26,8 +25,7 @@
                     </li>
                 </ul>
             </div>
-
-           <div class="card" id="profile-main">
+             <div class="card" id="profile-main">
                 <div class="pm-overview c-overflow">
 
                     <div class="pmo-pic">
@@ -58,21 +56,14 @@
                                 <input type="submit" class="uploadPhoto btn btn-sm btn-primary" name="upload" value="Upload Photo" />
                             </div>
                              </div>
-                            </form>
-
-
+                        </form>
                         <div class="pmo-stat">
                             <h2 class="m-0 c-white">2</h2>
                             Experience
                         </div>
                     </div>
-
-
-
-
                     <div class="pmo-block pmo-contact hidden-xs">
                         <h2>Contact</h2>
-
                         <ul>
                             <li><i class="zmdi zmdi-phone"></i> {{ $app->contactno }}</li>
                             <li><i class="zmdi zmdi-email"></i> {{ $app->email }}</li>
@@ -89,7 +80,6 @@
 
                     <div class="pmo-block pmo-items hidden-xs">
                         <h2>Employers</h2>
-
                         <div class="pmob-body">
                             <div class="row">
                                 <a href="" class="col-xs-2">
@@ -146,11 +136,9 @@
                     <ul class="tab-nav tn-justified">
                         <li class="active"><a href="profile-about.html">About</a></li>
                         <li><a href="profile-timeline.html">Timeline</a></li>
-                        <li><a href="profile-photos.html">Photos</a></li>
+                        <li><a href="profile-photos.html">Certifications</a></li>
                         <li><a href="profile-connections.html">Connections</a></li>
                     </ul>
-
-
                     <div class="pmb-block">
                         <div class="pmbb-header">
                             <h2><i class="zmdi zmdi-equalizer m-r-10"></i> Summary</h2>
@@ -173,7 +161,6 @@
                             <div class="pmbb-view">
                                 I am from pakitsan an I am willing to work very hard.
                             </div>
-
                             <div class="pmbb-edit">
                                 <div class="fg-line">
                                     <textarea class="form-control" rows="5" placeholder="Summary...">Sed eu est vulputate, fringilla ligula ac, maximus arcu. Donec sed felis vel magna mattis ornare ut non turpis. Sed id arcu elit. Sed nec sagittis tortor. Mauris ante urna, ornare sit amet mollis eu, aliquet ac ligula. Nullam dolor metus, suscipit ac imperdiet nec, consectetur sed ex. Sed cursus porttitor leo.</textarea>
@@ -330,13 +317,11 @@
                                         </div>
                                     </dd>
                                 </dl>
-
                                 <div class="m-t-30">
                                     <button class="btn btn-primary btn-sm" type="submit" name="action">Save</button>
                                     <button data-ma-action="profile-edit-cancel" class="btn btn-link btn-sm">Cancel</button>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -392,9 +377,9 @@
                                 <dl class="dl-horizontal">
                                     <dt class="p-t-10">Address</dt>
                                     <dd>
-                                        <select name="location" class="form-control">
+                                        <select name="location" class="browser-default">
                                             @foreach($location as $loc)
-                                                <option value="{{ $loc['regionid'] }}">{{ $loc['location'] }}</option>
+                                                <option value="{{ $loc['regionid'] }}">{{ $location->location  }}</option>
                                             @endforeach
                                         </select>
                                     </dd>
@@ -408,8 +393,8 @@
                         </div>
                     </div>
                 </div>
-               </form>
-            </div>
-        </div>
 
+            </div>
+            </form>
+        </div>
 @stop

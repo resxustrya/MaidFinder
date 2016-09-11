@@ -1,121 +1,420 @@
 <?php $__env->startSection('content'); ?>
-    <div class="row" style="padding: 0px;">
-        <ul class="collection with-header">
-            <li class="collection-header  light-blue darken-1"><h5 class="white-text">Update Profile</h5></li>
-            <li class="collection-item">
-                <form action="<?php echo asset('/applicant/profile/edit'); ?>" method="POST">
-                    <div class="row">
-                        <p><strong>User information</strong></p>
-                        <div class="input-field col s12 m12 l6">
-                            <i class="material-icons prefix">account_circle</i>
-                            <input id="icon_prefix" type="text" name="fname" value="<?php echo $app->fname; ?>" class="validate">
-                            <label for="icon_prefix">First Name</label>
-                        </div>
-                        <div class="input-field col s12 m12 l6">
-                            <i class="material-icons prefix">account_circle</i>
-                            <input id="icon_prefix" type="text" name="lname" value="<?php echo $app->lname; ?>" class="validate">
-                            <label for="icon_prefix">Last Name</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12 m12 l6">
-                            <strong>Gender</strong>
-                            <select class="browser-default" name="gender">
-                                <option value="">Gender</option>
-                                <option <?php echo (isset($app->gender) and $app->gender == "Male") ? 'selected' : ''; ?> value="Male">Male</option>
-                                <option <?php echo (isset($app->gender) and $app->gender == "Female") ? 'selected' : ''; ?> value="Female">Female</option>
-                            </select>
-                        </div>
-                        <div class="input-field col s12 m12 l6">
-                            <strong>Civil Status</strong>
-                            <select class="browser-default" name="civilstatus">
-                                <option disabled value="">Civil status</option>
-                                <?php $status = array('Single', 'Married', 'Divorced', 'Widowed'); ?>
-                                <?php foreach($status as $key => $value): ?>
-                                    <option <?php echo (isset($app->civilstatus) and $app->civilstatus == $key) ? 'selected' : ''; ?>  value="<?php echo $key; ?>"><?php echo $value; ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                            <span class="red-text"><?php echo isset($error) ? $error->first('civilstatus') : ''; ?></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p><strong>Birthdate</strong></p>
-                        <div class="col s12 m12 l4">
-                            <select class="browser-default" name="year">
-                                <option value="" selected disabled>Year</option>
-                                <?php $date = explode('-', $app->birth); $count = 1; ?>
-                                <?php for($i = date('Y');50 > $count++; $i--): ?>
-                                    <option <?php echo $date[0] == $i ? 'selected' : ''; ?> value="<?php echo $i; ?>"> <?php echo $i; ?></option>
-                                <?php endfor; ?>
-                            </select>
-                        </div>
-                        <div class="col s12 m12 l4">
-                            <select class="browser-default" name="month">
-                                <option value="" selected disabled>Month</option>
-                                <?php $month = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"); ?>
-                                <?php foreach($month as $key => $value): ?>
-                                    <option <?php echo $date[1] == $key ? 'selected' : ''; ?> value="<?php echo $key; ?>"><?php echo $value; ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                        <div class="col s12 m12 l4">
-                            <select name="day"  class="browser-default">
-                                <option value="" selected disabled>Day</option>
-                                <?php for($i = 1; $i <= 31; $i++): ?>
-                                    <option <?php echo $date[2] == $i ? 'selected' : ''; ?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                <?php endfor; ?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p><strong>Contact Information</strong></p>
-                        <div class="col s12 m12 l6 input-field">
-                            <i class="material-icons prefix">phone</i>
-                            <input id="icon_prefix" type="text" value="<?php echo $app->contactno != null ? $app->contactno : ''; ?>" name="contactno" class="validate">
-                            <label for="icon_prefix">Contact number</label>
-                        </div>
-                        <div class="col s12 m12 l6 input-field">
-                            <select name="location" class="browser-default">
-                                <option value="" selected disabled>Location</option>
-                                <?php foreach($location as $loc): ?>
-                                    <option value="<?php echo $loc->regionid; ?>" <?php echo (($app->regionid == $loc->regionid) ? 'selected' : ''); ?>><?php echo $loc['location']; ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p><strong>Complete Address</strong></p>
-                        <div class="col s12 m12 l12 input-field">
-                            <input id="icon_prefix" type="text" value="<?php echo $app->address != null ? $app->address: ''; ?>" name="address" class="validate">
-                            <label for="icon_prefix">Full Address</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p><strong>Other information</strong></p>
-                        <div class="col s12 m12 l6 input-field">
-                            <input id="icon_prefix" type="text" value="<?php echo $app->nationality != null ? $app->nationality : ''; ?>" name="nationality" class="validate">
-                            <label for="icon_prefix">Nationality</label>
-                        </div>
-                        <div class="col s12 m12 l6 input-field">
-                            <input id="icon_prefix" type="text" value="<?php echo $app->religion != null ? $app->religion: ''; ?>" name="religion" class="validate">
-                            <label for="icon_prefix">Religion</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="row">
-                            <h1></h1>
-                            <div class="col s12 m12 l12">
-                                <p class="center-align">
-                                    <button class="btn-large waves-effect green" type="submit" name="action">Submit
-                                        <i class="material-icons right">send</i>
+    <div class="container container-alt" style="margin-top:7em">
+        <div class="block-header">
+            <h2><?php echo $app->fname ." ". $app->lname; ?>
+
+                <small>Nanny, Babysitter, Petsitter</small>
+            </h2>
+
+            <ul class="actions m-t-20 hidden-xs">
+                <li class="dropdown">
+                    <a href="" data-toggle="dropdown">
+                        <i class="zmdi zmdi-more-vert"></i>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li>
+                            <a href="">Privacy Settings</a>
+                        </li>
+                        <li>
+                            <a href="">Account Settings</a>
+                        </li>
+                        <li>
+                            <a href="">Other Settings</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card" id="profile-main">
+            <div class="pm-overview c-overflow">
+
+                <div class="pmo-pic">
+                    <form action="<?php echo asset('/applicant/update/picture'); ?>" method="post" enctype="multipart/form-data" >
+                        <div class="p-relative">
+                            <a href="">
+                                <img id="editpicture" class="img-responsive" src="<?php echo asset('public/uploads/profile/'.(($app['profilepic']) != null ? $app['profilepic'] :'facebook.jpg' )); ?>" alt="">
+                            </a>
+                            <div class="dropdown pmop-message">
+                                <a data-toggle="dropdown" href="" class="btn bgm-white btn-float z-depth-1">
+                                    <i class="zmdi zmdi-comment-text-alt"></i>
+                                </a>
+
+                                <div class="dropdown-menu">
+                                    <textarea placeholder="Write something..."></textarea>
+
+                                    <button class="btn bgm-green btn-float"><i class="zmdi zmdi-mail-send"></i>
                                     </button>
-                                </p>
+                                </div>
+                            </div>
+
+                            <input id="upload" type="file" name="profilepic" style="display:none">
+                            <a href="" id="upload_link" class="pmop-edit" >
+                                <i class="zmdi zmdi-camera"></i> <span
+                                        class="hidden-xs">Update Profile Picture</span>
+                            </a>
+                            <div class="row">
+                                <input type="submit" class="uploadPhoto btn btn-sm btn-primary" name="upload" value="Upload Photo" />
+                            </div>
+                        </div>
+                    </form>
+
+
+                    <div class="pmo-stat">
+                        <h2 class="m-0 c-white">2</h2>
+                        Experience
+                    </div>
+                </div>
+
+
+
+
+                <div class="pmo-block pmo-contact hidden-xs">
+                    <h2>Contact</h2>
+
+                    <ul>
+                        <li><i class="zmdi zmdi-phone"></i> <?php echo $app->contactno; ?></li>
+                        <li><i class="zmdi zmdi-email"></i> <?php echo $app->email; ?></li>
+                        <li><i class="zmdi zmdi-facebook-box"></i> <?php echo $app->fname." ".$app->lname; ?></li>
+                        <li>
+                            <i class="zmdi zmdi-pin"></i>
+
+                            <address class="m-b-0 ng-binding">
+                                <select name="location" class="browser-default">
+                                    <option value="" selected disabled>Location</option>
+                                    <?php foreach($location as $loc): ?>
+                                        <option value="<?php echo $loc->regionid; ?>" <?php echo (($app->regionid == $loc->regionid) ? 'selected' : ''); ?>><?php echo $loc['location']; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </address>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pmo-block pmo-items hidden-xs">
+                    <h2>Employers</h2>
+
+                    <div class="pmob-body">
+                        <div class="row">
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="<?php echo asset('public/template/img/profile-pics/1.jpg'); ?>" alt="">
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="<?php echo asset('public/template/img/profile-pics/2.jpg'); ?>" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="<?php echo asset('public/template/img/profile-pics/3.jpg'); ?>" alt="">
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="<?php echo asset('public/template/img/profile-pics/4.jpg'); ?>" alt="">
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="<?php echo asset('public/template/img/profile-pics/5.jpg'); ?>" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="<?php echo asset('public/template/img/profile-pics/6.jpg'); ?>" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="<?php echo asset('public/template/img/profile-pics/7.jpg'); ?>" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="<?php echo asset('public/template/img/profile-pics/8.jpg'); ?>" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="<?php echo asset('public/template/img/profile-pics/9.jpg'); ?>" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="<?php echo asset('public/template/img/profile-pics/1.jpg'); ?>" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="<?php echo asset('public/template/img/profile-pics/2.jpg'); ?>" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="<?php echo asset('public/template/img/profile-pics/3.jpg'); ?>" alt="">
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pm-body clearfix">
+                <ul class="tab-nav tn-justified">
+                    <li class="active"><a href="profile-about.html">About</a></li>
+                    <li><a href="profile-timeline.html">Timeline</a></li>
+                    <li><a href="profile-photos.html">Certifications</a></li>
+                    <li><a href="profile-connections.html">Connections</a></li>
+                </ul>
+
+
+                <div class="pmb-block">
+                    <div class="pmbb-header">
+                        <h2><i class="zmdi zmdi-equalizer m-r-10"></i> Summary</h2>
+
+                        <ul class="actions">
+                            <li class="dropdown">
+                                <a href="" data-toggle="dropdown">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li>
+                                        <a data-ma-action="profile-edit" href="">Edit</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pmbb-body p-l-30">
+                        <div class="pmbb-view">
+                            I am from pakitsan an I am willing to work very hard.
+                        </div>
+
+                        <div class="pmbb-edit">
+                            <div class="fg-line">
+                                <textarea class="form-control" rows="5" placeholder="Summary...">Sed eu est vulputate, fringilla ligula ac, maximus arcu. Donec sed felis vel magna mattis ornare ut non turpis. Sed id arcu elit. Sed nec sagittis tortor. Mauris ante urna, ornare sit amet mollis eu, aliquet ac ligula. Nullam dolor metus, suscipit ac imperdiet nec, consectetur sed ex. Sed cursus porttitor leo.</textarea>
+                            </div>
+                            <div class="m-t-10">
+                                <button class="btn btn-primary btn-sm">Save</button>
+                                <button data-ma-action="profile-edit-cancel" class="btn btn-link btn-sm">Cancel</button>
                             </div>
                         </div>
                     </div>
-                </form>
-            </li>
-        </ul>
+                </div>
+
+                <div class="pmb-block">
+                    <div class="pmbb-header">
+                        <h2><i class="zmdi zmdi-account m-r-10"></i> Basic Information</h2>
+
+                        <ul class="actions">
+                            <li class="dropdown">
+                                <a href="" data-toggle="dropdown">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li>
+                                        <a data-ma-action="profile-edit" href="">Edit</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pmbb-body p-l-30">
+                        <div class="pmbb-view">
+                            <dl class="dl-horizontal">
+                                <dt >Full Name</dt>
+                                <dd class="text-capitalize"><?php echo $app->fname . " ". $app->lname; ?></dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt>Gender</dt>
+                                <dd><?php echo $app->gender; ?></dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <?php $month = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"); ?>
+                                <?php $bdate = explode('-', $app->birth); ?>
+                                <dt>Birthday</dt>
+                                <dd><?php echo $month[$bdate[1]].' ' . $bdate[2] .', ' . $bdate[0]; ?></dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt>Martial Status</dt>
+                                <dd><?php echo $app->civilstatus; ?></dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt> Nationality</dt>
+                                <dd><?php echo $app->nationality; ?></dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt>Religion</dt>
+                                <dd><?php echo $app->religion; ?></dd>
+                            </dl>
+                        </div>
+                        <form action="<?php echo asset('/applicant/profile/edit'); ?>" method="POST">
+                            <div class="pmbb-edit">
+                                <dl class="dl-horizontal">
+                                    <dt class="p-t-10">Full Name</dt>
+                                    <dd>
+                                        <div class="fg-line">
+                                            <input type="text" name= "fname" class="form-control"
+                                                   placeholder="eg.FirstName" value="<?php echo $app->fname; ?>">
+                                            <input type="text" name= "lname" class="form-control"
+                                                   placeholder="eg.LasttName" value="<?php echo $app->lname; ?>">
+                                        </div>
+
+                                    </dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt class="p-t-10">Gender</dt>
+                                    <dd>
+                                        <div class="fg-line">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <select class="chosen" name="gender">
+                                                        <option <?php echo (isset($app->gender) and $app->gender == "Male") ? 'selected' : ''; ?> value="Male">Male</option>
+                                                        <option <?php echo (isset($app->gender) and $app->gender == "Female") ? 'selected' : ''; ?> value="Female">Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt class="p-t-10">Birthday</dt>
+                                    <dd>
+                                        <div class="dtp-container dropdown fg-line">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <select class="chosen" name="year">
+                                                        <option value="" selected disabled>Year</option>
+                                                        <?php $date = explode('-', $app->birth); $count = 1; ?>
+                                                        <?php for($i = date('Y');50 > $count++; $i--): ?>
+                                                            <option <?php echo $date[0] == $i ? 'selected' : ''; ?> value="<?php echo $i; ?>"> <?php echo $i; ?></option>
+                                                        <?php endfor; ?>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <select class="chosen" name="month">
+                                                        <option value="" selected disabled>Month</option>
+                                                        <?php $month = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"); ?>
+                                                        <?php foreach($month as $key => $value): ?>
+                                                            <option <?php echo $date[1] == $key ? 'selected' : ''; ?> value="<?php echo $key; ?>"><?php echo $value; ?></option>
+                                                        <?php endforeach; ?>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <select name="day"  class="chosen">
+                                                        <option value="" selected disabled>Day</option>
+                                                        <?php for($i = 1; $i <= 31; $i++): ?>
+                                                            <option <?php echo $date[2] == $i ? 'selected' : ''; ?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                                        <?php endfor; ?>
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt class="p-t-10">Martial Status</dt>
+                                    <dd>
+                                        <div class="fg-line">
+                                            <select class="chosen" name="civilstatus">
+                                                <option disabled value="">Civil status</option>
+                                                <?php $status = array('Single', 'Married', 'Divorced', 'Widowed'); ?>
+                                                <?php foreach($status as $key => $value): ?>
+                                                    <option <?php echo (isset($app->civilstatus) and $app->civilstatus == $key) ? 'selected' : ''; ?>  value="<?php echo $key; ?>"><?php echo $value; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <span class="red-text"><?php echo isset($error) ? $error->first('civilstatus') : ''; ?></span>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt> Nationality</dt>
+                                    <dd>
+                                        <div class="fg-line">
+                                            <input class="typeahead form-control" type="text" value="<?php echo $app->nationality != null ? $app->nationality : ''; ?>" name="nationality">
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt>Religion</dt>
+                                    <dd>
+                                        <div class="fg-line">
+                                            <input class="typeahead form-control" type="text" value="<?php echo $app->religion != null ? $app->religion: ''; ?>" name="religion">
+                                        </div>
+                                    </dd>
+                                </dl>
+
+                                <div class="m-t-30">
+                                    <button class="btn btn-primary btn-sm" type="submit" name="action">Save</button>
+                                    <button data-ma-action="profile-edit-cancel" class="btn btn-link btn-sm">Cancel</button>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+
+                <div class="pmb-block">
+                    <div class="pmbb-header">
+                        <h2><i class="zmdi zmdi-phone m-r-10"></i> Contact Information</h2>
+
+                        <ul class="actions">
+                            <li class="dropdown">
+                                <a href="" data-toggle="dropdown">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li>
+                                        <a data-ma-action="profile-edit" href="">Edit</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pmbb-body p-l-30">
+                        <div class="pmbb-view">
+                            <dl class="dl-horizontal">
+                                <dt>Mobile Phone</dt>
+                                <dd><?php echo $app->contactno; ?></dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt>Email Address</dt>
+                                <dd><?php echo $app->email; ?></dd>
+                            </dl>
+                        </div>
+
+                        <div class="pmbb-edit">
+                            <dl class="dl-horizontal">
+                                <dt class="p-t-10">Mobile Phone</dt>
+                                <dd>
+                                    <div class="fg-line">
+                                        <input type="text" class="form-control"value="<?php echo $app->contactno != null ? $app->contactno : ''; ?>" name="contactno"
+                                               placeholder="eg. 00971 12345678 9">
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt class="p-t-10">Email Address</dt>
+                                <dd>
+                                    <div class="fg-line">
+                                        <input type="email" class="form-control"
+                                               placeholder="eg. malinda.h@gmail.com">
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="dl-horizontal">
+                                <dt class="p-t-10">Address</dt>
+                                <dd>
+                                    <select name="location" class="browser-default">
+                                        <option value="" selected disabled>Location</option>
+                                        <?php foreach($location as $loc): ?>
+                                            <option value="<?php echo $loc->regionid; ?>" <?php echo (($app->regionid == $loc->regionid) ? 'selected' : ''); ?>><?php echo $loc['location']; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </dd>
+                            </dl>
+
+                            <div class="m-t-30">
+                                <button class="btn btn-primary btn-sm"type="submit" name="action">Save</button>
+                                <button data-ma-action="profile-edit-cancel" class="btn btn-link btn-sm">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
     </div>
 
 <?php $__env->stopSection(); ?>

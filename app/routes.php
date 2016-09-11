@@ -106,6 +106,8 @@ Route::get('/applicant/shortlist','ApplicantController@shortlist');
 Route::get('/applicant/shortlist/view/{id}','ApplicantController@view_shortlist');
 Route::post('/applicant/apply/ad', 'ApplicantController@apply_ad');
 
+Route::get('/applicant/applicantPost','ApplicantController@applicantPost');
+
 
 /*
  *

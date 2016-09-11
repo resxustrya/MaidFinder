@@ -2,45 +2,211 @@
 
 
 @section('content')
-    <h5>Your messages <i class="material-icons">email</i></h5>
-    <div class="row">
-        <div class="col s12 m12 l5 white">
-            <h5 class="grey-text">Sender</h5>
-            <div class="divider"></div>
-            <ul class="collection">
-                <li class="collection-item avatar">
-                    <img src="images/yuna.jpg" alt="" class="circle">
-                    <span class="title">Title</span>
-                    <p>First Line <br>
-                        Second Line
-                    </p>
-                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                </li>
-            </ul>
-        </div>
-        <div class="col s12 m12 l7 grey lighten-4">
-            <h5>Messages</h5>
-            <form action="{{ asset('') }}" method="POST">
-                <div class="row">
-                    <div class="col s12 m12 l6">
-                        <div class="message_box white">
+    <div class="container container-alt" style="margin-top:6em">
+        <div class="messages card">
+            <div class="m-sidebar">
+                <header>
+                    <h2 class="hidden-xs">Messages</h2>
 
+                    <ul class="actions">
+                        <li>
+                            <a href="">
+                                <i class="zmdi zmdi-comment-text"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown hidden-xs">
+                            <a href="" data-toggle="dropdown">
+                                <i class="zmdi zmdi-more-vert"></i>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li>
+                                    <a href="">Profile & Status</a>
+                                </li>
+                                <li>
+                                    <a href="">Help</a>
+                                </li>
+                                <li>
+                                    <a href="">Settings</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </header>
+
+                <div class="ms-search hidden-xs">
+                    <div class="fg-line">
+                        <i class="zmdi zmdi-search"></i>
+
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </div>
+                </div>
+
+                <div class="list-group c-overflow">
+                    <a class="list-group-item media" href="">
+                        <div class="pull-left">
+                            <img src="{{asset('public/template/img/profile-pics/4.jpg')}}" alt="" class="lgi-img">
+                        </div>
+                        <div class="media-body">
+                            <div class="lgi-heading">Davil Parnell</div>
+                            <small class="lgi-text">Fierent fastidii recteque ad pro</small>
+                            <small class="ms-time">05:00 PM</small>
+                        </div>
+                    </a>
+
+                    <a class="list-group-item media active" href="">
+                        <div class="pull-left">
+                            <img src="{{asset('public/template/img/profile-pics/2.jpg')}}" alt="" class="lgi-img">
+                        </div>
+                        <div class="media-body">
+                            <div class="lgi-heading">Ann Watkinson</div>
+                            <small class="lgi-text">Cum sociis natoque penatibus </small>
+                            <small class="ms-time">10:02 AM</small>
+                        </div>
+                    </a>
+
+                    <a class="list-group-item media" href="">
+                        <div class="pull-left">
+                            <img src="{{asset('public/template/img/profile-pics/3.jpg')}}" alt="" class="lgi-img">
+                        </div>
+                        <div class="media-body">
+                            <div class="lgi-heading">Marse Walter</div>
+                            <small class="lgi-text">Suspendisse sapien ligula</small>
+                            <small class="ms-time">Yesterday</small>
+                        </div>
+                    </a>
+
+                    <a class="list-group-item media" href="">
+                        <div class="pull-left">
+                            <img src="{{asset('public/template/img/profile-pics/2.jpg')}}" alt="" class="lgi-img">
+                        </div>
+                        <div class="media-body">
+                            <div class="lgi-heading">Jeremy Robbins</div>
+                            <small class="lgi-text">Phasellus porttitor tellus nec</small>
+                            <small class="ms-time">23/04/16</small>
+                        </div>
+                    </a>
+
+                    <a class="list-group-item media" href="">
+                        <div class="pull-left">
+                            <img src="{{asset('public/template/img/profile-pics/4.jpg')}}" alt="" class="lgi-img">
+                        </div>
+                        <div class="media-body">
+                            <div class="lgi-heading">Reginald Horace</div>
+                            <small class="lgi-text">Quisque consequat arcu eget</small>
+                            <small class="ms-time">15/04/16</small>
+                        </div>
+                    </a>
+
+                    <a class="list-group-item media" href="">
+                        <div class="pull-left">
+                            <img src="{{asset('public/template/img/profile-pics/5.jpg')}}" alt="" class="lgi-img">
+                        </div>
+                        <div class="media-body">
+                            <div class="lgi-heading">Shark Henry</div>
+                            <small class="lgi-text">Nam lobortis odio et leo maximu</small>
+                            <small class="ms-time">30/03/16</small>
+                        </div>
+                    </a>
+
+                    <a class="list-group-item media" href="">
+                        <div class="pull-left">
+                            <img src="{{asset('public/template/img/profile-pics/2.jpg')}}" alt="" class="lgi-img">
+                        </div>
+                        <div class="media-body">
+                            <div class="lgi-heading">Paul Van Dack</div>
+                            <small class="lgi-text">Nam posuere purus sed velit auctor sodales</small>
+                            <small class="ms-time">10/03/16</small>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="m-body">
+                <header class="mb-header">
+                    <div class="mbh-user clearfix">
+                        <img src="{{asset('public/template/img/profile-pics/2.jpg')}}" alt="">
+                        <div class="p-t-5">Ann Watkinson</div>
+                    </div>
+
+                    <ul class="actions">
+                        <li>
+                            <a href="">
+                                <i class="zmdi zmdi-refresh-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="zmdi zmdi-delete"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="" data-toggle="dropdown">
+                                <i class="zmdi zmdi-more-vert"></i>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li>
+                                    <a href="">Contact Info</a>
+                                </li>
+                                <li>
+                                    <a href="">Mute</a>
+                                </li>
+                                <li>
+                                    <a href="">Clear Messages</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </header>
+
+                <div class="mb-list">
+                    <div class="mbl-messages c-overflow">
+                        <div class="mblm-item mblm-item-left">
+                            <div>
+                                Nullam id dolor id nibh ultricies vehicula ut id elit
+                            </div>
+                            <small>5:47 PM</small>
+                        </div>
+                        <div class="mblm-item mblm-item-right">
+                            <div>
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quamurabitur blandit tempus porttitor
+                            </div>
+                            <small>5:49 PM</small>
+                        </div>
+                        <div class="mblm-item mblm-item-right">
+                            <div>
+                                blandit tempus
+                            </div>
+                            <small>5:55 PM</small>
+                        </div>
+                        <div class="mblm-item mblm-item-left">
+                            <div>
+                                Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.
+                            </div>
+                            <small>6:10 PM</small>
+                        </div>
+                        <div class="mblm-item mblm-item-left">
+                            <div>
+                                Donec id elit non mi porta gravida at eget metus
+                            </div>
+                            <small>6:11 PM</small>
+                        </div>
+                        <div class="mblm-item mblm-item-right">
+                            <div>
+                                Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.                                    </div>
+                            <small>6:15 PM</small>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12 m12 l12">
-                        <i class="material-icons prefix">textsms</i>
-                        <input type="text" name="message" length="120" />
-                        <label for="textarea1">Type your message here</label>
+
+                    <div class="mbl-compose">
+                        <textarea placeholder="Type a message..."></textarea>
+
+                        <button><i class="zmdi zmdi-mail-send"></i></button>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col s12 m12 l4">
-                        <input type="submit" name="submit" value="Send message" class="btn green"/>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 @stop

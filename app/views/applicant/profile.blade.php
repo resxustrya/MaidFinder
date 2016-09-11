@@ -55,7 +55,7 @@
                                         class="hidden-xs">Update Profile Picture</span>
                             </a>
                             <div class="row">
-                                <input type="submit" class="uploadPhoto" name="upload" value="Upload Photo" />
+                                <input type="submit" class="uploadPhoto btn btn-sm btn-primary" name="upload" value="Upload Photo" />
                             </div>
                              </div>
                             </form>
@@ -392,7 +392,11 @@
                                 <dl class="dl-horizontal">
                                     <dt class="p-t-10">Address</dt>
                                     <dd>
-                                        
+                                        <select name="location" class="form-control">
+                                            @foreach($location as $loc)
+                                                <option value="{{ $loc['regionid'] }}">{{ $loc['location'] }}</option>
+                                            @endforeach
+                                        </select>
                                     </dd>
                                 </dl>
 

@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo asset('public/template/vendors/farbtastic/farbtastic.css'); ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo asset('public/template/vendors/bower_components/chosen/chosen.css'); ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo asset('public/template/vendors/bower_components/summernote/dist/summernote.css'); ?>" />
-
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('public/template/vendors/bower_components/nouislider/distribute/nouislider.min.css'); ?>" >
     <!-- CSS -->
     <link href="<?php echo asset('public/template/css/app_1.min.css'); ?>" rel="stylesheet">
     <link href="<?php echo asset('public/template/css/app_2.min.css'); ?>" rel="stylesheet">
@@ -36,8 +36,6 @@
             <?php echo $__env->make('applicant.sidenav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </section>
 
-
-
 <!-- Javascript Libraries -->
 <script src="<?php echo asset('public/template/vendors/bower_components/jquery/dist/jquery.min.js'); ?>"></script>
 <script src="<?php echo asset('public/template/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js'); ?>"></script>
@@ -56,6 +54,8 @@
 <script src="<?php echo asset('public/template/vendors/bower_components/chosen/chosen.jquery.js'); ?>"></script>
 <script src="<?php echo asset('public/template/vendors/fileinput/fileinput.min.js'); ?>"></script>
 <script src="<?php echo asset('public/template/vendors/input-mask/input-mask.min.js'); ?>"></script>
+<script src="<?php echo asset('/public/template/vendors/bower_components/nouislider/distribute/nouislider.min.js'); ?>"></script>
+
 
 <script src="<?php echo asset('public/template/js/app.min.js'); ?>"></script>
 <?php $__env->startSection('js'); ?>

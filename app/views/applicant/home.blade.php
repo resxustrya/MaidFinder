@@ -6,8 +6,364 @@
 @stop
 
 @section('content')
+        <div class="container container-alt" style="margin-top:7em">
+                    <div class="block-header">
+                        <h2>Find Employers
+                        </h2>
+                    </div>
 
-        <!-- Page Loader -->
+                    <div class="card">
+                        <div class="action-header clearfix">
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="btn-demo  pull-right">
+                                        <button class="btn btn-info btn-icon waves-effect waves-circle waves-float" type="button" data-toggle="collapse"
+                                                data-target="#searchMatch" aria-expanded="false"
+                                                aria-controls="searchMatch">
+                                            <i class="zmdi zmdi-search "></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body card-padding">
+                                    <div class="collapse m-t-10" id="searchMatch">
+                                        <div class="card-body card-padding">
+                                                <form class="row" role="form" action="{{ asset('') }}" method="get">
+                                                    <div class="col-sm-2">
+                                                        <div class="form-group">
+                                                            <div class="fg-line">
+                                                                <div class="select">
+                                                                    <select name="location" class="form-control">
+                                                                        @foreach($location as $loc)
+                                                                            <option value="{{ $loc['regionid'] }}">{{ $loc['location'] }}</option>
+                                                                        @endforeach
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <div class="form-group">
+                                                            <div class="fg-line">
+                                                                <div class="select">
+                                                                    <select class="form-control">
+                                                                        <option>Salary</option>
+                                                                        <option>Option 1</option>
+                                                                        <option>Option 2</option>
+                                                                        <option>Option 3</option>
+                                                                        <option>Option 4</option>
+                                                                        <option>Option 5</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <div class="form-group">
+                                                            <div class="fg-line">
+                                                                <div class="select">
+                                                                    <select class="form-control">
+                                                                        <option>Year of Experience</option>
+                                                                        <option>Option 1</option>
+                                                                        <option>Option 2</option>
+                                                                        <option>Option 3</option>
+                                                                        <option>Option 4</option>
+                                                                        <option>Option 5</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <div class="form-group">
+                                                            <div class="fg-line">
+                                                                <div class="select">
+                                                                    <select name="jobtype" class="form-control">
+                                                                        @foreach($jobtype as $type)
+                                                                            <option value="{{ $type['jobtypeid'] }}">{{ $type['description'] }}</option>
+                                                                        @endforeach
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <div class="form-group">
+                                                            <div class="fg-line">
+                                                                <div class="select">
+                                                                    <select class="form-control">
+                                                                        <option>Capacity</option>
+                                                                        <option>Full Time</option>
+                                                                        <option>Part Time</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <div class="form-group">
+                                                            <div class="fg-line">
+                                                                <div class="select">
+                                                                    <select class="form-control">
+                                                                        <option>Education Level</option>
+                                                                        <option>Elementary</option>
+                                                                        <option>High School</option>
+                                                                        <option>College Level</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="f-500 c-black m-b-5">Services</p>
+                                                    <div class="col-sm-2">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" value="">
+                                                                <i class="input-helper"></i>
+                                                                Cooking
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" value="">
+                                                                <i class="input-helper"></i>
+                                                                Gardening
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" value="">
+                                                                <i class="input-helper"></i>
+                                                                Grocery
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" value="">
+                                                                <i class="input-helper"></i>
+                                                                House Cleaning
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" value="">
+                                                                <i class="input-helper"></i>
+                                                                Tutoring
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" value="">
+                                                                <i class="input-helper"></i>
+                                                                Laundry
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class=" row">
+                                                        <div class=" col-sm-7 pull-right">
+                                                            <button type="submit" class="btn btn-primary btn-lg" href="{{ asset('helpers') }}">Find Match</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        <div class="card-body card-padding">
+
+                            <div class="contacts clearfix row">
+                                <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{{asset('public/template/img/contacts/1.jpg')}}" alt="">
+                                        </a>
+
+                                        <div class="c-info text-left ">
+                                            <strong>Cathy Shelton</strong>
+
+                                            <a href="#"><small class="c-yellow f-19">
+                                                    <i class="zmdi zmdi-star"></i>
+                                                    <i class="zmdi zmdi-star"></i>
+                                                    <i class="zmdi zmdi-star"></i>
+                                                    <i class="zmdi zmdi-star-half"></i>
+                                                    <i class="zmdi zmdi-star-outline"></i>
+                                                </small></a>
+                                            <div class="card-body ">
+                                                <div class="pmo-contact">
+                                                    <ul class="text-left">
+                                                        <li class="ng-binding"> <small><i class="zmdi zmdi-search"></i> Nanny</small></li>
+                                                        <li class="ng-binding"> <small><i class="zmdi zmdi-tag"></i> &#8369; Salary</small></li>
+                                                        <li class="ng-binding"> <small><i class="zmdi zmdi-book"></i> 2 Experience</small></li>
+
+                                                        <li>
+                                                            <small> <i class="zmdi zmdi-pin"></i>
+                                                                <address class="m-b-0 ng-binding">
+                                                                    44-46 Morningside Road <br>
+                                                                    Edinburgh <br>
+                                                                    Scotland
+                                                                </address></small>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect btn-primary"><i class="zmdi zmdi-person-add"></i> Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{{asset('public/template/img/contacts/2.jpg')}}" alt="">
+                                        </a>
+
+                                        <div class="c-info text-left ">
+
+                                            <strong>Cathy Shelton</strong>
+                                            <a href="#"><small class="c-yellow f-19">
+                                                    <i class="zmdi zmdi-star"></i>
+                                                    <i class="zmdi zmdi-star"></i>
+                                                    <i class="zmdi zmdi-star"></i>
+                                                    <i class="zmdi zmdi-star-half"></i>
+                                                    <i class="zmdi zmdi-star-outline"></i>
+                                                </small></a>
+                                            <div class="card-body ">
+                                                <div class="pmo-contact">
+                                                    <ul class="text-left">
+                                                        <li class="ng-binding"> <small><i class="zmdi zmdi-search"></i> Nanny</small></li>
+                                                        <li class="ng-binding"> <small><i class="zmdi zmdi-tag"></i> &#8369; Salary</small></li>
+                                                        <li class="ng-binding"> <small><i class="zmdi zmdi-book"></i> 2 Experience</small></li>
+
+                                                        <li>
+                                                            <small> <i class="zmdi zmdi-pin"></i>
+                                                                <address class="m-b-0 ng-binding">
+                                                                    44-46 Morningside Road <br>
+                                                                    Edinburgh <br>
+                                                                    Scotland
+                                                                </address></small>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect btn-primary"><i class="zmdi zmdi-person-add"></i> Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{{asset('public/template/img/contacts/3.jpg')}}" alt="">
+                                        </a>
+
+                                        <div class="c-info text-left ">
+
+                                            <strong>Cathy Shelton</strong>
+                                            <a href="#"><small class="c-yellow f-19">
+                                                    <i class="zmdi zmdi-star"></i>
+                                                    <i class="zmdi zmdi-star"></i>
+                                                    <i class="zmdi zmdi-star"></i>
+                                                    <i class="zmdi zmdi-star-half"></i>
+                                                    <i class="zmdi zmdi-star-outline"></i>
+                                                </small></a>
+                                            <div class="card-body ">
+                                                <div class="pmo-contact">
+                                                    <ul class="text-left">
+                                                        <li class="ng-binding"> <small><i class="zmdi zmdi-search"></i> Nanny</small></li>
+                                                        <li class="ng-binding"> <small><i class="zmdi zmdi-tag"></i> &#8369; Salary</small></li>
+                                                        <li class="ng-binding"> <small><i class="zmdi zmdi-book"></i> 2 Experience</small></li>
+
+                                                        <li>
+                                                            <small> <i class="zmdi zmdi-pin"></i>
+                                                                <address class="m-b-0 ng-binding">
+                                                                    44-46 Morningside Road <br>
+                                                                    Edinburgh <br>
+                                                                    Scotland
+                                                                </address></small>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect btn-primary"><i class="zmdi zmdi-person-add"></i> Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="{{asset('public/template/img/contacts/4.jpg')}}" alt="">
+                                        </a>
+
+                                        <div class="c-info text-left ">
+
+                                            <strong>Cathy Shelton</strong>
+                                            <a href="#"><small class="c-yellow f-19">
+                                                    <i class="zmdi zmdi-star"></i>
+                                                    <i class="zmdi zmdi-star"></i>
+                                                    <i class="zmdi zmdi-star"></i>
+                                                    <i class="zmdi zmdi-star-half"></i>
+                                                    <i class="zmdi zmdi-star-outline"></i>
+                                                </small></a>
+                                            <div class="card-body ">
+                                                <div class="pmo-contact">
+                                                    <ul class="text-left">
+                                                        <li class="ng-binding"> <small><i class="zmdi zmdi-search"></i> Nanny</small></li>
+                                                        <li class="ng-binding"> <small><i class="zmdi zmdi-tag"></i> &#8369; Salary</small></li>
+                                                        <li class="ng-binding"> <small><i class="zmdi zmdi-book"></i> 2 Experience</small></li>
+
+                                                        <li>
+                                                            <small> <i class="zmdi zmdi-pin"></i>
+                                                                <address class="m-b-0 ng-binding">
+                                                                    44-46 Morningside Road <br>
+                                                                    Edinburgh <br>
+                                                                    Scotland
+                                                                </address></small>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="c-footer">
+                                            <button class="waves-effect btn-primary"><i class="zmdi zmdi-person-add"></i> Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="load-more">
+                                    <a href=""><i class="zmdi zmdi-refresh-alt"></i> Load More...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 <div class="page-loader">
     <div class="preloader pls-blue">
         <svg class="pl-circular" viewBox="25 25 50 50">
@@ -17,205 +373,8 @@
         <p>Please wait...</p>
     </div>
 </div>
-    <div class="row">
-        <div class="card-panel">
-            <h6><strong>Find helpers</strong></h6>
-            <form action="{{ asset('') }}" method="get">
-                <div class="row">
-                    <div class="col s12 m12 l6">
-                        <select name="location" class="browser-default">
-                            @foreach($location as $loc)
-                                <option value="{{ $loc['regionid'] }}">{{ $loc['location'] }}</option>
-                            @endforeach
-                        </select>
                     </div>
-                    <div class="col s12 m12 l6">
-                        <select name="jobtype" class="browser-default">
-                            @foreach($jobtype as $type)
-                                <option value="{{ $type['jobtypeid'] }}">{{ $type['description'] }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m12 l12 center-align">
-                        <div class="center-align"><input type="submit" href="{{ asset('helpers') }}" class="btn cyan lighten-3 col s12 l12 m12" value="Find a match" /> </div>
-                    </div>
-                </div>
-            </form>
-
-            <div class="divider"></div>
-            <div class="row">
-                <p class="center sub"> Suggested Employers<p>
-                    <div class="col s4 ">
-                        <div class="card ">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator " src="{{ asset('public/images/user-bg.jpg') }}">
-                                <span class="card-title">
-                                    <div class="col s5 ">
-                                        <img class="circle responsive-img" src="{{asset('public/images/facebook.jpg')}}" alt=""> <!-- notice the "circle" class -->
-
-                                    </div>
-                                    <a class="btn-floating btn-large waves-effect waves-light btn tooltipped right pink" data-position="right" data-delay="50" data-tooltip="Add to Shortlist"><i class="mdi mdi-heart"></i></a>
-
-                                </span>
-
-                            </div>
-
-                            <div class="card-content">
-
-                                <span class="card-title activator grey-text text-darken-4">
-                                    FName LastName<i class="material-icons right">more_vert</i>
-                                </span>
-
-                                <a href="#">position(NANNY)</a>
-                                <div class=" valign-wrapper">
-                                    <a href="#" class="yellow-text text-darken-4">
-                                        <i class="mdi mdi-star"></i>
-                                        <i class="mdi mdi-star"></i>
-                                        <i class="mdi mdi-star-half"></i>
-                                        <i class="mdi mdi-star-outline"></i>
-                                        <i class="mdi mdi-star-outline"></i>
-                                    </a>
-                                </div>
-
-
-                                <div class=" grey-text text-darken-4 valign-wrapper">
-                                    <i class="tIcon mdi mdi-account-location tiny"></i>
-                                    Location
-                                </div>
-                                <div class=" grey-text text-darken-4 valign-wrapper">
-                                    <i class="tIcon mdi mdi-tag-faces tiny"></i>&#8369;
-                                    Expected Salary
-                                </div>
-                                <div class=" grey-text text-darken-4 valign-wrapper">
-                                    <i class="tIcon mdi mdi-book-open tiny"></i>
-                                    Year of Experience
-                                </div>
-
-
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Short Description of Self <i class="material-icons right">close</i> </span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-            </div>
         </div>
-    </div>
-    <div class="col s4 ">
-        <div class="card ">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator " src="{{ asset('public/images/user-bg.jpg') }}">
-                                <span class="card-title">
-                                    <div class="col s5 ">
-                                        <img class="circle responsive-img" src="{{asset('public/images/facebook.jpg')}}" alt=""> <!-- notice the "circle" class -->
-
-                                    </div>
-                                    <a class="btn-floating btn-large waves-effect waves-light btn tooltipped right pink" data-position="right" data-delay="50" data-tooltip="Add to Shortlist"><i class="mdi mdi-heart"></i></a>
-
-                                </span>
-
-            </div>
-
-            <div class="card-content">
-
-                                <span class="card-title activator grey-text text-darken-4">
-                                    FName LastName<i class="material-icons right">more_vert</i>
-                                </span>
-
-                <a href="#">position(NANNY)</a>
-                <div class=" valign-wrapper">
-                    <a href="#" class="yellow-text text-darken-4">
-                        <i class="mdi mdi-star"></i>
-                        <i class="mdi mdi-star"></i>
-                        <i class="mdi mdi-star-half"></i>
-                        <i class="mdi mdi-star-outline"></i>
-                        <i class="mdi mdi-star-outline"></i>
-                    </a>
-                </div>
-
-
-                <div class=" grey-text text-darken-4 valign-wrapper">
-                    <i class="tIcon mdi mdi-account-location tiny"></i>
-                    Location
-                </div>
-                <div class=" grey-text text-darken-4 valign-wrapper">
-                    <i class="tIcon mdi mdi-tag-faces tiny"></i>&#8369;
-                    Expected Salary
-                </div>
-                <div class=" grey-text text-darken-4 valign-wrapper">
-                    <i class="tIcon mdi mdi-book-open tiny"></i>
-                    Year of Experience
-                </div>
-
-
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Short Description of Self <i class="material-icons right">close</i> </span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col s4 ">
-        <div class="card ">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator " src="{{ asset('public/images/user-bg.jpg') }}">
-                                <span class="card-title">
-                                    <div class="col s5 ">
-                                        <img class="circle responsive-img" src="{{asset('public/images/facebook.jpg')}}" alt=""> <!-- notice the "circle" class -->
-
-                                    </div>
-                                    <a class="btn-floating btn-large waves-effect waves-light btn tooltipped right pink" data-position="right" data-delay="50" data-tooltip="Add to Shortlist"><i class="mdi mdi-heart"></i></a>
-
-                                </span>
-
-            </div>
-
-            <div class="card-content">
-
-                                <span class="card-title activator grey-text text-darken-4">
-                                    FName LastName<i class="material-icons right">more_vert</i>
-                                </span>
-
-                <a href="#">position(NANNY)</a>
-                <div class=" valign-wrapper">
-                    <a href="#" class="yellow-text text-darken-4">
-                        <i class="mdi mdi-star"></i>
-                        <i class="mdi mdi-star"></i>
-                        <i class="mdi mdi-star-half"></i>
-                        <i class="mdi mdi-star-outline"></i>
-                        <i class="mdi mdi-star-outline"></i>
-                    </a>
-                </div>
-
-
-                <div class=" grey-text text-darken-4 valign-wrapper">
-                    <i class="tIcon mdi mdi-account-location tiny"></i>
-                    Location
-                </div>
-                <div class=" grey-text text-darken-4 valign-wrapper">
-                    <i class="tIcon mdi mdi-tag-faces tiny"></i>&#8369;
-                    Expected Salary
-                </div>
-                <div class=" grey-text text-darken-4 valign-wrapper">
-                    <i class="tIcon mdi mdi-book-open tiny"></i>
-                    Year of Experience
-                </div>
-
-
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Short Description of Self <i class="material-icons right">close</i> </span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-            </div>
-        </div>
-    </div>
-
-    </div>
-        </div>
-    </div>
 @stop
 
 @section('js')

@@ -129,8 +129,7 @@
                                 </div>
 
                                 <div class="c-footer">
-                                  <button class="waves-effect  btn"> <a href="{{ asset('application/view/'. $app->applicationid) }}"> View
-                                    </a></button>
+                                    <a href="{{ asset('application/view/'. $app->applicationid) }}" class="waves-effect btn w-100">View</a>
                                 </div>
                             </div>
                         </div>

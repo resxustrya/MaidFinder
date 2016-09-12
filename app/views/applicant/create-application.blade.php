@@ -24,12 +24,8 @@
                     <div class="row">
                     <div class="col-sm-4">
                         <label for="location" class="c-black f-500 m-b-2">Location</label>
-                        <div class="alert alert-danger alert-dismissible" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                                        aria-hidden="true">&times;</span></button>
-                            {{ isset($error)? $error->first('location') : '' }}
-                        </div>
-                        <div class="form-group has-error">
+                        <label class="has-error c-red" for="location">{{ isset($error)? $error->first('location') : '' }}</label>
+                        <div class="form-group">
                             <div class="fg-line select">
                                 <select name="location" class="form-control">
                                     @foreach($location as $loc)
@@ -41,12 +37,8 @@
                     </div>
                     <div class="col-sm-4">
                         <label for="position" class="c-black f-500 m-b-2">Position</label>
-                        <div class="alert alert-danger alert-dismissible" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                                        aria-hidden="true">&times;</span></button>
-                            {{ isset($error)? $error->first('position') : '' }}
-                        </div>
-                        <div class="form-group has-error">
+                        <label class="has-error c-red" for="position">{{ isset($error)? $error->first('position') : '' }}</label>
+                        <div class="form-group">
                             <div class="fg-line select">
                                 <select name="jobtype" class="form-control">
                                     <option value="" selected>Position</option>

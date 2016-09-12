@@ -37,7 +37,7 @@
                             $job_desc = AdDesc::where('adid', '=', $ad->adid)->get();
 
                             ?>
-                        <div class="col-sm-6">
+                        <div class="col-sm-12">
                             <div class="card z-depth-3">
                                 <div class="card-header bgm-bluegray">
                                     <h2>
@@ -61,7 +61,7 @@
                                                     <a href="{{asset ('/employer/ad/edit/'. $ad->adid)}}">Edit</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{asset ('/employer/ad/delete/'. $ad->adid)}}">Delete</a>
+                                                    <a id="sa-params" href="{{asset ('/employer/ad/delete/'. $ad->adid)}}">Delete</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -150,8 +150,8 @@
                                 </div>
                             </div>
                         </div>
-                            <?php $jobcount++ ?>
-                            @endforeach
+                        <?php $jobcount++ ?>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -170,3 +170,26 @@
         }
     </style>
 @stop
+@section('js')
+    <script>
+        $('#sa-params').click(function(){
+            swal({
+                title: "Are you sure?",
+                text: "You will not be able to recover this imaginary file!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel plx!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function(isConfirm){
+                if (isConfirm) {
+                    swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                } else {
+                    swal("Cancelled", "Your imaginary file is safe :)", "error");
+                }
+            });
+        });
+    </script>
+    @stop

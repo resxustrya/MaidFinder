@@ -43,8 +43,8 @@
                     <span class="new badge red ">{{ $count }}</span>
                 @endif
             </a></li>
-        <li><a href="{{ asset('/employer/ads') }}"><i class="zmdi zmdi-case"></i> Job Ads</a></li>
-        <li><a href="{{asset('/employer/job/ads')}}"><i class="zmdi zmdi-filter-list"></i> Employer Ads</a></li>
+        <li><a href="{{ asset('/employer/ads') }}"><i class="zmdi zmdi-case"></i>My Job Ads</a></li>
+        <li><a href="{{asset('/helpers')}}"><i class="zmdi zmdi-filter-list"></i>Helpers Posts</a></li>
         <li><a href="typography.html"><i class="zmdi zmdi-account-box-phone"></i> Recommendations</a></li>
         <li><a href="{{ asset('/employer/message/inbox') }}"><i class="zmdi zmdi-account-box-mail"></i> Messages</a></li>
     </ul>

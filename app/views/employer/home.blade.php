@@ -39,7 +39,6 @@
                                     <div class="card">
                                         <div class="card-header ch-alt m-b-20">
                                             <h2>{{ $jobtype->description }}
-                                                <small>Phasellus condimentum ipsum id auctor</small>
                                             </h2>
                                             <ul class="actions">
                                                 <li>

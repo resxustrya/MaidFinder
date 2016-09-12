@@ -31,10 +31,12 @@ class EmployerController extends BaseController {
 
         $location = Regions::where('regionid', '=',$this->emp->regionid)->first();
         $ads = Ads::where('empid', '=', $this->emp->empid)->first();
+        $region = Regions::all();
 
         return View::make('employer.profile')
                         ->with('emp',$this->emp)
-                        ->with('location', $location)
+                        ->with('loc', $location)
+                        ->with('location', $region)
                         ->with('ads', $ads);
     }
     public function update_profile() {

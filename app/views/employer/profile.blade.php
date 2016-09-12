@@ -1,123 +1,363 @@
 @extends('employer.layout')
 
 @section('content')
-    <div class="row" style="padding: 0px;">
-        <div class="col s12 m12 l12">
-            <div class="row">
-                <div class="card-panel">
-                    <div class="row">
-                        <div class="col s12 m12 l4">
-                            <form action="{{ asset('/employer/update/picture') }}" method="post" enctype="multipart/form-data" >
-                                <div class="row">
-                                    <div class="col s12 m12 l12 valign-wrapper">
-                                        <img id="editpicture"  class="center  circle" src="{{ asset('public/uploads/profile/'.(($emp['profilepic']) != null ? $emp['profilepic'] :'facebook.jpg' )) }}" />
-                                        <div class="file-field input-field">
-                                            <a style="text-decoration: underline; margin-top: 10px">
-                                                <span><i class="mdi mdi-camera small "></i></span>
-                                                <input type="file" class="photo right" name="profilepic">
-                                            </a>
-                                            <div class="file-path-wrapper blue-text reveal">
-                                                <input class="file-path blue-text validate" type="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <input type="submit" class="btn reveal blue" name="upload" value="Upload Photo" />
-                                    </div>
+    <div class="container container-alt" style="margin-top:7em">
+        <div class="block-header">
+            <h2>{{ $emp->fname ." ". $emp->lname }}
+                <small>Employer</small>
+            </h2>
+            <ul class="actions m-t-20 hidden-xs">
+                <li class="dropdown">
+                    <a href="" data-toggle="dropdown">
+                        <i class="zmdi zmdi-more-vert"></i>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li>
+                            <a href="">Privacy Settings</a>
+                        </li>
+                        <li>
+                            <a href="">Account Settings</a>
+                        </li>
+                        <li>
+                            <a href="">Other Settings</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="card" id="profile-main">
+            <div class="pm-overview c-overflow">
+
+                <div class="pmo-pic">
+                    <form action="{{ asset('/employer/update/picture') }}" method="post" enctype="multipart/form-data" >
+                        <div class="p-relative">
+                            <a href="">
+                                <img id="editpicture" class="img-responsive" src="{{ asset('public/uploads/profile/'.(($emp['profilepic']) != null ? $emp['profilepic'] :'facebook.jpg' )) }}" alt="">
+                            </a>
+                            <div class="dropdown pmop-message">
+                                <a data-toggle="dropdown" href="" class="btn bgm-white btn-float z-depth-1">
+                                    <i class="zmdi zmdi-comment-text-alt"></i>
+                                </a>
+
+                                <div class="dropdown-menu">
+                                    <textarea placeholder="Write something..."></textarea>
+
+                                    <button class="btn bgm-green btn-float"><i class="zmdi zmdi-mail-send"></i>
+                                    </button>
                                 </div>
-                            </form>
+                            </div>
+
+                            <input id="upload" type="file" name="profilepic" style="display:none">
+                            <a href="" id="upload_link" class="pmop-edit" >
+                                <i class="zmdi zmdi-camera"></i> <span
+                                        class="hidden-xs">Update Profile Picture</span>
+                            </a>
+                            <div class="row">
+                                <input type="submit" class="uploadPhoto btn btn-sm btn-primary" name="upload" value="Upload Photo" />
+                            </div>
                         </div>
-                        <div class="col s12 m12 l8">
-                            <a class="btn-floating tooltipped btn-large waves-effect waves-light right  red  " data-position="bottom" data-delay="50" data-tooltip="Edit Profile"  href="{{ asset('/employer/update/') }}"><i class="material-icons">mode_edit</i></a>
-                            <div class="section">
-                                <div class="cText grey-text text-darken-4 name">
-                                    <i class="mdi mdi-account"></i>
-                                    {{ $emp->fname ." ". $emp->lname }}
-                                    <div class="divider"></div>
-                                </div>
-                                <div class="cText grey-text text-darken-4 valign-wrapper">
+                    </form>
+                </div>
+                <div class="pmo-block pmo-contact hidden-xs">
+                    <h2>Contact</h2>
+                    <ul>
+                        <li><i class="zmdi zmdi-phone"></i> {{ $emp->contactno }}</li>
+                        <li><i class="zmdi zmdi-email"></i> {{ $emp->email }}</li>
+                        <li><i class="zmdi zmdi-facebook-box"></i> {{ $emp->fname." ".$emp->lname }}</li>
+                        <li>
+                            <i class="zmdi zmdi-pin"></i>
+                            <address class="m-b-0 ng-binding">
+                                {{ $loc->location }}
+
+                            </address>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pmo-block pmo-items hidden-xs">
+                    <h2>Employee</h2>
+                    <div class="pmob-body">
+                        <div class="row">
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="{{asset('public/template/img/profile-pics/1.jpg')}}" alt="">
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="{{asset('public/template/img/profile-pics/2.jpg')}}" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="{{asset('public/template/img/profile-pics/3.jpg')}}" alt="">
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="{{asset('public/template/img/profile-pics/4.jpg')}}" alt="">
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="{{asset('public/template/img/profile-pics/5.jpg')}}" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="{{asset('public/template/img/profile-pics/6.jpg')}}" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="{{asset('public/template/img/profile-pics/7.jpg')}}" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="{{asset('public/template/img/profile-pics/8.jpg')}}" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="{{asset('public/template/img/profile-pics/9.jpg')}}" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="{{asset('public/template/img/profile-pics/1.jpg')}}" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="{{asset('public/template/img/profile-pics/2.jpg')}}" alt="">
+
+                            </a>
+                            <a href="" class="col-xs-2">
+                                <img class="img-circle" src="{{asset('public/template/img/profile-pics/3.jpg')}}" alt="">
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form action="{{ asset('/employer/update') }}" method="POST">
+                <div class="pm-body clearfix">
+                    <ul class="tab-nav tn-justified">
+                        <li class="active"><a href="/employer/profile">About</a></li>
+                        <li><a href="profile-timeline.html">Timeline</a></li>
+                        <li><a href="profile-photos.html">Certifications</a></li>
+                        <li><a href="profile-connections.html">Ratings</a></li>
+                    </ul>
+                    <div class="pmb-block">
+                        <div class="pmbb-header">
+                            <h2><i class="zmdi zmdi-account m-r-10"></i> Basic Information</h2>
+
+                            <ul class="actions">
+                                <li class="dropdown">
+                                    <a href="" data-toggle="dropdown">
+                                        <i class="zmdi zmdi-more-vert"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li>
+                                            <a data-ma-action="profile-edit" href="">Edit</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pmbb-body p-l-30">
+                            <div class="pmbb-view">
+                                <dl class="dl-horizontal">
+                                    <dt >Full Name</dt>
+                                    <dd class="text-capitalize">{{ $emp->fname . " ". $emp->lname }}</dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt>Gender</dt>
+                                    <dd>{{$emp->gender}}</dd>
+                                </dl>
+                                <dl class="dl-horizontal">
                                     <?php $month = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"); ?>
                                     <?php $bdate = explode('-', $emp->bdate); ?>
-                                    <i class="tIcon mdi mdi-cake-variant "></i>
-                                    {{ $month[$bdate[1]].' ' . $bdate[2] .', ' . $bdate[0]  }}
-                                </div>
-                                <div class=" grey-text text-darken-4 valign-wrapper">
-                                    <i class="tIcon mdi mdi-email"></i>
-                                    {{ $emp->email }}
-                                </div>
-                                <div class="grey-text text-darken-4 valign-wrapper">
-                                    <i class="tIcon  mdi mdi-account-location"></i>
-                                    {{ $location->location }}
-                                </div>
-                                <div class="grey-text text-darken-4 valign-wrapper">
-                                    <i class="tIcon mdi mdi-phone"></i>
-                                    {{ $emp->contactno }}
-                                </div>
-                                <div class=" valign-wrapper">
-
-                                    <?php
-                                    if( $emp->gender  == "Female")
-                                    {
-                                        echo "<i class=\"tIcon mdi mdi-gender-female \"></i>";
-                                    } else
-                                    {
-                                        echo "<i class=\"tIcon mdi mdi-gender-male \"></i>";
-                                    }
-                                    ?>
-                                    {{ $emp->gender }}
-                                </div>
-
+                                    <dt>Birthday</dt>
+                                    <dd>{{ $month[$bdate[1]].' ' . $bdate[2] .', ' . $bdate[0]  }}</dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt>Martial Status</dt>
+                                    <dd>{{$emp->civilstatus}}</dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt> Nationality</dt>
+                                    <dd>{{$emp->nationality}}</dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt>Religion</dt>
+                                    <dd>{{$emp->religion}}</dd>
+                                </dl>
                             </div>
-                            <h6 class="divider"></h6>
-                            <div class="row">
-<<<<<<< HEAD
-                                <div class="col s12 m12 l6">
-
-=======
-                                <div class="col s12 m12 l12">
-                                    <div class="section">
-                                        <div class="valign-wrapper">
-                                            <i class="tIcon mdi mdi-flag">Nationality: </i>
-                                            {{ $emp->nationality }}
-                                        </div>
-                                        <div class="valign-wrapper">
-                                            <i class="tIcon mdi mdi-church">Religion:</i>
-
-                                            {{ $emp->religion }}
+                            <div class="pmbb-edit">
+                                <dl class="dl-horizontal">
+                                    <dt class="p-t-10">Full Name</dt>
+                                    <dd>
+                                        <div class="fg-line">
+                                            <input type="text" name= "fname" class="form-control"
+                                                   placeholder="eg.FirstName" value="{{ $emp->fname }}">
+                                            <input type="text" name= "lname" class="form-control"
+                                                   placeholder="eg.LasttName" value="{{ $emp->lname }}">
                                         </div>
 
-                                        <div class="valign-wrapper">
-                                            <i class="tIcon mdi mdi-account-multiple ">Civil Status:</i>
-                                            {{ $emp->civilstatus }}
+                                    </dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt class="p-t-10">Gender</dt>
+                                    <dd>
+                                        <div class="fg-line">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <select class="chosen" name="gender">
+                                                        <option {{ (isset($emp->gender) and $emp->gender == "Male") ? 'selected' : ''  }} value="Male">Male</option>
+                                                        <option {{ (isset($emp->gender) and $emp->gender == "Female") ? 'selected' : ''  }} value="Female">Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
->>>>>>> f5dc6829c45661380e7069d518b17cd4f62fef16
+                                    </dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt class="p-t-10">Birthday</dt>
+                                    <dd>
+                                        <div class="dtp-container dropdown fg-line">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <select class="chosen" name="year">
+                                                        <option value="" selected disabled>Year</option>
+                                                        <?php $date = explode('-', $emp['bdate']); $count = 1; ?>
+                                                        @for($i = date('Y');50 > $count++; $i--)
+                                                            <option {{ $date[0] == $i ? 'selected' : ''}} value="{{ $i }}"> {{ $i }}</option>
+                                                        @endfor
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <select class="chosen" name="month">
+                                                        <option value="" selected disabled>Month</option>
+                                                        <?php $month = array("January", "Febuary", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"); ?>
+                                                        @foreach($month as $key => $value)
+                                                            <option {{ $date[1] == $key ? 'selected' : ''}} value="{{ $key}}">{{ $value }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <select name="day"  class="chosen">
+                                                        <option value="" selected disabled>Day</option>
+                                                        @for($i = 1; $i <= 31; $i++)
+                                                            <option {{ $date[2] == $i ? 'selected' : '' }} value="{{ $i }}">{{ $i }}</option>
+                                                        @endfor
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt class="p-t-10">Martial Status</dt>
+                                    <dd>
+                                        <div class="fg-line">
+                                            <select class="chosen" name="civilstatus">
+                                                <option disabled value="">Civil status</option>
+                                                <?php $status = array('Single', 'Married', 'Divorced', 'Widowed'); ?>
+                                                @foreach($status as $key => $value)
+                                                    <option {{ (isset($emp->civilstatus) and $emp->civilstatus == $key) ? 'selected' : '' }}  value="{{ $value }}">{{ $value }}</option>
+                                                @endforeach
+                                            </select>
+                                            <span class="red-text">{{ isset($error) ? $error->first('civilstatus') : '' }}</span>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt> Nationality</dt>
+                                    <dd>
+                                        <div class="fg-line">
+                                            <input class="typeahead form-control" type="text" value="{{ $emp->nationality != null ? $emp->nationality : '' }}" name="nationality">
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt>Religion</dt>
+                                    <dd>
+                                        <div class="fg-line">
+                                            <input class="typeahead form-control" type="text" value="{{ $emp->religion != null ? $emp->religion: '' }}" name="religion">
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <div class="m-t-30">
+                                    <button class="btn btn-primary btn-sm" type="submit" name="action">Save</button>
+                                    <button data-ma-action="profile-edit-cancel" class="btn btn-link btn-sm">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pmb-block">
+                        <div class="pmbb-header">
+                            <h2><i class="zmdi zmdi-phone m-r-10"></i> Contact Information</h2>
+
+                            <ul class="actions">
+                                <li class="dropdown">
+                                    <a href="" data-toggle="dropdown">
+                                        <i class="zmdi zmdi-more-vert"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li>
+                                            <a data-ma-action="profile-edit" href="">Edit</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pmbb-body p-l-30">
+                            <div class="pmbb-view">
+                                <dl class="dl-horizontal">
+                                    <dt>Mobile Phone</dt>
+                                    <dd>{{ $emp->contactno }}</dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt>Email Address</dt>
+                                    <dd>{{ $emp->email }}</dd>
+                                </dl>
+                            </div>
+
+                            <div class="pmbb-edit">
+                                <dl class="dl-horizontal">
+                                    <dt class="p-t-10">Mobile Phone</dt>
+                                    <dd>
+                                        <div class="fg-line">
+                                            <input type="text" class="form-control"value="{{ $emp->contactno != null ? $emp->contactno : '' }}" name="contactno"
+                                                   placeholder="eg. 00971 12345678 9">
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt class="p-t-10">Email Address</dt>
+                                    <dd>
+                                        <div class="fg-line">
+                                            <input type="email" class="form-control"
+                                                   placeholder="eg. malinda.h@gmail.com">
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt class="p-t-10">Address</dt>
+                                    <dd>
+                                        <select name="location" class="chosen">
+                                            <option value="" selected disabled>Location</option>
+                                            @foreach($location as $loc)
+                                                <option value="{{ $loc->regionid}}" {{ (($emp->regionid == $loc->regionid) ? 'selected' : '') }}>{{ $loc['location'] }}</option>
+                                            @endforeach
+                                        </select>
+                                    </dd>
+                                </dl>
+
+                                <div class="m-t-30">
+                                    <button class="btn btn-primary btn-sm"type="submit" name="action">Save</button>
+                                    <button data-ma-action="profile-edit-cancel" class="btn btn-link btn-sm">Cancel</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="divider"></div>
-            <div class="row">
-                <div class="col s12 m12 l3">
-                    @if($ads and count($ads) >0)
-                        <ul class="collection with-header">
-                            <li class="collection-header  light-blue darken-1"><h6 class="white-text">Your ads</h6></li>
-                        </ul>
-                    @else
-                        <div class="row">
-                            <div class="col s12 m12 l6">
-                                <a href="{{ asset('/create/ad') }}" class="orange btn">Create ad</a>
-                            </div>
-                        </div>
-                    @endif
-
-                </div>
-            </div>
+            </form>
         </div>
     </div>
-
 @stop
 
 @section('js')

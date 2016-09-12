@@ -144,7 +144,7 @@
                  <form action="<?php echo asset('/applicant/profile/edit'); ?>" method="POST">
                 <div class="pm-body clearfix">
                     <ul class="tab-nav tn-justified">
-                        <li class="active"><a href="profile-about.html">About</a></li>
+                        <li class="active"><a href="/applicant/profile">About</a></li>
                         <li><a href="profile-timeline.html">Timeline</a></li>
                         <li><a href="profile-photos.html">Certifications</a></li>
                         <li><a href="profile-connections.html">Ratings</a></li>

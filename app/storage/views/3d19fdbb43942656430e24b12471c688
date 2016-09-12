@@ -3,48 +3,64 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
-    <div class="row">
-        <h4>Job request</h4>
-    </div>
-    <?php if($apply_ad != null and count($apply_ad) > 0): ?>
-        <div class="row">
-            <div class="col s12 m12 l10">
-                <ul class="collection">
-                    <?php foreach($apply_ad as $a): ?>
-                        <?php
-                        $applicant = Applicants::find($a->appid);
-                        $application = Applications::find($applicant->appid);
-                        ?>
-                        <?php if($application): ?>
-                            <li class="collection-item avatar card-panel">
-                                <img src="<?php echo asset('public/uploads/profile/'.(($applicant['profilepic']) != null ? $applicant['profilepic'] :'facebook.jpg' )); ?>" alt="" class="circle">
-                                <h4><?php echo $applicant->fname ." " .$applicant->lname; ?></h4>
-                                <?php $jobtype = JobTypes::find($application->jobtypeid); ?>
-                                <p>Applying for - <strong><?php echo $jobtype->description; ?></strong><br>
-                                </p>
-                                <table>
-                                    <tr>
-                                        <td class="center-align"><i class="material-icons">visibility</i> </td>
-                                        <td class="left-align"><?php echo $a->message; ?></td>
-                                    </tr>
-                                </table>
-                                <a href="<?php echo asset('/application/view/'.$application->applicationid); ?>" class="secondary-content btn green waves-effect">View profile</a>
-                            </li>
-                        <?php else: ?>
-                            <li><h5>Helpers job application not available.</h5></li>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
+    <div class="container" style="margin-top:7em;">
+        <div class="block-header">
+            <h2>Job Request</h2>
+        </div>
+        <?php if($apply_ad != null and count($apply_ad) > 0): ?>
+        <div class="card">
+            <div class="list-group lg-odd-black">
+            <?php foreach($apply_ad as $a): ?>
+                <?php
+                $applicant = Applicants::find($a->appid);
+                $application = Applications::find($applicant->appid);
+                ?>
+                <?php if($application): ?>
+                <div class="list-group-item media">
+                    <div class="pull-left">
+                        <img class="lgi-img" src="<?php echo asset('public/uploads/profile/'.(($applicant['profilepic']) != null ? $applicant['profilepic'] :'facebook.jpg' )); ?>" alt="">
+                    </div>
+                    <div class="pull-right">
+                        <div class="actions dropdown">
+                            <a href="" data-toggle="dropdown" aria-expanded="true">
+                                <i class="zmdi zmdi-more-vert"></i>
+                            </a>
 
-        </div>
-    <?php else: ?>
-        <div class="row">
-            <div class="cols s12 m12 l10 card-panel teal lighten-4">
-                <p>You don't have any job request now. <a href="<?php echo asset('/helpers'); ?>">Find a helper</a> and add them to your hirelist. </p>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li>
+                                    <a href="<?php echo asset('/application/view/'.$application->applicationid); ?>">View</a>
+                                </li>
+                                <li>
+                                    <a href="">Delete</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="media-body">
+                        <div class="lgi-heading"><?php echo $a->message; ?></div>
+                        <ul class="lgi-attrs">
+                            <li>Full Name: <?php echo $applicant->fname ." " .$applicant->lname; ?></li>
+                            <?php $jobtype = JobTypes::find($application->jobtypeid); ?>
+                            <li>Applying for:<?php echo $jobtype->description; ?></li>
+                        </ul>
+                    </div>
+                    <?php else: ?>
+                        <li><h5>Helpers job application not available.</h5></li>
+                    <?php endif; ?>
+
+                </div>
+                        <?php endforeach; ?>
             </div>
         </div>
-    <?php endif; ?>
+        <?php else: ?>
+            <div class="row">
+                <div class="cols s12 m12 l10 card-panel teal lighten-4">
+                    <p>You don't have any job request now. <a href="<?php echo asset('/helpers'); ?>">Find a helper</a> and add them to your hirelist. </p>
+                </div>
+            </div>
+        <?php endif; ?>
+    </div>
 
 <?php $__env->stopSection(); ?>
 

@@ -24,8 +24,8 @@
                     <div class="row">
                     <div class="col-sm-4">
                         <label for="location" class="c-black f-500 m-b-2">Location</label>
-                        <label class="has-error" for="location">{{ isset($error)? $error->first('location') : '' }}</label>
-                        <div class="form-group">
+                        <p class="help-block" for="location">{{ isset($error)? $error->first('location') : '' }}</p>
+                        <div class="form-group has-error">
                             <div class="fg-line select">
                                 <select name="location" class="form-control">
                                     @foreach($location as $loc)
@@ -37,8 +37,8 @@
                     </div>
                     <div class="col-sm-4">
                         <label for="position" class="c-black f-500 m-b-2">Position</label>
-                        <label class="has-error" for="jobtype">{{ isset($error)? $error->first('position') : '' }}</label>
-                        <div class="form-group">
+                        <p class="c-red" for="jobtype">{{ isset($error)? $error->first('position') : '' }}</p>
+                        <div class="form-group has-error">
                             <div class="fg-line select">
                                 <select name="jobtype" class="form-control">
                                     <option value="" selected>Position</option>
@@ -51,7 +51,7 @@
                     </div>
                     <div class="col-sm-4">
                         <label for="salary" class="c-black f-500 m-b-2">Expected Salary</label>
-                        <label class=" has-error" for="salary">{{ isset($error)? $error->first('salary') : '' }}</label>
+                        <label class=" has-error c-red" for="salary">{{ isset($error)? $error->first('salary') : '' }}</label>
                         <div class="form-group">
                             <div class="fg-line select">
                                 <select name="salary" class="form-control">
@@ -66,7 +66,7 @@
                     <div class="col-sm-4">
                         <?php $capacity = array('Full Time', 'Part Time'); ?>
                         <label for="capacity" class="c-black f-500 m-b-2">Capacity</label>
-                            <label class="has-error" for="capacity">{{ isset($error)? $error->first('capacity') : '' }}</label>
+                            <label class="has-error c-red" for="capacity">{{ isset($error)? $error->first('capacity') : '' }}</label>
                         <div class="form-group">
                             <div class="fg-line select">
                                 <select name="capacity" class="form-control">
@@ -81,7 +81,7 @@
                     <div class="col-sm-4">
                         <?php $edlevel = array("Elementary", "High School", "College Level"); ?>
                         <label for="edlevel" class="c-black f-500 m-b-2">Education Level</label>
-                        <label class=" has-error" for="edlevel">{{ isset($error)? $error->first('edlevel') : '' }}</label>
+                        <label class=" has-error c-red" for="edlevel">{{ isset($error)? $error->first('edlevel') : '' }}</label>
                         <div class="form-group">
                             <div class="fg-line select">
                                 <select name="edlevel" class="form-control">
@@ -96,7 +96,7 @@
                     <div class="col-sm-4">
                         <?php $days = array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday','TBD','Flexible'); ?>
                         <label for="dayoff" class="c-black f-500 m-b-2">Day Off</label>
-                        <label class=" has-error" for="dayof">{{ isset($error)? $error->first('dayof') : '' }}</label>
+                        <label class=" has-error c-red" for="dayof">{{ isset($error)? $error->first('dayof') : '' }}</label>
                         <div class="form-group">
                             <div class="fg-line select">
                                 <select name="dayof" class="form-control">
@@ -110,7 +110,7 @@
                     </div>
                     <div class="col-sm-12">
                         <label for="pitch" class="c-black f-500 m-b-2">Job Application Pitch</label>
-                        <label class=" has-error" for="pitch">{{ isset($error)? $error->first('pitch') : '' }}</label>
+                        <label class=" has-error c-red" for="pitch">{{ isset($error)? $error->first('pitch') : '' }}</label>
                         <div class="form-group">
                             <div class="fg-line">
                                 <textarea class="form-control" name="pitch" id="textarea1" placeholder ="Tell the employer why you are best suited for this role. Highlight specific skills and how you can contribute.">
@@ -169,7 +169,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="col-sm-5 m  -t-30">
+                        <div class="col-sm-5" style="margin-top:2em;">
                             <a class="-format-underlined " href="{{asset('/applicant/applicantPost')}}">Cancel</a>
                         </div>
 

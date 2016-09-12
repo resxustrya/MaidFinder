@@ -27,7 +27,15 @@
             </div>
              <div class="card" id="profile-main">
                 <div class="pm-overview c-overflow">
-
+                    @if($application != null and count($application) >0 )
+                        <?php
+                        $salary = Salaries::find($application->salaryid);
+                        $location = Regions::find($application->regionid);
+                        $jobtype = JobTypes::find($application->jobtypeid);
+                        $edlevel = array('Elementary', 'High School', 'College');
+                        $skills = ApplicantSkills::where('applicationid', '=', $application->applicationid)->first();
+                        $duties = Duties::find($skills->dutyid);
+                        ?>
                     <div class="pmo-pic">
                         <form action="{{ asset('/applicant/update/picture') }}" method="post" enctype="multipart/form-data" >
                         <div class="p-relative">
@@ -131,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-
+                 <form action="{{ asset('/applicant/profile/edit') }}" method="POST">
                 <div class="pm-body clearfix">
                     <ul class="tab-nav tn-justified">
                         <li class="active"><a href="profile-about.html">About</a></li>
@@ -139,40 +147,6 @@
                         <li><a href="profile-photos.html">Certifications</a></li>
                         <li><a href="profile-connections.html">Connections</a></li>
                     </ul>
-                    <div class="pmb-block">
-                        <div class="pmbb-header">
-                            <h2><i class="zmdi zmdi-equalizer m-r-10"></i> Summary</h2>
-
-                            <ul class="actions">
-                                <li class="dropdown">
-                                    <a href="" data-toggle="dropdown">
-                                        <i class="zmdi zmdi-more-vert"></i>
-                                    </a>
-
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li>
-                                            <a data-ma-action="profile-edit" href="">Edit</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pmbb-body p-l-30">
-                            <div class="pmbb-view">
-                                I am from pakitsan an I am willing to work very hard.
-                            </div>
-                            <div class="pmbb-edit">
-                                <div class="fg-line">
-                                    <textarea class="form-control" rows="5" placeholder="Summary...">Sed eu est vulputate, fringilla ligula ac, maximus arcu. Donec sed felis vel magna mattis ornare ut non turpis. Sed id arcu elit. Sed nec sagittis tortor. Mauris ante urna, ornare sit amet mollis eu, aliquet ac ligula. Nullam dolor metus, suscipit ac imperdiet nec, consectetur sed ex. Sed cursus porttitor leo.</textarea>
-                                </div>
-                                <div class="m-t-10">
-                                    <button class="btn btn-primary btn-sm">Save</button>
-                                    <button data-ma-action="profile-edit-cancel" class="btn btn-link btn-sm">Cancel</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="pmb-block">
                         <div class="pmbb-header">
                             <h2><i class="zmdi zmdi-account m-r-10"></i> Basic Information</h2>
@@ -220,7 +194,6 @@
                                     <dd>{{$app->religion}}</dd>
                                 </dl>
                             </div>
-                            <form action="{{ asset('/applicant/profile/edit') }}" method="POST">
                             <div class="pmbb-edit">
                                 <dl class="dl-horizontal">
                                     <dt class="p-t-10">Full Name</dt>
@@ -294,7 +267,7 @@
                                                 <option disabled value="">Civil status</option>
                                                 <?php $status = array('Single', 'Married', 'Divorced', 'Widowed'); ?>
                                                 @foreach($status as $key => $value)
-                                                    <option {{ (isset($app->civilstatus) and $app->civilstatus == $key) ? 'selected' : '' }}  value="{{ $key }}">{{ $value }}</option>
+                                                    <option {{ (isset($app->civilstatus) and $app->civilstatus == $key) ? 'selected' : '' }}  value="{{ $value }}">{{ $value }}</option>
                                                 @endforeach
                                             </select>
                                             <span class="red-text">{{ isset($error) ? $error->first('civilstatus') : '' }}</span>
@@ -377,11 +350,7 @@
                                 <dl class="dl-horizontal">
                                     <dt class="p-t-10">Address</dt>
                                     <dd>
-                                        <select name="location" class="browser-default">
-                                            @foreach($location as $loc)
-                                                <option value="{{ $loc['regionid'] }}">{{ $location->location  }}</option>
-                                            @endforeach
-                                        </select>
+                                        {{$location->location}}
                                     </dd>
                                 </dl>
 
@@ -393,13 +362,10 @@
                         </div>
                     </div>
                 </div>
-
+                </form>
             </div>
-            </form>
+            @endif
         </div>
-<<<<<<< HEAD
 @stop
-=======
 
 @stop
->>>>>>> c31601859080404c0192f1e4010ae8aa87861ed7

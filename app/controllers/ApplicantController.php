@@ -36,6 +36,7 @@ class ApplicantController extends BaseController {
     public function applicant_profile() {
         return View::make('applicant.profile')
                     ->with('app', $this->app)
+                    ->with('location', Regions::all())
                     ->with('location', Regions::find($this->app->regionid));
     }
     public function update_profile() {

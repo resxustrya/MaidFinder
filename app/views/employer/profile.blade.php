@@ -75,7 +75,7 @@
                                     <table class="other_info">
                                         <tr>
                                             <td><span class="grey-text text-darken-4">Nationanlity :</span></td>
-                                            <?php $n = Nationalities::find($emp->nationality); ?>
+                                             <?php $n = Nationalities::find($emp->nationality); ?>
                                             <td><span class="grey-text text-darken-4">{{ $n->nationality }}</span></td>
                                         </tr>
                                         <tr>

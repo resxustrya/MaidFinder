@@ -72,23 +72,7 @@
                             <div class="row">
 <<<<<<< HEAD
                                 <div class="col s12 m12 l6">
-                                    <table class="other_info">
-                                        <tr>
-                                            <td><span class="grey-text text-darken-4">Nationanlity :</span></td>
-                                             <?php $n = Nationalities::find($emp->nationality); ?>
-                                            <td><span class="grey-text text-darken-4">{{ $n->nationality }}</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="grey-text text-darken-4">Religion :</span> </td>
-                                            <?php $r = Religions::find($emp->religion); ?>
-                                            <td><span class="grey-text text-darken-4">{{ $r->religion }}</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="grey-text text-darken-4">Civil Status :</span> </td>
-                                            <?php $status = array('Single', 'Married', 'Divorced', 'Widowed'); ?>
-                                            <td><span class="grey-text text-darken-4">{{ $status[$emp->civilstatus] }}</span></td>
-                                        </tr>
-                                    </table>
+
 =======
                                 <div class="col s12 m12 l12">
                                     <div class="section">

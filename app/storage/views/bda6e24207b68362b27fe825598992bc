@@ -1,9 +1,18 @@
 <?php $__env->startSection('content'); ?>
+    <?php if($application != null and count($application) >0 ): ?>
+        <?php
+        $salary = Salaries::find($application->salaryid);
+        $location = Regions::find($application->regionid);
+        $jobtype = JobTypes::find($application->jobtypeid);
+        $edlevel = array('Elementary', 'High School', 'College');
+        $skills = ApplicantSkills::where('applicationid', '=', $application->applicationid)->first();
+        $duties = Duties::find($skills->dutyid);
+        ?>
         <div class="container container-alt" style="margin-top:7em">
             <div class="block-header">
                 <h2><?php echo $app->fname ." ". $app->lname; ?>
 
-                    <small>Nanny, Babysitter, Petsitter</small>
+                    <small><?php echo $jobtype->description; ?></small>
                 </h2>
                 <ul class="actions m-t-20 hidden-xs">
                     <li class="dropdown">
@@ -27,15 +36,7 @@
             </div>
              <div class="card" id="profile-main">
                 <div class="pm-overview c-overflow">
-                    <?php if($application != null and count($application) >0 ): ?>
-                        <?php
-                        $salary = Salaries::find($application->salaryid);
-                        $location = Regions::find($application->regionid);
-                        $jobtype = JobTypes::find($application->jobtypeid);
-                        $edlevel = array('Elementary', 'High School', 'College');
-                        $skills = ApplicantSkills::where('applicationid', '=', $application->applicationid)->first();
-                        $duties = Duties::find($skills->dutyid);
-                        ?>
+
                     <div class="pmo-pic">
                         <form action="<?php echo asset('/applicant/update/picture'); ?>" method="post" enctype="multipart/form-data" >
                         <div class="p-relative">
@@ -66,7 +67,7 @@
                              </div>
                         </form>
                         <div class="pmo-stat">
-                            <h2 class="m-0 c-white">2</h2>
+                            <h2 class="m-0 c-white"><?php echo $application->yearexp; ?></h2>
                             Experience
                         </div>
                     </div>
@@ -146,7 +147,7 @@
                         <li class="active"><a href="profile-about.html">About</a></li>
                         <li><a href="profile-timeline.html">Timeline</a></li>
                         <li><a href="profile-photos.html">Certifications</a></li>
-                        <li><a href="profile-connections.html">Connections</a></li>
+                        <li><a href="profile-connections.html">Ratings</a></li>
                     </ul>
                     <div class="pmb-block">
                         <div class="pmbb-header">

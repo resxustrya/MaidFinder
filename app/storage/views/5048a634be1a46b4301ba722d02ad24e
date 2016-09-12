@@ -1,326 +1,172 @@
 <?php $__env->startSection('content'); ?>
     <?php if(count($ads) > 0): ?>
-        <span>&nbsp;</span>
-        <div class="row">
-            <div class="col s12 m12 l11">
-               <div class="row">
-                   <h5>Your current ad</h5>
-                       <?php foreach($ads as $ad): ?>
-                           <?php
-                               $dayof =  array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday');
-                               $edlevel = array("Elementary", "High School", "College graduate");
-                               $salary = Salaries::find($ad->salaryid);
-                               $duties = Duties::where('adid', '=', $ad->adid)->first();
-                               $jobtype = JobTypes::where('jobtypeid', '=', $ad->jobtypeid)->first();
-                               $location = Regions::where('regionid', '=', $ad->regionid)->first();
-                               $job_desc = AdDesc::where('adid', '=', $ad->adid)->get();
-                           ?>
-                            <div class="card-panel">
-                               <div class="row" style="padding:10px;">
-                                   <div class="col s12 m12 l10">
-                                       <h5><span>Position -  </span><?php echo $jobtype->description; ?></h5>
-                                       <span><i class="material-icons">location_on</i> </span><span><strong><?php echo $location->location; ?></strong></span>
-                                       <br/>
-                                       <span><i class="material-icons">redeem</i></span><span><strong><?php echo $salary->amount_range; ?> - (peso)</strong></span>
-                                       <br />
-                                       <?php $capacity = array('Full Time', 'Part Time'); ?>
-                                       <span><strong>Capacity</strong></span> - <span><strong><?php echo $capacity[$ad->capacity]; ?></strong></span>
-                                   </div>
-                                   <div class="col s12 m12 l2">
-                                       <a class="btn light-blue darken-3 waves-effect col s12 m12 l12 white-text" href="<?php echo asset ('/employer/ad/edit/'. $ad->adid); ?>">Edit ad</a>
-                                   </div>
-                               </div>
-                            </div>
-                            <div class="row">
-                                <div class="row">
-                                    <?php if($ads->count() < $ads->getTotal()): ?>
-                                        <ul class="pagination center-align">
-                                            <?php echo $ads->links(); ?>
-
-                                        </ul>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <?php if(count($ads) > 0): ?>
-                                        <!--Auto suggest UI STARTS HERE-->
-                                <div class="divider"></div>
-                                    <div class="row">
-                                        <p class="center sub"> Suggested Applicants <p>
-                                            <div class="col s4 ">
-                                                <div class="card ">
-                                                    <div class="card-image waves-effect waves-block waves-light">
-                                                        <img class="activator " src="<?php echo asset('public/images/user-bg.jpg'); ?>">
-                                                            <span class="card-title">
-                                                                <div class="col s5 ">
-                                                                    <img class="circle responsive-img" src="<?php echo asset('public/images/facebook.jpg'); ?>" alt=""> <!-- notice the "circle" class -->
-
-                                                                </div>
-                                                                <a class="btn-floating btn-large waves-effect waves-light btn tooltipped right pink" data-position="right" data-delay="50" data-tooltip="Add to Shortlist"><i class="mdi mdi-heart"></i></a>
-
-                                                            </span>
-                                                    </div>
-                                                    <div class="card-content">
-
-                                                        <span class="card-title activator grey-text text-darken-4">
-                                                            FName LastName<i class="material-icons right">more_vert</i>
-                                                        </span>
-
-                                                        <a href="#">position(NANNY)</a>
-                                                        <div class=" valign-wrapper">
-                                                            <a href="#" class="yellow-text text-darken-4">
-                                                                <i class="mdi mdi-star"></i>
-                                                                <i class="mdi mdi-star"></i>
-                                                                <i class="mdi mdi-star-half"></i>
-                                                                <i class="mdi mdi-star-outline"></i>
-                                                                <i class="mdi mdi-star-outline"></i>
-                                                            </a>
-                                                        </div>
-                                                        <div class=" grey-text text-darken-4 valign-wrapper">
-                                                            <i class="tIcon mdi mdi-account-location tiny"></i>
-                                                            Location
-                                                        </div>
-                                                        <div class=" grey-text text-darken-4 valign-wrapper">
-                                                            <i class="tIcon mdi mdi-tag-faces tiny"></i>&#8369;
-                                                            Expected Salary
-                                                        </div>
-                                                        <div class=" grey-text text-darken-4 valign-wrapper">
-                                                            <i class="tIcon mdi mdi-book-open tiny"></i>
-                                                            Year of Experience
-                                                        </div>
-
-
-                                                    </div>
-                                                    <div class="card-reveal">
-                                                        <span class="card-title grey-text text-darken-4">Short Description of Self <i class="material-icons right">close</i> </span>
-                                        <p>I am a very simple card. I am good at containing small bits of information.
-                                            I am convenient because I require little markup to use effectively.</p>
-                                    </div>
-                            </div>
-               </div>
-                <div class="col s4 ">
-                    <div class="card ">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator " src="<?php echo asset('public/images/user-bg.jpg'); ?>">
-                                <span class="card-title">
-                                    <div class="col s5 ">
-                                        <img class="circle responsive-img" src="<?php echo asset('public/images/facebook.jpg'); ?>" alt=""> <!-- notice the "circle" class -->
-
-                                    </div>
-                                    <a class="btn-floating btn-large waves-effect waves-light btn tooltipped right pink" data-position="right" data-delay="50" data-tooltip="Add to Shortlist"><i class="mdi mdi-heart"></i></a>
-
-                                </span>
-
-                        </div>
-
-                        <div class="card-content">
-
-                                <span class="card-title activator grey-text text-darken-4">
-                                    FName LastName<i class="material-icons right">more_vert</i>
-                                </span>
-
-                            <a href="#">position(NANNY)</a>
-                            <div class=" valign-wrapper">
-                                <a href="#" class="yellow-text text-darken-4">
-                                    <i class="mdi mdi-star"></i>
-                                    <i class="mdi mdi-star"></i>
-                                    <i class="mdi mdi-star-half"></i>
-                                    <i class="mdi mdi-star-outline"></i>
-                                    <i class="mdi mdi-star-outline"></i>
-                                </a>
-                            </div>
-
-
-                            <div class=" grey-text text-darken-4 valign-wrapper">
-                                <i class="tIcon mdi mdi-account-location tiny"></i>
-                                Location
-                            </div>
-                            <div class=" grey-text text-darken-4 valign-wrapper">
-                                <i class="tIcon mdi mdi-tag-faces tiny"></i>&#8369;
-                                Expected Salary
-                            </div>
-                            <div class=" grey-text text-darken-4 valign-wrapper">
-                                <i class="tIcon mdi mdi-book-open tiny"></i>
-                                Year of Experience
-                            </div>
-
-
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Short Description of Self <i class="material-icons right">close</i> </span>
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                                I am convenient because I require little markup to use effectively.</p>
+    <div class="container container-alt" style="margin-top:7em">
+        <div class="block-header">
+            <h2>Find Helpers
+            </h2>
+        </div>
+        <div class="card">
+            <div class="action-header clearfix">
+                <div class="card">
+                    <div class="card-header">
+                        <p class="f-500 c-lightblue m-b-5">Current Job Ad</p>
+                        <div class="btn-demo  pull-right">
+                            <button class="btn bgm-lightblue btn-icon waves-effect waves-circle waves-float" type="button" data-toggle="collapse"
+                                    data-target="#currentAd" aria-expanded="false"
+                                    aria-controls="currentAd">
+                                <i class="zmdi zmdi-dropbox "></i>
+                            </button>
                         </div>
                     </div>
-                </div>
-                <div class="col s4 ">
-                    <div class="card ">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator " src="<?php echo asset('public/images/user-bg.jpg'); ?>">
-                                <span class="card-title">
-                                    <div class="col s5 ">
-                                        <img class="circle responsive-img" src="<?php echo asset('public/images/facebook.jpg'); ?>" alt=""> <!-- notice the "circle" class -->
 
-                                    </div>
-                                    <a class="btn-floating btn-large waves-effect waves-light btn tooltipped right pink" data-position="right" data-delay="50" data-tooltip="Add to Shortlist"><i class="mdi mdi-heart"></i></a>
+                    <div class="card-body card-padding">
+                        <div class="collapse m-t-10" id="currentAd">
+                            <?php foreach($ads as $ad): ?>
+                                <?php
+                                $dayof =  array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday');
+                                $edlevel = array("Elementary", "High School", "College graduate");
+                                $salary = Salaries::find($ad->salaryid);
+                                $duties = Duties::where('adid', '=', $ad->adid)->first();
+                                $jobtype = JobTypes::where('jobtypeid', '=', $ad->jobtypeid)->first();
+                                $location = Regions::where('regionid', '=', $ad->regionid)->first();
+                                $job_desc = AdDesc::where('adid', '=', $ad->adid)->get();
+                                ?>
+                                    <div class="card">
+                                        <div class="card-header ch-alt m-b-20">
+                                            <h2><?php echo $jobtype->description; ?>
 
-                                </span>
-
-                        </div>
-
-                        <div class="card-content">
-
-                                <span class="card-title activator grey-text text-darken-4">
-                                    FName LastName<i class="material-icons right">more_vert</i>
-                                </span>
-
-                            <a href="#">position(NANNY)</a>
-                            <div class=" valign-wrapper">
-                                <a href="#" class="yellow-text text-darken-4">
-                                    <i class="mdi mdi-star"></i>
-                                    <i class="mdi mdi-star"></i>
-                                    <i class="mdi mdi-star-half"></i>
-                                    <i class="mdi mdi-star-outline"></i>
-                                    <i class="mdi mdi-star-outline"></i>
-                                </a>
-                            </div>
-
-
-                            <div class=" grey-text text-darken-4 valign-wrapper">
-                                <i class="tIcon mdi mdi-account-location tiny"></i>
-                                Location
-                            </div>
-                            <div class=" grey-text text-darken-4 valign-wrapper">
-                                <i class="tIcon mdi mdi-tag-faces tiny"></i>&#8369;
-                                Expected Salary
-                            </div>
-                            <div class=" grey-text text-darken-4 valign-wrapper">
-                                <i class="tIcon mdi mdi-book-open tiny"></i>
-                                Year of Experience
-                            </div>
-
-
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Short Description of Self <i class="material-icons right">close</i> </span>
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                                I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col s12 m12 l12">
-                                                <?php
-                                                $count = 1;
-                                                $application = DB::table('application')
-                                                                ->where('jobtypeid', '=', $ad->jobtypeid)
-                                                                ->orWhere('regionid' ,'=', $ad->regionid)
-                                                                ->orWhere('salaryid' ,'=', $ad->salaryid)
-                                                                ->get();
-                                                ?>
-                                                <?php foreach($application as $app) : ?>
-                                                <?php
-                                                    $location = Regions::find($app->regionid);
-                                                    $applicant = Applicants::find($app->appid);
-                                                    $jobtype = JobTypes::find($app->jobtypeid);
-                                                ?>
-
-                                                <div class="col s12 m6 l4 hoverable ">
-                                                    <a href="<?php echo asset('application/view/'. $app->applicationid); ?>" class="grey-text">
-                                                        <div class="card-panel" style="padding: 3px;">
-                                                            <div class="row">
-                                                                <div class="profile-img col s12 m12 l4">
-                                                                    <div class="center-align" style="padding-top: 10px;">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col s12 m12 l6">
-                                                                    <p>
-                                                                    <table class="black-text info">
-                                                                        <tr>
-                                                                            <td><i class="material-icons">perm_identity</i></td>
-                                                                            <td><span class="name"><?php echo $applicant->fname; ?></span> </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td><i class="material-icons">room</i> </td>
-                                                                            <td><?php echo $location->location; ?></td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td><i class="material-icons">work</i> </td>
-                                                                            <td><?php echo $jobtype->description; ?></td>
-                                                                        </tr>
-                                                                    </table>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="divider"></div>
-                                                            <div class="row">
-                                                                <div class="col s12 m12 l6">
-                                                                    <p>
-                                                                        <a href="<?php echo asset('application/view/'. $app->applicationid); ?>">View helper profile</a>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                <small>Phasellus condimentum ipsum id auctor</small>
+                                            </h2>
+                                            <ul class="actions">
+                                                <li>
+                                                    <a href="">
+                                                        <i class="zmdi zmdi-refresh-alt"></i>
                                                     </a>
-                                                </div>
-                                                <?php $count++ ?>
-                                                <?php endforeach; ?>
+                                                </li>
+                                            </ul>
+
+                                            <a href="<?php echo asset ('/employer/ad/edit/'. $ad->adid); ?>"> <button class="btn bgm-red btn-float waves-effect" >
+                                                    <i class="zmdi zmdi-edit"></i>
+                                            </button></a>
+                                        </div>
+
+                                        <div class="card-body card-padding">
+                                            <div class="pmo-contact">
+                                                <ul>
+                                                    <li class="ng-binding"><i class="zmdi zmdi-pin"></i><?php echo $location->location; ?></li>
+                                                    <li class="ng-binding"><i class="zmdi zmdi-money-box"></i><?php echo $salary->amount_range; ?> - (peso)</li>
+                                                    <?php $capacity = array('Full Time', 'Part Time'); ?>
+                                                    <li class="ng-binding"><i class="zmdi zmdi-time-interval"></i><?php echo $capacity[$ad->capacity]; ?></li>
+                                                </ul>
+                                            </div>
+                                            <div class="row">
+                                                <?php if($ads->count() < $ads->getTotal()): ?>
+                                                    <ul class="pagination center-align">
+                                                        <?php echo $ads->links(); ?>
+
+                                                    </ul>
+                                                <?php endif; ?>
                                             </div>
                                         </div>
                                     </div>
-                                <?php endif; ?>
-                            </div>
-                       <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body card-padding">
+                    <?php if(count($ads) > 0): ?>
+                        <?php
+                        $count = 1;
+                        $applications = Applications::where('jobtypeid', '=', $ad->jobtypeid)
+                                ->Where('deleted_at' ,'=', NULL)
+                                ->orWhere('regionid', '=', $ad->regionid)
+                                ->orWhere('salaryid', '=', $ad->salaryid)
+                                ->orWhere('yearexp', '=', $ad->yearexp)
+                                ->orderBy('applicationid', 'DESC')
+                                ->get();
+                        ?>
+                        <?php foreach($applications as $app) : ?>
+                        <?php
+                            $location = Regions::find($app->regionid);
+                            $applicant = Applicants::find($app->appid);
+                            $jobtype = JobTypes::find($app->jobtypeid);
+                            ?>
+                    <div class="contacts clearfix row">
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <div class="c-item">
+                                <a href="" class="ci-avatar">
+                                    <img src="<?php echo asset('public/uploads/profile/'.(($applicant['profilepic']) != null ? $applicant['profilepic'] :'facebook.jpg' )); ?>" alt="">
+                                </a>
 
-                   </div>
-               </div>
+                                <div class="c-info text-left ">
+                                    <strong><?php echo $applicant->fname . " ". $applicant->lname; ?></strong>
+
+                                    <a href="#"><small class="c-yellow f-19">
+                                            <i class="zmdi zmdi-star"></i>
+                                            <i class="zmdi zmdi-star"></i>
+                                            <i class="zmdi zmdi-star"></i>
+                                            <i class="zmdi zmdi-star-half"></i>
+                                            <i class="zmdi zmdi-star-outline"></i>
+                                        </small></a>
+                                    <div class="card-body ">
+                                        <div class="pmo-contact">
+                                            <ul class="text-left">
+                                                <li class="ng-binding"> <small><i class="zmdi zmdi-search"></i> <?php echo $jobtype->description; ?></small></li>
+                                                <li class="ng-binding"> <small><i class="zmdi zmdi-tag"></i> &#8369; Salary</small></li>
+                                                <li class="ng-binding"> <small><i class="zmdi zmdi-book"></i> 2 Experience</small></li>
+
+                                                <li>
+                                                    <small> <i class="zmdi zmdi-pin"></i>
+                                                        <address class="m-b-0 ng-binding">
+                                                            <?php echo $location->location; ?>
+
+                                                        </address></small>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="c-footer">
+                                  <button class="waves-effect  btn"> <a href="<?php echo asset('application/view/'. $app->applicationid); ?>"> View
+                                    </a></button>
+                                </div>
+                            </div>
+                        </div>
+                        <?php if(count($ads) > 8): ?>
+                        <div class="load-more">
+                            <a href=""><i class="zmdi zmdi-refresh-alt"></i> Load More...</a>
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                            <?php $count++ ?>
+                            <?php endforeach; ?>
+                    <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <div class="page-loader">
+                <div class="preloader pls-blue">
+                    <svg class="pl-circular" viewBox="25 25 50 50">
+                        <circle class="plc-path" cx="50" cy="50" r="20" />
+                    </svg>
+
+                    <p>Please wait...</p>
+                </div>
             </div>
         </div>
+
+    </div>
+
     <?php else: ?>
-       <span>&nbsp;</span>
-       <div class="row">
-           <div class="col s12 m12 l12 white">
-               <h5 class="center-align">Create your job ad now.</h5>
-               <p class="center-align">
-                   <a href="<?php echo asset('/create/ad'); ?>" class="btn green">Create ad</a>
-               </p>
-           </div>
-       </div>
+        <div class="row">
+            <div class="col s12 m12 l12 white">
+                <h5 class="center-align">Create your job ad now.</h5>
+                <p class="center-align">
+                    <a href="<?php echo asset('/create/ad'); ?>" class="btn green">Create ad</a>
+                </p>
+            </div>
+        </div>
     <?php endif; ?>
 <?php $__env->stopSection(); ?>
 
-<?php $__env->startSection('js'); ?>
-    @parent
-    <script>
-        $(document).ready(function() {
-            $('.carousel').carousel();
-            $('.carousel.carousel-slider').carousel({full_width: true});
-            $('.indicator-item').css('background-color', 'blue').css('padding', '10px');
-        });
-    </script>
-<?php $__env->stopSection(); ?>
-
-<?php $__env->startSection('css'); ?>
-    @parent
-    <style>
-        .profile-img {
-            max-height: 150px;
-        }
-        .image {
-            max-width: 150px;
-            height: 150px;
-        }
-        .name {
-            font-family: "Tahoma";
-            font-size: 1.2em;
-        }
-        table.info tr td {
-            padding: 0px;
-            color: #333;
-        }
-    </style>
-<?php $__env->stopSection(); ?>
 <?php echo $__env->make('employer.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

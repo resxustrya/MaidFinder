@@ -398,6 +398,11 @@
             </div>
             </form>
         </div>
+<<<<<<< HEAD
 <?php $__env->stopSection(); ?>
+=======
+
+<?php $__env->stopSection(); ?>
+>>>>>>> c31601859080404c0192f1e4010ae8aa87861ed7
 
 <?php echo $__env->make('applicant.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

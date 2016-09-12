@@ -10,7 +10,7 @@
 @extends('home.layout')
 
 @section('content')
-    <div class="container">
+    <div class="container" style="margin-top:2em;">
         <div class="row">
             @if(Session::has('input'))
                 <?php $input = Session::get('input'); ?>
@@ -153,13 +153,13 @@
                            <div class="row">
                                <div class="row">
                                    <h1></h1>
-                                   <div class="col s12 m12 l12 center-align">
-                                       <p>
-                                           <button class="btn-large waves-effect green" type="submit" name="action">Finish
+                                   <div class="col s12 m12 l12 ">
+                                       <p class="right">
+                                           <button class="btn-large waves-effect green " type="submit" name="action">Finish
                                                <i class="material-icons right">send</i>
                                            </button>
+                                           <span> Next step, you will upload your profile picture.</span>
                                        </p>
-                                       <p>Next step, you will upload your profile picture.</p>
                                    </div>
                                </div>
                            </div>

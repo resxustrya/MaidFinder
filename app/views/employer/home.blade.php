@@ -76,24 +76,24 @@
                     </div>
                 </div>
                 <div class="card-body card-padding">
-                    @if(count($ads) > 0)
-                        <?php
-                        $count = 1;
-                        $applications = Applications::where('jobtypeid', '=', $ad->jobtypeid)
-                                ->Where('deleted_at' ,'=', NULL)
-                                ->orWhere('regionid', '=', $ad->regionid)
-                                ->orWhere('salaryid', '=', $ad->salaryid)
-                                ->orWhere('yearexp', '=', $ad->yearexp)
-                                ->orderBy('applicationid', 'DESC')
-                                ->get();
-                        ?>
-                        <?php foreach($applications as $app) : ?>
-                        <?php
+                    <div class="contacts clearfix row">
+                        @if(count($ads) > 0)
+                            <?php
+                            $count = 1;
+                            $applications = Applications::where('jobtypeid', '=', $ad->jobtypeid)
+                                    ->Where('deleted_at' ,'=', NULL)
+                                    ->orWhere('regionid', '=', $ad->regionid)
+                                    ->orWhere('salaryid', '=', $ad->salaryid)
+                                    ->orWhere('yearexp', '=', $ad->yearexp)
+                                    ->orderBy('applicationid', 'DESC')
+                                    ->get();
+                            ?>
+                            <?php foreach($applications as $app) : ?>
+                            <?php
                             $location = Regions::find($app->regionid);
                             $applicant = Applicants::find($app->appid);
                             $jobtype = JobTypes::find($app->jobtypeid);
                             ?>
-                    <div class="contacts clearfix row">
                         <div class="col-md-3 col-sm-4 col-xs-6">
                             <div class="c-item">
                                 <a href="" class="ci-avatar">
@@ -139,11 +139,11 @@
                             <a href=""><i class="zmdi zmdi-refresh-alt"></i> Load More...</a>
                         </div>
                         @endif
+                                <?php $count++ ?>
+                                <?php endforeach; ?>
+                        @endif
+                        @endforeach
                     </div>
-                            <?php $count++ ?>
-                            <?php endforeach; ?>
-                    @endif
-                    @endforeach
                 </div>
             </div>
             <div class="page-loader">

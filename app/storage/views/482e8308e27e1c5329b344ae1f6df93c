@@ -20,26 +20,27 @@
                         </button></a>
                 </div>
 
-                <?php $jobcount = 1; ?>
-                <?php foreach($ads as $ad): ?>
-                    <?php
-                    $dayof =  array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday');
-                    $edlevel = array("Elementary", "High School", "College graduate");
-                    $salary = Salaries::find($ad->salaryid);
-                    $duties = Duties::where('adid', '=', $ad->adid)->first();
-                    $jobtype = JobTypes::where('jobtypeid', '=', $ad->jobtypeid)->first();
-                    $location = Regions::where('regionid', '=', $ad->regionid)->first();
-                    $job_desc = AdDesc::where('adid', '=', $ad->adid)->get();
 
-                    ?>
-                    <div class="row m-l-20 ">
+                    <div class="row m-l-10 m-r-10">
+                        <?php $jobcount = 1; ?>
+                        <?php foreach($ads as $ad): ?>
+                            <?php
+                            $dayof =  array('Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday');
+                            $edlevel = array("Elementary", "High School", "College graduate");
+                            $salary = Salaries::find($ad->salaryid);
+                            $duties = Duties::where('adid', '=', $ad->adid)->first();
+                            $jobtype = JobTypes::where('jobtypeid', '=', $ad->jobtypeid)->first();
+                            $location = Regions::where('regionid', '=', $ad->regionid)->first();
+                            $job_desc = AdDesc::where('adid', '=', $ad->adid)->get();
+
+                            ?>
                         <div class="col-sm-6">
                             <div class="card z-depth-3">
                                 <div class="card-header bgm-bluegray">
                                     <h2>
-                                        <p>Looking for a Helper with the following desc.</p>
-                                        <small>Job ad <?php echo $jobcount; ?></small><?php echo $jobtype->description; ?>
-
+                                        <p>Job Ad <?php echo $jobcount; ?></p>
+                                        <small>Looking for a Helper with the following desc</small>
+                                        <small><i>Job Type: </i><?php echo $jobtype->description; ?></small>
                                         <small><i>posted: </i><?php echo $ad->created_at; ?></small>
                                     </h2>
 
@@ -148,9 +149,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                        <?php $jobcount++ ?>
-                <?php endforeach; ?>
+                            <?php $jobcount++ ?>
+                            <?php endforeach; ?>
+                </div>
             </div>
         </div>
     </div>

@@ -33,7 +33,7 @@ class AccountController extends BaseController {
         if($app and ($app->email == Input::get('email') and $app->password == Input::get('password'))) {
             Session::put('applicant',$app);
             Session::put('isAuth',true);
-            return Redirect::to('applicant/profile');
+            return Redirect::to('applicant/home');
         }
         return Redirect::to('user-login')->with('msg','Invalid email or password');
     }
